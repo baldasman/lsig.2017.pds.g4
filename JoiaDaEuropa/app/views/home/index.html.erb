@@ -41,12 +41,16 @@
       <li><a href="#">Page 2</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="#"><span class="glyphicon glyphicon-search" aria-hidden="true" style="font-size:20px"></span></a></li>
 
-      <li><a href="#"><form action="/action_page.php">
-      <input type="text" name="FirstName" value="Mickey">
-      </form></a></li>
-      <li><a href="#">dwd</a></li>
+
+      <form class="navbar-form navbar-left">
+        <div class="form-group">
+          <button type="submit" class="glyphicon glyphicon-search"></button>
+        </div>
+        <input type="text" class="form-control" placeholder="Search">
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+      <li><a href="#">  <img src="<%= asset_path 'logo.png' %>"></a></li>
       <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
       <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
     </ul>
