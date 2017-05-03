@@ -55,6 +55,7 @@
       <style>
         .w3-bar {
           width: 10%!important;
+        }
         .w3-btn, .w3-button {
 
           background-color: black!important;
@@ -98,6 +99,8 @@
       <ul class="nav navbar-nav">
         <li class="active"><a href="#">PÁGINA INICIAL</a></li>
         <li><a href="#">ENCOMENDAS</a></li>
+
+
         <li><a href="#">PRODUTOS</a></li>
         <li><a href="#">RELATÓRIOS</a></li>
         <li><a href="#">UTILIZADORES</a></li>
@@ -117,6 +120,7 @@
       <ul class="nav nav-pills nav-stacked">
         <li class="active"><a href="#section1">PÁGINA INICIAL</a></li>
 
+        <li><a href="#section3">ENCOMENDAS</a></li>
         <li><a href="#section3">ENCOMENDAS</a></li>
         <li><a href="#section3">PRODUTOS</a></li>
         <li><a href="#section3">RELATÓRIOS</a></li>
@@ -139,6 +143,14 @@
 
           </div>
         </div>
+        <div class="row">
+          <div class="col-sm-3">
+            <div class="well">
+              <span class="glyphicon glyphicon-list-alt" aria-hidden="true" style="font-size:70px;text-align: center"></span>
+              <h4>Nova Encomendas</h4>
+
+            </div>
+          </div>
         <div class="col-sm-3">
           <div class="well">
             <span class="glyphicon glyphicon-folder-open" aria-hidden="true" style="font-size:70px;text-align: center"></span>
@@ -175,5 +187,5 @@
   <h1>Home</h1>
 
   <%= link_to t('my_account'), profile_index_path %>
-
+  <img src="<%= asset_path '1.png' %>">
 </div>

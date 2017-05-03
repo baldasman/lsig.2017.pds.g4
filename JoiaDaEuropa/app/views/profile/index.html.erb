@@ -1,3 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <style>
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 550px}
+
+    /* Set gray background color and 100% height */
+    .sidenav {
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+
+    /* On small screens, set height to 'auto' for the grid */
+    @media screen and (max-width: 767px) {
+      .row.content {height: auto;}
+    }
+  </style>
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#"><img src="<%= asset_path '2.png' %>"></a>
+    </div>
+
+    <ul class="nav navbar-nav navbar-right">
+
+
+      <form class="navbar-form navbar-left">
+        <div class="form-group">
+          <button type="submit" class="glyphicon glyphicon-search"></button>
+        </div>
+        <input type="text" class="form-control" placeholder="Search">
+        <select>
+          <option value="Encomendas Realizadas">Encomendas Realizadas</option>
+          <option value="Encomendas Pendentes">Encomendas Pendentes</option>
+          <option value="Encomendas Concluidas">Encomendas Concluidas</option>
+
+        </select>
+
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+
+      <li><a href="#"></span> </a></li><!--
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><img src="<%= asset_path '1.png' %>">Perfil <span class="caret"></span></a>
+-->
+      <style>
+        .w3-bar {
+          width: 10%!important;
+        }
+        .w3-btn, .w3-button {
+
+          background-color: black!important;
+        }
+      </style>
+      <div class="w3-bar w3-light-grey">
+        <div class="w3-dropdown-hover">
+          <button class="w3-button" style="text-color: white"><img src="<%= asset_path '1.png' %>">Perfil</button>
+          <div class="w3-dropdown-content w3-bar-block w3-card-4">
+            <a href="#" class="w3-bar-item w3-button">Link 1</a>
+            <a href="#" class="w3-bar-item w3-button">Link 2</a>
+            <a href="#" class="w3-bar-item w3-button">Link 3</a>
+          </div>
+        </div>
+      </div>
+      </li>
+
+
+
+
+
+
+
+
+    </ul>
+  </div>
+</nav>
+
+
+<nav class="navbar navbar-inverse visible-xs">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Logo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">PÁGINA INICIAL</a></li>
+        <li><a href="#">ENCOMENDAS</a></li>
+        <li><a href="#">PRODUTOS</a></li>
+        <li><a href="#">RELATÓRIOS</a></li>
+        <li><a href="#">UTILIZADORES</a></li>
+        <li><a href="#">ORÇAMENTOS</a></li>
+        <li><a href="#">DEFINIÇÕES</a></li>
+
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-3 sidenav hidden-xs">
+      <h2>Logo</h2>
+      <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="#section1">PÁGINA INICIAL</a></li>
+
+        <li><a href="#section3">ENCOMENDAS</a></li>
+        <li><a href="#section3">PRODUTOS</a></li>
+        <li><a href="#section3">RELATÓRIOS</a></li>
+        <li><a href="#section3">UTILIZADORES</a></li>
+        <li><a href="#section3">ORÇAMENTOS</a></li>
+        <li><a href="#section3">DEFINIÇÕES</a></li>
+      </ul><br>
+    </div>
+    <br>
+
+    <div class="col-sm-9">
+      <div class="well">
+        <h4>Inicio</h4>
+      </div>
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="well">
+            <span class="glyphicon glyphicon-list-alt" aria-hidden="true" style="font-size:70px;text-align: center"></span>
+            <h4>Nova Encomendas</h4>
+
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="well">
+            <span class="glyphicon glyphicon-folder-open" aria-hidden="true" style="font-size:70px;text-align: center"></span>
+            <h4>Encomendas Recentes</h4>
+
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="well">
+            <span class="glyphicon glyphicon-user" aria-hidden="true" style="font-size:70px;text-align: center"></span>
+            <h4>Novo Utilizador</h4>
+
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="well">
+            <span class="glyphicon glyphicon-book" aria-hidden="true" style="font-size:70px;text-align: center"></span>
+            <h4>Notas</h4>
+
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+
+
+<div class="container">
+  <h1>Home</h1>
+
+  <%= link_to t('my_account'), profile_index_path %>
+  <img src="<%= asset_path '1.png' %>">
+</div>
+
 <div class="container">
 
   <h1>YOaaaaUR PROFILE IS HERE!</h1>
