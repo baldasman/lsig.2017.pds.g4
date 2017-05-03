@@ -4,6 +4,7 @@ class HomeController < ApplicationController
 
 
     @foo = 12
+    
   end
 
 
