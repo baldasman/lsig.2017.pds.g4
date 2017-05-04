@@ -1,11 +1,15 @@
 class CreateClients < ActiveRecord::Migration[5.0]
   def change
+    #Criação tabela clientes
     create_table :clients do |t|
       t.string :name
-      t.number :phone_number
+      t.string :phone_number
       t.string :nib
-      t.string :address
+      t.text :address
       t.timestamps
     end
   end
+
+
+
 end

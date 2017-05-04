@@ -1,5 +1,6 @@
 class CreateOrders < ActiveRecord::Migration[5.0]
   def change
+    #Criação tabela encomendas
     create_table :orders do |t|
       t.string :description
       t.datetime :delivery_date
