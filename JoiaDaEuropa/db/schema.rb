@@ -12,6 +12,20 @@
 
 ActiveRecord::Schema.define(version: 20170504125503) do
 
+  create_table "client_area_order_states", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "client_area_orders", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.datetime "date"
+    t.decimal  "total",      precision: 10
+    t.integer  "state_id"
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+  end
+
   create_table "clients", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
     t.string   "phone_number"
@@ -19,6 +33,8 @@ ActiveRecord::Schema.define(version: 20170504125503) do
     t.text     "address",      limit: 65535
     t.datetime "created_at",                 null: false
     t.datetime "updated_at",                 null: false
+    t.integer  "user_id"
+    t.index ["user_id"], name: "index_clients_on_user_id", using: :btree
   end
 
   create_table "orders", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -29,6 +45,10 @@ ActiveRecord::Schema.define(version: 20170504125503) do
     t.decimal  "total_price",   precision: 10
     t.datetime "created_at",                   null: false
     t.datetime "updated_at",                   null: false
+    t.integer  "state_id"
+    t.integer  "client_id"
+    t.index ["client_id"], name: "index_orders_on_client_id", using: :btree
+    t.index ["state_id"], name: "index_orders_on_state_id", using: :btree
   end
 
   create_table "states", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
