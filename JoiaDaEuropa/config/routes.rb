@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   get '/profile/index'
 
   root to: 'home#index'
+
+
 end
