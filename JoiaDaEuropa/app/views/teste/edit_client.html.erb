@@ -1,0 +1,12 @@
+<%= form_for @account, :url => url_for(:controller => 'client_area', :action => 'save_account'), html: {class: 'container'} do |f| %>
+    <div class="form-group">
+      <label for="name"><%= t('name') %></label>
+      <%= f.text_field :name %>
+
+      <% if flash[:error] && flash[:error]['name'] %>
+          <div class="alert danger"><%= flash[:error]['name'].join('<br/>') %></div>
+      <% end %>
+    </div>
+
+    <%= f.submit t('save') %>
+<% end %>
