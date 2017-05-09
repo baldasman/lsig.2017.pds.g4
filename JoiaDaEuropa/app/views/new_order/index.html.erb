@@ -1,0 +1,22 @@
+<h2>Nova Encomenda</h2>
+
+<dd><%= t('description') %></dd>
+<dt><%= @order.description %></dt>
+
+<p/>
+
+<dd><%= t('delivery_date') %></dd>
+<dt><%= @order.delivery_date%></dt>
+
+<p/>
+
+<dd><%= t('unit_price') %></dd>
+<dt><%= @order.unit_price%></dt>
+
+<p/>
+
+<dd><%= t('quantity') %></dd>
+<dt><%= @order.quantity%></dt>
+
+<%= link_to t('edit'), new_order_edit_order_path %>
+
