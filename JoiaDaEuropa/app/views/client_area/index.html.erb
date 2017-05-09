@@ -1,22 +1,91 @@
-<h2>Área de Cliente</h2>
+<style>
+    header, footer {
+      padding: 1em;
+      color: white;
+      background-color: black;
+    }
+ </style>
 
-<dd><%= t('name') %></dd>
-<dt><%= @client.name %></dt>
 
-<p/>
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
 
-<dd><%= t('phone_number') %></dd>
-<dt><%= @client.phone_number%></dt>
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 450px}
 
-<p/>
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #000000;
+      height: 100%;
+    }
 
-<dd><%= t('nib') %></dd>
-<dt><%= @client.nib%></dt>
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
 
-<p/>
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;}
+    }
+  </style>
 
-<dd><%= t('address') %></dd>
-<dt><%= @client.address%></dt>
 
-<%= link_to t('edit'), client_area_edit_client_path %>
+<nav class="navbar navbar-inverse">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/profile/index"><img src="<%= asset_path '2.png' %>"></a>
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Search">
+      </div>
+    </div>
+
+</nav>
+
+<div class="container-fluid text-center">
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+      <p> <a href="/client_area/index">Área de Cliente</a></p>
+      <p><a href="/orders/index">Encomendas</a></p>
+    </div>
+    <div class="col-sm-8 text-left">
+      <h1>ÁREA DE CLIENTE</h1>
+      <p>Bem-Vindo à sua Área de Cliente!</p>
+
+      <ul class="list-group">
+        <li class="list-group-item">
+          <dd><%= t('name') %></dd>
+          <dt><%= @client.name %></dt>
+        </li>
+
+        <li class="list-group-item">
+          <dd><%= t('phone_number') %></dd>
+          <dt><%= @client.phone_number%></dt>
+        </li>
+
+        <li class="list-group-item">
+          <dd><%= t('nib') %></dd>
+          <dt><%= @client.nib%></dt>
+        </li>
+
+        <li class="list-group-item">
+          <dd><%= t('nib') %></dd>
+          <dt><%= @client.nib%></dt>
+        </li>
+      </ul>
+
+      <span class="label label-primary"><%= link_to t('edit'), client_area_edit_client_path %> </span>
+    </div>
+  </div>
+</div>
 
