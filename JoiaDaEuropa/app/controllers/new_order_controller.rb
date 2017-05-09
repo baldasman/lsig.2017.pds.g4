@@ -3,7 +3,7 @@ class NewOrderController < ApplicationController
 
 def index
 
-  @client = current_client.client
+  @client = current_user.client
 
 end
 
@@ -16,6 +16,7 @@ end
 def save_order
 
   @client = current_user.client
+  @order = @client
 
     #Descrição
     @order.description = params[:order][:description]
@@ -33,5 +34,6 @@ def save_order
     if @order.save
       redirect_to new_order_index_path
     end
+
   end
 end

@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get '/profile/index'
   get '/client_area/index'
   get '/new_order/index'
+  get '/pending_order/index'
 
   get '/client_area/edit_client'
   patch '/client_area/save_client'
