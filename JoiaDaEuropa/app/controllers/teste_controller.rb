@@ -1,6 +1,6 @@
 class TesteController < ApplicationController
 
-  before_action :check_account
+  before_action :check_client
 
   def index
 
@@ -20,11 +20,11 @@ class TesteController < ApplicationController
     @client.name = params[:client][:name]
 
     if @client.save
-      redirect_to client_area_index_path
+      redirect_to teste_index_path
     else
       flash[:error] = @client.errors.messages
 
-      redirect_to client_area_edit_account_path
+      redirect_to teste_edit_client_path
     end
 
   end
