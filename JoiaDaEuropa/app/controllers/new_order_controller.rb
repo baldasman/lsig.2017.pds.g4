@@ -3,7 +3,7 @@ class NewOrderController < ApplicationController
 
 def index
 
-  @order = current_client.order
+  @client = current_client.client
 
 end
 
