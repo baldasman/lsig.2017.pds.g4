@@ -1,21 +1,21 @@
 class NewOrderController < ApplicationController
 
 
+def index
 
-  def index
+  @order = current_client.order
 
+end
 
+def edit_order
 
-  end
+  @client = current_user.client
 
-  def edit_order
+end
 
+def save_order
 
-  end
-
-  def save_order
-
-
+  @client = current_user.client
 
     #Descrição
     @order.description = params[:order][:description]
@@ -33,10 +33,5 @@ class NewOrderController < ApplicationController
     if @order.save
       redirect_to new_order_index_path
     end
-
-    private
-
   end
-
-
 end
