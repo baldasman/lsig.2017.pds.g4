@@ -19,9 +19,16 @@ class ClientAreaController < ApplicationController
     @client = current_user.client
     @client.name = params[:client][:name]
 
-    #Morada
+    #Telefone
+    @client.phone_number = params[:client][:phone_number]
 
+    #Nib
+    @client.nib = params[:client][:nib]
+
+    #Morada
     @client.address = params[:client][:address]
+
+
     if @client.save
       redirect_to client_area_index_path
     else

@@ -24,6 +24,9 @@ To use a different locale, set it with `I18n.locale`:
   hello: "Hello world"
   my_account: "A minha conta"
   name: "Nome"
+  phone_number: "Telefone"
+  nib: "NIB"
+  address: "Morada"
   save: "Gravar"
   activerecord:
     errors:
