@@ -19,6 +19,9 @@ class ClientAreaController < ApplicationController
     @client = current_user.client
     @client.name = params[:client][:name]
 
+    #Morada
+
+    @client.address = params[:client][:address]
     if @client.save
       redirect_to client_area_index_path
     else
@@ -27,8 +30,7 @@ class ClientAreaController < ApplicationController
       redirect_to client_area_client_path
     end
 
-    #Morada
-    @client.address = params[:client][:address]
+
 
   end
 

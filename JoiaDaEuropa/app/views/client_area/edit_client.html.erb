@@ -1,6 +1,6 @@
 <%= form_for @client, :url => url_for(:controller => 'client_area', :action => 'save_client'), html: {class: 'container'} do |f| %>
     <div class="form-group">
-     #Nome
+
       <label for="name"><%= t('name') %></label>
       <%= f.text_field :name %>
 
@@ -8,7 +8,7 @@
           <div class="alert danger"><%= flash[:error]['name'].join('<br/>') %></div>
       <% end %>
 
-      #Morada
+
       <label for="address"><%= t('address') %></label>
       <%= f.text_field :address %>
 
@@ -19,8 +19,5 @@
     </div>
 
     <%= f.submit t('save') %>
-
-
-
 
 <% end %>
