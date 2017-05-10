@@ -21,8 +21,9 @@ end
 def save_order
 
   @order = Order.new
+
     #Descrição
-    @order.description = Order.new params[:order][:description]
+    @order.description = params[:order][:description]
 
     #Data_Entrega
     @order.delivery_date = params[:order][:delivery_date]

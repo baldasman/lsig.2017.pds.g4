@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   patch '/client_area/save_client'
 
   get '/new_order/edit_order'
-  patch '/new_order/save_order'
+  post'/new_order/save_order'
 
   root to: 'home#index'
   
