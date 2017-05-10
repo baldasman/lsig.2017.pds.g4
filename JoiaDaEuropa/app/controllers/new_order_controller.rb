@@ -1,25 +1,28 @@
 class NewOrderController < ApplicationController
 
 
+  def new
+    @order = Order.new
+  end
+
+
 def index
 
-  @client = current_user.client
+  @@order = Order.new
 
 end
 
 def edit_order
 
-  @client = current_user.client
+  @order = Order.new
 
 end
 
 def save_order
 
-  @client = current_user.client
-  @order = @client
-
+  @order = Order.new
     #Descrição
-    @order.description = params[:order][:description]
+    @order.description = Order.new params[:order][:description]
 
     #Data_Entrega
     @order.delivery_date = params[:order][:delivery_date]

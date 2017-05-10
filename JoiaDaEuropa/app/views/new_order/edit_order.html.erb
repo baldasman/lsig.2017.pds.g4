@@ -14,7 +14,7 @@
       <% end %>
 
       <label for="unit_price"><%= t('unit_price') %></label>
-      <%= f.text_field :nib %>
+      <%= f.text_field :unit_price %>
       <% if flash[:error] && flash[:error]['unit_price'] %>
           <div class="alert danger"><%= flash[:error]['unit_price'].join('<br/>') %></div>
       <% end %>
