@@ -1,18 +1,21 @@
 <style>
-  header, footer {
+  header {
     padding: 1em;
     color: white;
     background-color: black;
   }
 
-  /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-  .row.content {height: 450px}
+  input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #555;
+    outline: none;
+  }
 
-  /* Set gray background color and 100% height */
-  .sidenav {
-    padding-top: 20px;
-    background-color: #000000;
-    height: 100%;
+  input[type=text]:focus {
+    background-color: ghostwhite;
   }
 </style>
 
@@ -23,7 +26,7 @@
 <br/> <br/>
 
 <%= form_for @client, :url => url_for(:controller => 'client_area', :action => 'save_client'), html: {class: 'container'} do |f| %>
-    <div class="form-group" align="center">
+    <div class="form-group">
 
       <label for="name"><%= t('name') %></label>
       <%= f.text_field :name %>
