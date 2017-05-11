@@ -13,27 +13,39 @@
     background-color: black;
     height: 100%;
   }
+
+  a:link {
+
+  }
 </style>
 
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="/profile/index"><img src="<%= asset_path '2.png' %>" ></a>
+<nav class="navbar ">
+  <a class="navbar-brand" href="/profile/index"><img src="<%= asset_path '2.png' %>"></a>
+  <form class="navbar-form navbar-right">
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="Search">
     </div>
-    <form class="navbar-form navbar">
-      <div class="form-group">
-        <input type="text" class="form-control" placeholder="Search">
-      </div>
-    </form>
+    <button type="submit" class="btn btn-default">Procurar</button>
+  </form>
   </div>
 </nav>
 
-<div class="container-fluid text-center">
+<div class="container-fluid text-left">
   <div class="row content">
     <div class="col-sm-2 sidenav">
-      <br> <a href="/client_area/index">Área de Cliente</a></br>
-      <br><a href="/new_order/index">Encomendas</a></br>
+      <br><a href="/client_area/index">Área de Cliente</a></br>
+      <br>
+      <div class="w3-dropdown-hover">
+        <a href="#">Encomendas ></a>
+        <div class="w3-dropdown-content w3-bar-block w3-card-4">
+          <a href="/pending_order/index" class="w3-bar-item w3-button">Encomendas Pendentes</a>
+          <a href="#" class="w3-bar-item w3-button">Encomendas para Revisão</a>
+          <a href="#" class="w3-bar-item w3-button">Encomendas Concluídas</a>
+          <a href="/new_order/index" class="w3-bar-item w3-button">Nova Encomenda</a>
+        </div>
+      </div>
     </div>
+
     <div class="col-sm-8 text-left">
       <h1>ENCOMENDAS PENDENTES</h1>
       </br>

@@ -4,8 +4,5 @@ class PendingOrderController < ApplicationController
 
   end
 
-  if
-
-  end
 end
 

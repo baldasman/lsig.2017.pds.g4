@@ -32,3 +32,12 @@ en:
   unit_price: "Preço Unitário"
   quantity: "Quantidade"
   save: "Guardar"
+  submit: "Submeter"
+  edit: "Editar"
+  activerecord:
+      errors:
+        models:
+          account:
+            attributes:
+              name:
+                blank: "O nome não pode estar vazio"
