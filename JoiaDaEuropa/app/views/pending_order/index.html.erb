@@ -1,17 +1,16 @@
 <style>
-  header, footer {
-    padding: 1em;
-    color: white;
+  header {
+    padding: 5px;
     background-color: black;
   }
 
-  /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
   .row.content {height: 450px}
 
-  /* Set gray background color and 100% height */
+  .navbar {background-color: black;}
+
   .sidenav {
-    padding-top: 20px;
-    background-color: #000000;
+    padding-top: 30px;
+    background-color: black;
     height: 100%;
   }
 </style>
@@ -19,7 +18,7 @@
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="/profile/index"><img src="<%= asset_path '2.png' %>"></a>
+      <a class="navbar-brand" href="/profile/index"><img src="<%= asset_path '2.png' %>" ></a>
     </div>
     <form class="navbar-form navbar">
       <div class="form-group">

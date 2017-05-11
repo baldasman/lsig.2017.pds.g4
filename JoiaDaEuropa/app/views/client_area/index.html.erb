@@ -1,33 +1,28 @@
 <style>
-  header, footer {
-    padding: 1em;
-    color: white;
+  header {
+    padding: 5px;
     background-color: black;
   }
 
   .row.content {height: 450px}
 
+  .navbar {background-color: black;}
+
   .sidenav {
-    padding-top: 20px;
-    background-color: #000000;
+    padding-top: 30px;
+    background-color: black;
     height: 100%;
   }
-    .container {
-      width: 100% !important;
-    }
 </style>
 
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="/profile/index"><img src="<%= asset_path '2.png' %>"></a>
+<nav class="navbar">
+  <a class="navbar-brand" href="/profile/index"><img src="<%= asset_path '2.png' %>"></a>
+  <form class="navbar-form navbar-left">
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="Search">
     </div>
-    <form class="navbar-form navbar-right">
-      <div class="form-group">
-        <input type="text" class="form-control" placeholder="Search">
-      </div>
-      <button type="submit" class="btn btn-default">Submit</button>
-    </form>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
   </div>
 </nav>
 
