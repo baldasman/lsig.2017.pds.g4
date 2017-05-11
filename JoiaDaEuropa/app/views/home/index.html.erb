@@ -1,122 +1,63 @@
-#dashboard principal
+<style>
+  header {
+    padding: 5px;
+    background-color: black;
+  }
 
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#"><img src="<%= asset_path '2.png' %>"></a>
+  .row.content {height: 450px}
+
+  .navbar {background-color: black;}
+
+  .sidenav {
+    padding-top: 30px;
+    background-color: black;
+    height: 100%;
+  }
+
+  a:link {
+
+  }
+</style>
+
+<nav class="navbar ">
+  <a class="navbar-brand" href="/profile/index"><img src="<%= asset_path '2.png' %>"></a>
+  <form class="navbar-form navbar-right">
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="Search">
     </div>
+    <button type="submit" class="btn btn-default">Procurar</button>
+  </form>
+  </div>
+</nav>
 
-    <ul class="nav navbar-nav navbar-right">
-
-      <form class="navbar-form navbar-left">
-        <div class="form-group">
-          <button type="submit" class="glyphicon glyphicon-search"></button>
-        </div>
-        <input type="text" class="form-control" placeholder="Search">
-        <select>
-          <option value="Encomendas Realizadas">Encomendas  Realizadas</option>
-          <option value="Encomendas Pendentes">Encomendas Pendentes</option>
-          <option value="Encomendas Concluidas">Encomendas Concluidas</option>
-
-        </select>
-
-        <button type="submit" class="btn btn-default">Submit</button>
-      </form>
-
-      <li><a href="#"></span> </a></li><!--
-      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href=l"#"><img src="<%= asset_path '1.png' %>">Perfil <span class="caret"></span></a>
--->
-
-      <div class="w3-bar w3-light-grey">
-        <div class="w3-dropdown-hover">
-          <button class="w3-button" style="text-color: white"><img src="<%= asset_path '1.png' %>">Perfil</button>
-          <div class="w3-dropdown-content w3-bar-block w3-card-4">
-            <a href="#" class="w3-bar-item w3-button">Link 1</a>
-            <a href="#" class="w3-bar-item w3-button">Link 2</a>
-            <a href="#" class="w3-bar-item w3-button">Link 3</a>
-          </div>
+<div class="container-fluid text-left">
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+      <br><a href="/client_area/index">Área de Cliente</a></br>
+      <br>
+      <div class="w3-dropdown-hover">
+        <a href="#">Encomendas ></a>
+        <div class="w3-dropdown-content w3-bar-block w3-card-4">
+          <a href="/pending_order/index" class="w3-bar-item w3-button">Encomendas Pendentes</a>
+          <a href="#" class="w3-bar-item w3-button">Encomendas para Revisão</a>
+          <a href="#" class="w3-bar-item w3-button">Encomendas Concluídas</a>
+          <a href="/new_order/index" class="w3-bar-item w3-button">Nova Encomenda</a>
         </div>
       </div>
-      </li>
-
-
-
-
-
-
-
-
-    </ul>
-  </div>
-</nav>
-
-
-<nav class="navbar navbar-inverse visible-xs">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Logo</a>
     </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">PÁGINA INICIAL</a></li>
-        <li><a href="#">ENCOMENDAS</a></li>
-
-
-        <li><a href="#">PRODUTOS</a></li>
-        <li><a href="#">RELATÓRIOS</a></li>
-        <li><a href="#">UTILIZADORES</a></li>
-        <li><a href="#">ORÇAMENTOS</a></li>
-        <li><a href="#">DEFINIÇÕES</a></li>
-
-
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<div class="container-fluid">
-  <div class="row content">
-    <div class="col-sm-3 sidenav hidden-xs">
-      <h2>Logo</h2>
-      <ul class="nav nav-pills nav-stacked">
-        <li class="active"><a href="#section1">PÁGINA INICIAL</a></li>
-
-        <li><a href="#section3">ENCOMENDAS</a></li>
-        <li><a href="#section3">ENCOMENDAS</a></li>
-        <li><a href="#section3">PRODUTOS</a></li>
-        <li><a href="#section3">RELATÓRIOS</a></li>
-        <li><a href="#section3">UTILIZADORES</a></li>
-        <li><a href="#section3">ORÇAMENTOS</a></li>
-        <li><a href="#section3">DEFINIÇÕES</a></li>
-      </ul><br>
-    </div>
-    <br>
 
     <div class="col-sm-9">
       <div class="well">
         <h4>Inicio</h4>
       </div>
       <div class="row">
-        <div class="col-sm-2">
+        <div class="col-sm-3">
           <div class="well">
             <span class="glyphicon glyphicon-list-alt" aria-hidden="true" style="font-size:70px;text-align: center"></span>
             <h4>Nova Encomendas</h4>
 
           </div>
         </div>
-        <div class="row">
-          <div class="col-sm-2">
-            <div class="well">
-              <span class="glyphicon glyphicon-list-alt" aria-hidden="true" style="font-size:70px;text-align: center"></span>
-              <h4>Nova Encomendas</h4>
-
-            </div>
-          </div>
         <div class="col-sm-3">
           <div class="well">
             <span class="glyphicon glyphicon-folder-open" aria-hidden="true" style="font-size:70px;text-align: center"></span>
@@ -124,14 +65,14 @@
 
           </div>
         </div>
-        <div class="col-sm-2">
+        <div class="col-sm-3">
           <div class="well">
             <span class="glyphicon glyphicon-user" aria-hidden="true" style="font-size:70px;text-align: center"></span>
             <h4>Novo Utilizador</h4>
 
           </div>
         </div>
-        <div class="col-sm-2">
+        <div class="col-sm-3">
           <div class="well">
             <span class="glyphicon glyphicon-book" aria-hidden="true" style="font-size:70px;text-align: center"></span>
             <h4>Notas</h4>
@@ -140,15 +81,7 @@
         </div>
       </div>
 
-      </div>
+
     </div>
   </div>
-</div>
-
-
-<div class="container">
-  <h1>Home</h1>
-
-  <%= link_to t('my_account'), profile_index_path %>
-  <img src="<%= asset_path '1.png' %>">
 </div>
