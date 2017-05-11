@@ -14,9 +14,12 @@ class ClientAreaController < ApplicationController
 
   end
 
+
   def save_client
-    #Nome
+
     @client = current_user.client
+
+    #Nome
     @client.name = params[:client][:name]
 
     #Telefone
