@@ -36,6 +36,62 @@
   .container-fluid {
     padding-top: 180px;
   }
+    /*modal*/
+
+  body {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+  }
+
+  .overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+  }
+
+  .overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+
+  .overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+  }
+
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
+
+  @media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+  }
 </style>
 
 <nav class="navbar navbar-default navbar-fixed-top">
@@ -151,6 +207,74 @@
   </div>
 </div>
 
+
+
+
+<!modal-->
+
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="container-fluid bg-grey" id="missao">
+    <div class="row">
+      <div class="col-sm-4" id="qim2" >
+        <img class="img-responsive" src="<%= asset_path '3.jpg' %>" width="1893" height="697">
+      </div>
+      <div class="col-sm-8" > <!--id="m"-->
+        <h2>Feira na Alemanha 2016</h2><br>
+        <h4 id="m4">
+          Uma empresa não se define pelo nome que tem, define-se pelo esforço e trabalho despendido por todos aqueles que fazem parte dela, os recursos humanos, fornecedores, clientes e todos os outros colaboradores são necessários para o sucesso de qualquer empresa, e Jóia da Europa conta com a ajuda de todos.
+
+
+          A nossa missão centraliza-se em:
+
+          Atender às necessidades de todos os nossos clientes, aperfeiçoando sempre os nossos produtos e serviços.
+
+          Fornecer produtos de tal qualidade que os nossos clientes se sintam satisfeitos, e os nossos empregados e parceiros de negócios se beneficiem com nosso êxito.
+
+          Oferecer soluções para qualquer ideia, contando com a nossa assistência.
+
+          Apostar sempre em tecnologias inovadoras.
+        </h4>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+
+<script>
+    function openNav() {
+        document.getElementById("myNav").style.width = "100%";
+    }
+
+    function closeNav() {
+        document.getElementById("myNav").style.width = "0%";
+    }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- Container (Portfolio Section) -->
 <div id="portfolio" class="container-fluid text-center bg-grey">
 
@@ -174,3 +298,4 @@
   </div>
 
   <!-- Add Google Maps -->
+</div>
