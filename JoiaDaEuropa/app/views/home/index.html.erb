@@ -1,87 +1,176 @@
 <style>
-  header {
-    padding: 5px;
-    background-color: black;
+  /*quem somos*/
+  #q{
+    padding-right: 60px;
+    padding-top: 111px;
+    padding-left: 60px;
   }
 
-  .row.content {height: 450px}
-
-  .navbar {background-color: black;}
-
-  .sidenav {
-    padding-top: 30px;
-    background-color: black;
-    height: 100%;
+  #tq{
+    text-align: justify;
+    line-height: 2;
+  }
+  #qim{
+    padding-left: 10px;
+    padding-top: 215px;
   }
 
-  a:link {
+  /*missão*/
+  #missao{
+    padding-right: 60px;
+    padding-top: 257px;
+  }
 
+  #m4{
+    text-align: justify;
+    line-height: 2;
+  }
+  #qim2{
+    padding-right: 50px;
+    padding-top: 100px;
+    padding-left: 100px;
+  }
+
+  /*noticia*/
+
+  .container-fluid {
+    padding-top: 180px;
   }
 </style>
 
-<nav class="navbar ">
-  <a class="navbar-brand" href="/profile/index"><img src="<%= asset_path '2.png' %>"></a>
-  <form class="navbar-form navbar-right">
-    <div class="form-group">
-      <input type="text" class="form-control" placeholder="Search">
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/home/index"><img src="<%= asset_path '2.png' %>"></a>
     </div>
-    <button type="submit" class="btn btn-default">Procurar</button>
-  </form>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/profile/index">PERFIL</a></li>
+        <li><a href="#about">QUEM SOMOS</a></li>
+        <li><a href="#missao">MISSÃO</a></li>
+        <li><a href="#services">NOTICIAS</a></li>
+        <li><a href="#contact">CONTACTOS</a></li>
+        <li><a href="/users/sign_in">LOGIN</a></li>
+      </ul>
+    </div>
   </div>
 </nav>
+<img class="img-responsive" src="<%= asset_path '3.jpg' %>" width="1893" height="697">
 
-<div class="container-fluid text-left">
-  <div class="row content">
-    <div class="col-sm-2 sidenav">
-      <br><a href="/client_area/index">Área de Cliente</a></br>
-      <br>
-      <div class="w3-dropdown-hover">
-        <a href="#">Encomendas ></a>
-        <div class="w3-dropdown-content w3-bar-block w3-card-4">
-          <a href="/pending_order/index" class="w3-bar-item w3-button">Encomendas Pendentes</a>
-          <a href="#" class="w3-bar-item w3-button">Encomendas para Revisão</a>
-          <a href="#" class="w3-bar-item w3-button">Encomendas Concluídas</a>
-          <a href="/new_order/index" class="w3-bar-item w3-button">Nova Encomenda</a>
-        </div>
-      </div>
+
+<div id="q" class="container-fluid">
+  <div class="row" id="qr">
+    <div class="col-sm-8" id="q">
+      <h2 class="teste">QUEM SOMOS</h2><br>
+      <h4 id="tq"> Em 2006, ano de novas oportunidades e desafios, António Bento Da Costa Ferreira inicia-se por conta própria, criando a empresa Jóia Da Europa, que se dedica inteiramente à fabricação de calçado.
+
+        Jóia da Europa, é mais um dos casos de sucesso nacional e internacional, isto porque a inovação e a qualidade dos seus produtos é difícil de encontrar. Lentamente, ano após ano, esta empresa tem crescido, e não põe de parte qualquer desafio vindo à sua direcção. Para esta empresa tudo é possível.
+
+        Ao longo destes anos, Jóia da Europa tem feito apostas ao nível de novas tecnologias, tanto em máquinas, como em programas informáticos, o que faz com que exista uma margem bastante reduzida de erro, e permite à empresa dar resposta a todas as propostas que lhe sejam submetidas, nos prazos subordinados.
+
+        A qualidade dos nossos serviços advém também do valor que têm as matérias – primas seleccionadas para a nossa fabricação. Em todas as épocas, os nossos clientes podem contar com uma colecção completa e diferente.
+
+
+        Se procura qualidade, inovação, transformação, diferenciação de produtos, venha conhecer a nossa empresa, porque aqui encontra tudo o que precisa.</h4><br>
+
+
+    </div>
+    <div class="col-sm-4" id="qim">
+      <img class="img-responsive" src="<%= asset_path '3.jpg' %>" width="1893" height="697">
+
     </div>
 
-    <div class="col-sm-9">
-      <div class="well">
-        <h4>Inicio</h4>
-      </div>
-      <div class="row">
-        <div class="col-sm-3">
-          <div class="well">
-            <span class="glyphicon glyphicon-list-alt" aria-hidden="true" style="font-size:70px;text-align: center"></span>
-            <h4>Nova Encomendas</h4>
 
-          </div>
-        </div>
-        <div class="col-sm-3">
-          <div class="well">
-            <span class="glyphicon glyphicon-folder-open" aria-hidden="true" style="font-size:70px;text-align: center"></span>
-            <h4>Encomendas Recentes</h4>
+  </div>
+</div>
 
-          </div>
-        </div>
-        <div class="col-sm-3">
-          <div class="well">
-            <span class="glyphicon glyphicon-user" aria-hidden="true" style="font-size:70px;text-align: center"></span>
-            <h4>Novo Utilizador</h4>
-
-          </div>
-        </div>
-        <div class="col-sm-3">
-          <div class="well">
-            <span class="glyphicon glyphicon-book" aria-hidden="true" style="font-size:70px;text-align: center"></span>
-            <h4>Notas</h4>
-
-          </div>
-        </div>
-      </div>
+<div class="container-fluid bg-grey" id="missao">
+  <div class="row">
+    <div class="col-sm-4" id="qim2" >
+      <img class="img-responsive" src="<%= asset_path '3.jpg' %>" width="1893" height="697">
+    </div>
+    <div class="col-sm-8" > <!--id="m"-->
+      <h2>MISSÃO</h2><br>
+      <h4 id="m4">
+        Uma empresa não se define pelo nome que tem, define-se pelo esforço e trabalho despendido por todos aqueles que fazem parte dela, os recursos humanos, fornecedores, clientes e todos os outros colaboradores são necessários para o sucesso de qualquer empresa, e Jóia da Europa conta com a ajuda de todos.
 
 
+        A nossa missão centraliza-se em:
+
+        Atender às necessidades de todos os nossos clientes, aperfeiçoando sempre os nossos produtos e serviços.
+
+        Fornecer produtos de tal qualidade que os nossos clientes se sintam satisfeitos, e os nossos empregados e parceiros de negócios se beneficiem com nosso êxito.
+
+        Oferecer soluções para qualquer ideia, contando com a nossa assistência.
+
+        Apostar sempre em tecnologias inovadoras.
+      </h4>
     </div>
   </div>
 </div>
+
+<!-- Container (Services Section) -->
+<div id="services" class="container-fluid text-center">
+  <h2>NOTICIAS</h2>
+  <h4>What we offer</h4>
+  <br>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-off logo-small"></span>
+      <h4>POWER</h4>
+      <p>Lorem ipsum dolor sit amet..</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-heart logo-small"></span>
+      <h4>LOVE</h4>
+      <p>Lorem ipsum dolor sit amet..</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-lock logo-small"></span>
+      <h4>JOB DONE</h4>
+      <p>Lorem ipsum dolor sit amet..</p>
+    </div>
+  </div>
+  <br><br>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-leaf logo-small"></span>
+
+      <p>Lorem ipsum dolor sit amet..</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-certificate logo-small"></span>
+      <h4>CERTIFIED</h4>
+      <p>Lorem ipsum dolor sit amet..</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-wrench logo-small"></span>
+      <h4 style="color:#303030;">HARD WORK</h4>
+      <p>Lorem ipsum dolor sit amet..</p>
+    </div>
+  </div>
+</div>
+
+<!-- Container (Portfolio Section) -->
+<div id="portfolio" class="container-fluid text-center bg-grey">
+
+  <!-- Container (Contact Section) -->
+  <div id="contact" class="container-fluid bg-grey">
+    <h2 class="text-center">CONTACTOS</h2>
+    <div class="row">
+      <div class="col-sm-5">
+
+        <p><span class="glyphicon glyphicon-map-marker"></span> RUA SANTA MARIA, 437<BR>
+          BARROSAS<BR>
+          4650-139 IDÃES FLG</p>
+        <p><span class="glyphicon glyphicon-phone"></span> +00 1515151515</p>
+        <p><span class="glyphicon glyphicon-envelope"></span> myemail@something.com</p>
+      </div>
+      <div class="col-sm-7 slideanim">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2995.8244340537403!2d-8.26794114893171!3d41.33443090713743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2465070c1b29cf%3A0x98bbd8be12c4332!2sJ%C3%B3ia+Da+Europa+-+Unipessoal%2C+Lda.!5e0!3m2!1spt-PT!2spt!4v1494173733000" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Add Google Maps -->

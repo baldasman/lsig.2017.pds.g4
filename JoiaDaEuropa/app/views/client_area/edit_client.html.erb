@@ -1,8 +1,17 @@
 <style>
   header {
-    padding: 1em;
-    color: white;
+    padding: 5px;
     background-color: black;
+  }
+
+  .row.content {height: 450px}
+
+  .navbar {background-color: black;}
+
+  .sidenav {
+    padding-top: 30px;
+    background-color: black;
+    height: 150%;
   }
 
   input[type=text] {
@@ -18,6 +27,17 @@
     background-color: ghostwhite;
   }
 </style>
+
+<nav class="navbar ">
+  <a class="navbar-brand" href="/home/index"><img src="<%= asset_path '2.png' %>"></a>
+  <form class="navbar-form navbar-right">
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="Search">
+    </div>
+    <button type="submit" class="btn btn-default">Procurar</button>
+  </form>
+  </div>
+</nav>
 
 <br/>
 
