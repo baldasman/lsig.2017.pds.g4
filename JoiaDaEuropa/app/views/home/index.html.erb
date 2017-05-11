@@ -34,10 +34,11 @@
   /*noticia*/
 
   .container-fluid {
-    padding-top: 180px;
+    padding-top: 24px;
   }
-    /*modal*/
 
+
+    /*modal*/
   body {
     margin: 0;
     font-family: 'Lato', sans-serif;
@@ -92,6 +93,15 @@
       right: 35px;
     }
   }
+  /*linha*/
+  #linha{
+    padding-top: 260px;
+  }
+
+    /*contactos*/
+    #contact{
+    background-color: black;
+    }
 </style>
 
 <nav class="navbar navbar-default navbar-fixed-top">
@@ -164,48 +174,45 @@
     </div>
   </div>
 </div>
+<div class="row" id="linha">
 
-<!-- Container (Services Section) -->
+</div><
+
+<!-- noticias -->
 <div id="services" class="container-fluid text-center">
   <h2>NOTICIAS</h2>
-  <h4>What we offer</h4>
-  <br>
-  <div class="row slideanim">
-    <div class="col-sm-4">
-      <div class="container">
 
-        <button type="button" class="btn btn-primary btn-lg"  onclick="openNav()">Feira na Alemanha 2016</button>
-        <!--<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>-->
-
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <span class="glyphicon glyphicon-heart logo-small"></span>
-      <h4>LOVE</h4>
-      <p>Lorem ipsum dolor sit amet..</p>
-    </div>
-    <div class="col-sm-4">
-      <span class="glyphicon glyphicon-lock logo-small"></span>
-      <h4>JOB DONE</h4>
-      <p>Lorem ipsum dolor sit amet..</p>
-    </div>
-  </div>
   <br><br>
   <div class="row slideanim">
     <div class="col-sm-4">
-      <span class="glyphicon glyphicon-leaf logo-small"></span>
+      <!--modal1-->
+      <button type="button" class="btn btn-primary btn-lg"  onclick="openNav()">Feira na Alemanha 2016</button>
+    </div>
+    <div class="col-sm-4">
+      <!--modal2-->
+      <button type="button" class="btn btn-primary btn-lg"  onclick="openNav2()">Feira na Alemanha 2016</button>
+    </div>
+    <div class="col-sm-4">
+      <!--modal3-->
+      <button type="button" class="btn btn-primary btn-lg"  onclick="openNav3()">Feira na Alemanha 2016</button>
+    </div>
+  </div>
 
-      <p>Lorem ipsum dolor sit amet..</p>
+  <br>
+  <br>
+<!--segunda fila de botões-->
+  <div class="row slideanim">
+  <div class="col-sm-4">
+    <!--modal4-->
+    <button type="button" class="btn btn-primary btn-lg"  onclick="openNav4()">Feira na Alemanha 2016</button>
+  </div>
+   <div class="col-sm-4">
+     <!--modal5-->
+     <button type="button" class="btn btn-primary btn-lg"  onclick="openNav5()">Feira na Alemanha 2016</button>
     </div>
     <div class="col-sm-4">
-      <span class="glyphicon glyphicon-certificate logo-small"></span>
-      <h4>CERTIFIED</h4>
-      <p>Lorem ipsum dolor sit amet..</p>
-    </div>
-    <div class="col-sm-4">
-      <span class="glyphicon glyphicon-wrench logo-small"></span>
-      <h4 style="color:#303030;">HARD WORK</h4>
-      <p>Lorem ipsum dolor sit amet..</p>
+      <!--modal6-->
+      <button type="button" class="btn btn-primary btn-lg"  onclick="openNav6()">Feira na Alemanha 2016</button>
     </div>
   </div>
 </div>
@@ -213,7 +220,9 @@
 
 
 
-<!modal-->
+
+
+<!modal1-->
 
 <div id="myNav" class="overlay">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -244,7 +253,151 @@
 </div>
 
 
+<!--modal 2-->
+<div id="myNav2" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav2()">&times;</a>
+  <div class="container-fluid bg-grey" id="missao">
+    <div class="row">
+      <div class="col-sm-4" id="qim2" >
+        <img class="img-responsive" src="<%= asset_path '3.jpg' %>" width="1893" height="697">
+      </div>
+      <div class="col-sm-8" > <!--id="m"-->
+        <h2>Feira na Alemanha 2016</h2><br>
+        <h4 id="m4">
+          Uma empresa não se define pelo nome que tem, define-se pelo esforço e trabalho despendido por todos aqueles que fazem parte dela, os recursos humanos, fornecedores, clientes e todos os outros colaboradores são necessários para o sucesso de qualquer empresa, e Jóia da Europa conta com a ajuda de todos.
 
+
+          A nossa missão centraliza-se em:
+
+          Atender às necessidades de todos os nossos clientes, aperfeiçoando sempre os nossos produtos e serviços.
+
+          Fornecer produtos de tal qualidade que os nossos clientes se sintam satisfeitos, e os nossos empregados e parceiros de negócios se beneficiem com nosso êxito.
+
+          Oferecer soluções para qualquer ideia, contando com a nossa assistência.
+
+          Apostar sempre em tecnologias inovadoras.
+        </h4>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--modal 3-->
+<div id="myNav3" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav3()">&times;</a>
+  <div class="container-fluid bg-grey" id="missao">
+    <div class="row">
+      <div class="col-sm-4" id="qim2" >
+        <img class="img-responsive" src="<%= asset_path '3.jpg' %>" width="1893" height="697">
+      </div>
+      <div class="col-sm-8" > <!--id="m"-->
+        <h2>Feira na Alemanha 2016</h2><br>
+        <h4 id="m4">
+          Uma empresa não se define pelo nome que tem, define-se pelo esforço e trabalho despendido por todos aqueles que fazem parte dela, os recursos humanos, fornecedores, clientes e todos os outros colaboradores são necessários para o sucesso de qualquer empresa, e Jóia da Europa conta com a ajuda de todos.
+
+
+          A nossa missão centraliza-se em:
+
+          Atender às necessidades de todos os nossos clientes, aperfeiçoando sempre os nossos produtos e serviços.
+
+          Fornecer produtos de tal qualidade que os nossos clientes se sintam satisfeitos, e os nossos empregados e parceiros de negócios se beneficiem com nosso êxito.
+
+          Oferecer soluções para qualquer ideia, contando com a nossa assistência.
+
+          Apostar sempre em tecnologias inovadoras.
+        </h4>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--modal 4-->
+<div id="myNav4" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav4()">&times;</a>
+  <div class="container-fluid bg-grey" id="missao">
+    <div class="row">
+      <div class="col-sm-4" id="qim2" >
+        <img class="img-responsive" src="<%= asset_path '3.jpg' %>" width="1893" height="697">
+      </div>
+      <div class="col-sm-8" > <!--id="m"-->
+        <h2>Feira na Alemanha 20164</h2><br>
+        <h4 id="m4">
+          Uma empresa não se define pelo nome que tem, define-se pelo esforço e trabalho despendido por todos aqueles que fazem parte dela, os recursos humanos, fornecedores, clientes e todos os outros colaboradores são necessários para o sucesso de qualquer empresa, e Jóia da Europa conta com a ajuda de todos.
+
+
+          A nossa missão centraliza-se em:
+
+          Atender às necessidades de todos os nossos clientes, aperfeiçoando sempre os nossos produtos e serviços.
+
+          Fornecer produtos de tal qualidade que os nossos clientes se sintam satisfeitos, e os nossos empregados e parceiros de negócios se beneficiem com nosso êxito.
+
+          Oferecer soluções para qualquer ideia, contando com a nossa assistência.
+
+          Apostar sempre em tecnologias inovadoras.
+        </h4>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--modal 5-->
+<div id="myNav5" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav5()">&times;</a>
+  <div class="container-fluid bg-grey" id="missao">
+    <div class="row">
+      <div class="col-sm-4" id="qim2" >
+        <img class="img-responsive" src="<%= asset_path '3.jpg' %>" width="1893" height="697">
+      </div>
+      <div class="col-sm-8" > <!--id="m"-->
+        <h2>Feira na Alemanha 20164</h2><br>
+        <h4 id="m4">
+          Uma empresa não se define pelo nome que tem, define-se pelo esforço e trabalho despendido por todos aqueles que fazem parte dela, os recursos humanos, fornecedores, clientes e todos os outros colaboradores são necessários para o sucesso de qualquer empresa, e Jóia da Europa conta com a ajuda de todos.
+
+
+          A nossa missão centraliza-se em:
+
+          Atender às necessidades de todos os nossos clientes, aperfeiçoando sempre os nossos produtos e serviços.
+
+          Fornecer produtos de tal qualidade que os nossos clientes se sintam satisfeitos, e os nossos empregados e parceiros de negócios se beneficiem com nosso êxito.
+
+          Oferecer soluções para qualquer ideia, contando com a nossa assistência.
+
+          Apostar sempre em tecnologias inovadoras.
+        </h4>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--modal 6-->
+<div id="myNav6" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav6()">&times;</a>
+  <div class="container-fluid bg-grey" id="missao">
+    <div class="row">
+      <div class="col-sm-4" id="qim2" >
+        <img class="img-responsive" src="<%= asset_path '3.jpg' %>" width="1893" height="697">
+      </div>
+      <div class="col-sm-8" > <!--id="m"-->
+        <h2>Feira na Alemanha 20164</h2><br>
+        <h4 id="m4">
+          Uma empresa não se define pelo nome que tem, define-se pelo esforço e trabalho despendido por todos aqueles que fazem parte dela, os recursos humanos, fornecedores, clientes e todos os outros colaboradores são necessários para o sucesso de qualquer empresa, e Jóia da Europa conta com a ajuda de todos.
+
+
+          A nossa missão centraliza-se em:
+
+          Atender às necessidades de todos os nossos clientes, aperfeiçoando sempre os nossos produtos e serviços.
+
+          Fornecer produtos de tal qualidade que os nossos clientes se sintam satisfeitos, e os nossos empregados e parceiros de negócios se beneficiem com nosso êxito.
+
+          Oferecer soluções para qualquer ideia, contando com a nossa assistência.
+
+          Apostar sempre em tecnologias inovadoras.
+        </h4>
+      </div>
+    </div>
+  </div>
+</div>
+<!--script do modal1-->
 <script>
     function openNav() {
         document.getElementById("myNav").style.width = "100%";
@@ -252,6 +405,65 @@
 
     function closeNav() {
         document.getElementById("myNav").style.width = "0%";
+    }
+</script>
+<!--script do modal2-->
+<script>
+
+    function openNav2() {
+        document.getElementById("myNav2").style.width = "100%";
+    }
+
+    function closeNav2() {
+        document.getElementById("myNav2").style.width = "0%";
+    }
+</script>
+
+<!--script do modal3-->
+<script>
+
+    function openNav3() {
+        document.getElementById("myNav3").style.width = "100%";
+    }
+
+    function closeNav3() {
+        document.getElementById("myNav3").style.width = "0%";
+    }
+</script>
+
+<!--script do modal4-->
+<script>
+
+    function openNav4() {
+        document.getElementById("myNav4").style.width = "100%";
+    }
+
+    function closeNav4() {
+        document.getElementById("myNav4").style.width = "0%";
+    }
+</script>
+
+<!--script do modal5-->
+<script>
+
+    function openNav5() {
+        document.getElementById("myNav5").style.width = "100%";
+    }
+
+    function closeNav5() {
+        document.getElementById("myNav5").style.width = "0%";
+    }
+</script>
+
+<!--script do modal6-->
+<script>
+
+    function openNav6() {
+        document.getElementById("myNav6").style.width = "100%";
+    }
+
+    function closeNav6() {
+        document.getElementById("myNav6").style.width = "0%";
     }
 </script>
 
@@ -264,20 +476,14 @@
 
 
 
+<div class="row" id="linha">
+
+</div><
 
 
 
 
-
-
-
-
-
-
-
-
-
-<!-- Container (Portfolio Section) -->
+<!-- contactos -->
 <div id="portfolio" class="container-fluid text-center bg-grey">
 
   <!-- Container (Contact Section) -->
@@ -289,8 +495,8 @@
         <p><span class="glyphicon glyphicon-map-marker"></span> RUA SANTA MARIA, 437<BR>
           BARROSAS<BR>
           4650-139 IDÃES FLG</p>
-        <p><span class="glyphicon glyphicon-phone"></span> +00 1515151515</p>
-        <p><span class="glyphicon glyphicon-envelope"></span> myemail@something.com</p>
+        <p><span class="glyphicon glyphicon-phone"></span> +351 255 312 443 | Fax: +351 255 312 444</p>
+        <p><span class="glyphicon glyphicon-envelope"></span> geral@joiadaeuropa.com</p>
       </div>
       <div class="col-sm-7 slideanim">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2995.8244340537403!2d-8.26794114893171!3d41.33443090713743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2465070c1b29cf%3A0x98bbd8be12c4332!2sJ%C3%B3ia+Da+Europa+-+Unipessoal%2C+Lda.!5e0!3m2!1spt-PT!2spt!4v1494173733000" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
