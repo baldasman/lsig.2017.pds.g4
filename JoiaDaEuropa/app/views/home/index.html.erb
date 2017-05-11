@@ -36,8 +36,10 @@
   .container-fluid {
     padding-top: 24px;
   }
-
-
+/*contactos*/
+  #contact {
+    color: white;
+  }
     /*modal*/
   body {
     margin: 0;
@@ -102,6 +104,11 @@
     #contact{
     background-color: black;
     }
+    /*login*/
+  #caixa{
+    width: 70%;
+  }
+
 </style>
 
 <nav class="navbar navbar-default navbar-fixed-top">
@@ -117,6 +124,8 @@
         <li><a href="#services">NOTICIAS</a></li>
         <li><a href="#contact">CONTACTOS</a></li>
         <li><a href="/users/sign_in">LOGIN</a></li>
+        <li><a onclick="openNavl()">teste</a></li>
+
       </ul>
     </div>
   </div>
@@ -124,8 +133,8 @@
 <img class="img-responsive" src="<%= asset_path '3.jpg' %>" width="1893" height="697">
 
 
-<div id="q" class="container-fluid">
-  <div class="row" id="qr">
+<div id="q" class="container-fluid" style="background-image: url(3.jpg);">
+    <div class="row" id="qr">
     <div class="col-sm-8" id="q">
       <h2 class="teste">QUEM SOMOS</h2><br>
       <h4 id="tq"> Em 2006, ano de novas oportunidades e desafios, António Bento Da Costa Ferreira inicia-se por conta própria, criando a empresa Jóia Da Europa, que se dedica inteiramente à fabricação de calçado.
@@ -151,6 +160,7 @@
 </div>
 
 <div class="container-fluid bg-grey" id="missao">
+
   <div class="row">
     <div class="col-sm-4" id="qim2" >
       <img class="img-responsive" src="<%= asset_path '3.jpg' %>" width="1893" height="697">
@@ -397,6 +407,35 @@
     </div>
   </div>
 </div>
+
+<!--modal login-->
+<div id="myNavl" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNavl()">&times;</a>
+  <div class="container-fluid bg-grey" id="missao">
+
+    <div class="row slideanim">
+      <div class="col-sm-4">
+        <!--modal1-->
+
+      </div>
+      <div class="col-sm-4">
+        <h1 style="text-align: center">Login</h1>
+        <div class="input-group input-group-lg">
+          <span class="input-group-addon" id="sizing-addon1">@</span>
+          <input id="caixa" type="text" class="form-control" placeholder="" aria-describedby="sizing-addon1">
+        </div>
+        <br>
+        <div class="input-group input-group-lg">
+          <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span></span>
+          <input id="caixa" type="text" class="form-control" placeholder="" aria-describedby="sizing-addon1">
+        </div>
+      </div>
+      <div class="col-sm-4">
+      </div>
+    </div>
+
+  </div>
+</div>
 <!--script do modal1-->
 <script>
     function openNav() {
@@ -467,6 +506,17 @@
     }
 </script>
 
+<!--script do login-->
+<script>
+
+    function openNavl() {
+        document.getElementById("myNavl").style.width = "100%";
+    }
+
+    function closeNavl() {
+        document.getElementById("myNavl").style.width = "0%";
+    }
+</script>
 
 
 
@@ -490,8 +540,10 @@
   <div id="contact" class="container-fluid bg-grey">
     <h2 class="text-center">CONTACTOS</h2>
     <div class="row">
-      <div class="col-sm-5">
-
+      <div class="col-sm-5" >
+        <br>
+        <br>
+        <br>
         <p><span class="glyphicon glyphicon-map-marker"></span> RUA SANTA MARIA, 437<BR>
           BARROSAS<BR>
           4650-139 IDÃES FLG</p>
