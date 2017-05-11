@@ -5,9 +5,9 @@ class NewOrderController < ApplicationController
     @order = Order.new
   end
 
-
 def index
 
+  @client = Client.find(*1)
   @order = Order.new
 
 end
@@ -20,7 +20,7 @@ end
 
 def save_order
 
-  @order = Order.new
+  @order = save_order.new
 
     #Descrição
     @order.description = params[:order][:description]
@@ -35,7 +35,7 @@ def save_order
     @order.quantity = params[:order][:quantity]
 
     #Quantidade
-    @state.state = params[:state][:state]
+    #@order.state_id = params[:state][:state]
 
 
     if @order.save
