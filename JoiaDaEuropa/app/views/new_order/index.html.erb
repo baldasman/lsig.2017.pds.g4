@@ -15,8 +15,8 @@
   }
 
   input[type=text] {
-    width: 100%;
-    padding: 12px 20px;
+    width: 15%;
+    padding: 10px 20px;
     margin: 8px 0;
     box-sizing: border-box;
     border: 1px solid #555;
@@ -42,10 +42,11 @@
 <div class="container-fluid text-left">
   <div class="row content">
     <div class="col-sm-2 sidenav">
-      <br><a href="/client_area/index">Área de Cliente</a></br>
+      <br><a href="/profile/index">PERFIL</a></br>
+      <br><a href="/client_area/index">ÁREA DE CLIENTE</a></br>
       <br>
       <div class="w3-dropdown-hover">
-        <a href="#">Encomendas ></a>
+        <a href="#">ENCOMENDAS</a>
         <div class="w3-dropdown-content w3-bar-block w3-card-4">
           <a href="/pending_order/index" class="w3-bar-item w3-button">Encomendas Pendentes</a>
           <a href="#" class="w3-bar-item w3-button">Encomendas para Revisão</a>
@@ -67,26 +68,27 @@
           <% if flash[:error] && flash[:error]['description'] %>
           <div class="alert danger"><%= flash[:error]['description'].join('<br/>') %></div>
           <% end %>
-
+          <br>
           <label for="delivery_date"><%= t('delivery_date') %></label>
-          <%= f.text_field :delivery_date %>
+          <%= f.date_select :delivery_date %>
           <% if flash[:error] && flash[:error]['delivery_date'] %>
               <div class="alert danger"><%= flash[:error]['delivery_date'].join('<br/>') %></div>
           <% end %>
-
-          <br><br>
-
+          <br>
           <label for="unit_price"><%= t('unit_price') %></label>
           <%= f.text_field :unit_price %>
           <% if flash[:error] && flash[:error]['unit_price'] %>
               <div class="alert danger"><%= flash[:error]['unit_price'].join('<br/>') %></div>
           <% end %>
-
+          <br>
           <label for="quantity"><%= t('quantity') %></label>
           <%= f.text_field :quantity %>
           <% if flash[:error] && flash[:error]['quantity'] %>
               <div class="alert danger"><%= flash[:error]['quantity'].join('<br/>') %></div>
           <% end %>
+          <br>
+          <label for="state"><%= t('state') %> </label>
+          <%=f.text_field :state_id %></select>
 
           <br><br>
             <%= f.submit t('submit') %>

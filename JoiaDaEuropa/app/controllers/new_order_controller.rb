@@ -34,6 +34,9 @@ def save_order
     #Quantidade
     @order.quantity = params[:order][:quantity]
 
+    #Quantidade
+    @state.state = params[:state][:state]
+
 
     if @order.save
       redirect_to new_order_index_path

@@ -42,10 +42,11 @@
 <div class="container-fluid text-left">
   <div class="row content">
     <div class="col-sm-2 sidenav">
-      <br><a href="/client_area/index">Área de Cliente</a></br>
+      <br><a href="/profile/index">PERFIL</a></br>
+      <br><a href="/client_area/index">ÁREA DE CLIENTE</a></br>
       <br>
       <div class="w3-dropdown-hover">
-        <a href="#">Encomendas ></a>
+        <a href="#">ENCOMENDAS</a>
         <div class="w3-dropdown-content w3-bar-block w3-card-4">
           <a href="/pending_order/index" class="w3-bar-item w3-button">Encomendas Pendentes</a>
           <a href="#" class="w3-bar-item w3-button">Encomendas para Revisão</a>
@@ -58,6 +59,12 @@
     <div class="col-sm-8 text-left">
       <h1>ENCOMENDAS PENDENTES</h1>
       </br>
+
+      <dt><%= @client.name %></dt>
+      <dt><%= @client.phone_number %></dt>
+      <dt><%= @client.nib %></dt>
+      <dt><%= @client.address %></dt>
+
     </div>
   </div>
 </div>

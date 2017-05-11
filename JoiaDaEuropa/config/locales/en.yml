@@ -31,6 +31,7 @@ en:
   delivery_date: "Data de Entrega"
   unit_price: "Preço Unitário"
   quantity: "Quantidade"
+  state: "Estado"
   save: "Guardar"
   submit: "Submeter"
   edit: "Editar"
