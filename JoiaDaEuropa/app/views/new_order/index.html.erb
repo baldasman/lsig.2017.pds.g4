@@ -15,8 +15,8 @@
   }
 
   input[type=text] {
-    width: 15%;
-    padding: 10px 20px;
+    width: 100%;
+    padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
     border: 1px solid #555;
@@ -48,7 +48,7 @@
       <div class="w3-dropdown-hover">
         <a href="#">ENCOMENDAS</a>
         <div class="w3-dropdown-content w3-bar-block w3-card-4">
-          <a href="/pending_order/index" class="w3-bar-item w3-button">Encomendas Pendentes</a>
+          <a href="/hold_order/index" class="w3-bar-item w3-button">Encomendas Pendentes</a>
           <a href="#" class="w3-bar-item w3-button">Encomendas para Revisão</a>
           <a href="#" class="w3-bar-item w3-button">Encomendas Concluídas</a>
           <a href="/new_order/index" class="w3-bar-item w3-button">Nova Encomenda</a>
@@ -72,51 +72,51 @@
           </tr>
           </thead>
 
-         <tr>
-          <th><dt><%= @client.name %></dt></th>
-          <th><dt><%= @client.phone_number %></dt></th>
-          <th><dt><%= @client.nib %></dt></th>
-          <th><dt><%= @client.address %></dt></th>
-        </tr>
+          <tr>
+            <th><dt><%= @client.name %></dt></th>
+            <th><dt><%= @client.phone_number %></dt></th>
+            <th><dt><%= @client.nib %></dt></th>
+            <th><dt><%= @client.address %></dt></th>
+          </tr>
         </table>
       </div>
-<br>
+      <br>
       <%= form_for @order, :url => url_for(:controller => 'new_order', :action => 'save_order'), html: {class: 'container'} do |f| %>
           <br class="form-group">
 
           <label for="description"><%= t('description') %></label> <p>
-          <%= f.text_field :description %>
-          <% if flash[:error] && flash[:error]['description'] %>
-          <div class="alert danger"><%= flash[:error]['description'].join('<br/>') %></div>
+      <%= f.text_field :description %>
+      <% if flash[:error] && flash[:error]['description'] %>
+              <div class="alert danger"><%= flash[:error]['description'].join('<br/>') %></div>
           <% end %>
           <br> <p>
-          <label for="delivery_date"><%= t('delivery_date') %></label> <p>
-          <%= f.date_select :delivery_date %>
-          <% if flash[:error] && flash[:error]['delivery_date'] %>
+      <label for="delivery_date"><%= t('delivery_date') %></label> <p>
+      <%= f.date_select :delivery_date %>
+      <% if flash[:error] && flash[:error]['delivery_date'] %>
               <div class="alert danger"><%= flash[:error]['delivery_date'].join('<br/>') %></div>
           <% end %>
           <br> <p>
-          <label for="unit_price"><%= t('unit_price') %></label> <p>
-          <%= f.text_field :unit_price %>
-          <% if flash[:error] && flash[:error]['unit_price'] %>
+      <label for="unit_price"><%= t('unit_price') %></label> <p>
+      <%= f.text_field :unit_price %>
+      <% if flash[:error] && flash[:error]['unit_price'] %>
               <div class="alert danger"><%= flash[:error]['unit_price'].join('<br/>') %></div>
           <% end %>
           <br> <p>
-          <label for="quantity"><%= t('quantity') %></label> <p>
-          <%= f.text_field :quantity %>
-          <% if flash[:error] && flash[:error]['quantity'] %>
+      <label for="quantity"><%= t('quantity') %></label> <p>
+      <%= f.text_field :quantity %>
+      <% if flash[:error] && flash[:error]['quantity'] %>
               <div class="alert danger"><%= flash[:error]['quantity'].join('<br/>') %></div>
           <% end %>
           <br> <p>
-                <label for="state"><%= t('state') %> </label> <p>
+      <label for="state"><%= t('state') %> </label> <p>
 
-        <%= f.select_tag(:state_id, options_for_select([['Pendente', 1], ['Cancelada', 2], ['Concluida', 2]])) %>
+      <%= f.select_tag(:state_id, options_for_select([['Pendente', 1], ['Cancelada', 2], ['Concluida', 2]])) %>
 
 
-          <br><br>
-            <%= f.submit t('submit') %>
+      <br><br>
+      <%= f.submit t('submit') %>
 
       <% end %>
-     </div>
+    </div>
   </div>
 </div>
