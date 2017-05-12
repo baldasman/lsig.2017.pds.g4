@@ -59,12 +59,26 @@
     <div class="col-sm-8 text-left">
       <h1>ENCOMENDAS PENDENTES</h1>
       </br>
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+          <tr>
+            <th>NOME</th>
+            <th>TELEFONE</th>
+            <th>NIB</th>
+            <th>MORADA</th>
+            <th></th>
+          </tr>
+          </thead>
 
-      <dt><%= @client.name %></dt>
-      <dt><%= @client.phone_number %></dt>
-      <dt><%= @client.nib %></dt>
-      <dt><%= @client.address %></dt>
-
+          <tr>
+            <th><dt><%= @client.name %></dt></th>
+            <th><dt><%= @client.phone_number %></dt></th>
+            <th><dt><%= @client.nib %></dt></th>
+            <th><dt><%= @client.address %></dt></th>
+          </tr>
+        </table>
+      </div>
 
     </div>
   </div>

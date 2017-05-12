@@ -60,11 +60,27 @@
       <h1>NOVA ENCOMENDA</h1>
       <p>Faça a sua encomenda</p>
 
-      <dt><%= @client.name %></dt>
-      <dt><%= @client.phone_number %></dt>
-      <dt><%= @client.nib %></dt>
-      <dt><%= @client.address %></dt>
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+          <tr>
+            <th>NOME</th>
+            <th>TELEFONE</th>
+            <th>NIB</th>
+            <th>MORADA</th>
+            <th></th>
+          </tr>
+          </thead>
 
+         <tr>
+          <th><dt><%= @client.name %></dt></th>
+          <th><dt><%= @client.phone_number %></dt></th>
+          <th><dt><%= @client.nib %></dt></th>
+          <th><dt><%= @client.address %></dt></th>
+        </tr>
+        </table>
+      </div>
+<br>
       <%= form_for @order, :url => url_for(:controller => 'new_order', :action => 'save_order'), html: {class: 'container'} do |f| %>
           <br class="form-group">
 
@@ -92,8 +108,10 @@
               <div class="alert danger"><%= flash[:error]['quantity'].join('<br/>') %></div>
           <% end %>
           <br> <p>
-          <label for="state"><%= t('state') %> </label> <p>
-          <%=f.text_field :state_id %></select>
+                <label for="state"><%= t('state') %> </label> <p>
+
+        <%= f.select_tag(:state_id, options_for_select([['Pendente', 1], ['Cancelada', 2], ['Concluida', 2]])) %>
+
 
           <br><br>
             <%= f.submit t('submit') %>
