@@ -1,14 +1,12 @@
 class NewOrderController < ApplicationController
 
-
   def new
     @order = Order.new
-
   end
 
-def index
+ def index
 
-  @client = Client.find(*1)
+  @client = current_user.client
   @order = Order.new
 
 end
@@ -39,9 +37,10 @@ def save_order
     @order.state_id = params[:order][:state_id]
 
 
-    if @order.save
-      redirect_to new_order_index_path
-    end
+
+  if @order.save
+    redirect_to new_order_index_path
+  end
 
   end
 end

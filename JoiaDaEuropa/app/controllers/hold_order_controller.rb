@@ -1,7 +1,7 @@
 class HoldOrderController < ApplicationController
 
   def index
-    @client = Client.find(*1)
+    @client = Client.all
   end
 
 end
