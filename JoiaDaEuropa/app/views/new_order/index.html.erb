@@ -15,7 +15,7 @@
   }
 
   input[type=text] {
-    width: 100%;
+    width: 50%;
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
@@ -60,26 +60,26 @@
       <h1>NOVA ENCOMENDA</h1>
       <p>Faça a sua encomenda</p>
 
-      <div class="table-responsive">
-        <table class="table">
-          <thead>
-          <tr>
-            <th>NOME</th>
-            <th>TELEFONE</th>
-            <th>NIB</th>
-            <th>MORADA</th>
-            <th></th>
-          </tr>
-          </thead>
+      <table width="100%" class="table table-striped">
+        <thead>
+        <tr>
+          <th>NOME</th>
+          <th>TELEFONE</th>
+          <th>NIB</th>
+          <th>MORADA</th>
+          <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="odd gradeX">
+          <td><dt><%= @client.name %></dt> </td>
+          <td><dt><%= @client.phone_number%></dt></td>
+          <td><dt><%= @client.nib%></dt></td>
+          <td><dt><%= @client.address%></dt></td>
+        </tr>
+        </tbody>
+      </table>
 
-          <tr>
-            <th><dt><%= @client.name %></dt></th>
-            <th><dt><%= @client.phone_number %></dt></th>
-            <th><dt><%= @client.nib %></dt></th>
-            <th><dt><%= @client.address %></dt></th>
-          </tr>
-        </table>
-      </div>
       <br>
       <%= form_for @order, :url => url_for(:controller => 'new_order', :action => 'save_order'), html: {class: 'container'} do |f| %>
           <br class="form-group">
