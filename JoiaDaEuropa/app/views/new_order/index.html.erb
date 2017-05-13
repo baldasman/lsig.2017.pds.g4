@@ -81,7 +81,7 @@
       </table>
 
       <br>
-      <%= form_for @order, :url => url_for(:controller => 'new_order', :action => 'save_order'), html: {class: 'container'} do |f| %>
+      <%= form_tag @order.each do |post| %>
           <br class="form-group">
 
           <label for="description"><%= t('description') %></label> <p>

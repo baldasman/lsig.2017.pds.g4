@@ -46,7 +46,7 @@
       <br><a href="/client_area/index">ÁREA DE CLIENTE</a></br>
       <br>
       <div class="w3-dropdown-hover">
-        <a href="/order/index">ENCOMENDAS</a>
+        <a href="#">ENCOMENDAS</a>
         <div class="w3-dropdown-content w3-bar-block w3-card-4">
           <a href="/hold_order/index" class="w3-bar-item w3-button">Encomendas Pendentes</a>
           <a href="#" class="w3-bar-item w3-button">Encomendas para Revisão</a>
@@ -56,32 +56,7 @@
       </div>
     </div>
 
-    <div class="col-sm-8 text-left">
-      <h1>Área de Cliente</h1>
-      <p>Bem Vindo à sua àrea de cliente</p>
-      <br><br>
-      <div class="col-lg-10 text-left">
-       <table width="100%" class="table table-striped">
-          <thead>
-            <tr>
-              <th>NOME</th>
-              <th>TELEFONE</th>
-              <th>NIB</th>
-              <th>MORADA</th>
-              <th></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="odd gradeX">
-              <td><dt><%= @client.name %></dt> </td>
-              <td><dt><%= @client.phone_number%></dt></td>
-              <td><dt><%= @client.nib%></dt></td>
-              <td><dt><%= @client.address%></dt></td>
-              <td algin="center"> <%= link_to t('edit'), client_area_edit_client_path %></td>
-            </tr>
-          </tbody>
-       </table>
-      </div>
-    </div>
-  </div>
-</div>
+<% @order.each do |order| %>
+<%= link_to order.description, order %>
+    <%= order.content %>
+<% end %>

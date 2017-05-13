@@ -56,32 +56,27 @@
       </div>
     </div>
 
-    <div class="col-sm-8 text-left">
-      <h1>Área de Cliente</h1>
-      <p>Bem Vindo à sua àrea de cliente</p>
-      <br><br>
-      <div class="col-lg-10 text-left">
-       <table width="100%" class="table table-striped">
-          <thead>
-            <tr>
-              <th>NOME</th>
-              <th>TELEFONE</th>
-              <th>NIB</th>
-              <th>MORADA</th>
-              <th></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="odd gradeX">
-              <td><dt><%= @client.name %></dt> </td>
-              <td><dt><%= @client.phone_number%></dt></td>
-              <td><dt><%= @client.nib%></dt></td>
-              <td><dt><%= @client.address%></dt></td>
-              <td algin="center"> <%= link_to t('edit'), client_area_edit_client_path %></td>
-            </tr>
-          </tbody>
-       </table>
-      </div>
+    <div class="col-lg-10 text-left">
+<%= form_for @order, :url => url_for(:controller => 'order', :action => 'create') do |f| %>
+
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+<br>
+    <dd><%= f.label :delivery_date %></dd>
+    <dt><%= f.date_select :delivery_date %></dt>
+<br>
+    <dd><%= f.label :unit_price %></dd>
+    <dt><%= f.text_field :unit_price %></dt>
+          <p>
+<br>
+    <%= f.label :quantity %>
+    <%= f.text_field :quantity %>
+<br>
+    <%= f.label :state_id %>
+    <%= f.select_tag(:state_id, options_for_select([['Pendente', 1], ['Cancelada', 2], ['Concluida', 2]])) %>
+<br>
+
+    <%= f.submit "Adicionar uma nova encomenda" %>
+
+<% end %>
     </div>
-  </div>
-</div>

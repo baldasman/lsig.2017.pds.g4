@@ -5,13 +5,18 @@ Rails.application.routes.draw do
   get '/profile/index'
   get '/home/index'
   get '/client_area/index'
-  get '/new_order/index'
+
   get '/hold_order/index'
 
   get '/client_area/edit_client'
   patch '/client_area/save_client'
 
-  patch '/new_order/save_order'
+
+  #get '/new_order/index'
+  get '/order/new'
+  post '/order/create'
+
+  get '/order/index'
 
   root to: 'profile#index'
   

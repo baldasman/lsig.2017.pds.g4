@@ -4,14 +4,15 @@
     background-color: black;
   }
 
-    .navbar {background-color: black;  }
+  .row.content {height: 450px}
+
+  .navbar {background-color: black;}
 
   .sidenav {
     padding-top: 30px;
     background-color: black;
     height: 150%;
   }
-  .row.content {height: 450px}
 
   input[type=text] {
     width: 100%;
@@ -25,59 +26,16 @@
   input[type=text]:focus {
     background-color: ghostwhite;
   }
-
-  /*caixa de pesquisa*/
-    #caixa{
-      font-size: 9px;
-    }
-    /*combobox espaço*/
-    #comb{
-      padding-top: 8px;
-    }
-/*cor do botão de pesquisa*/
-  .btn-info {
-    color: #fff;
-    background-color: black;
-    border-color: black;
-  }
-
 </style>
 
-
-<!--menu horizontal-->
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#"><img src="<%= asset_path '2.png' %>"></a>
+<nav class="navbar ">
+  <a class="navbar-brand" href="/home/index"><img src="<%= asset_path '2.png' %>"></a>
+  <form class="navbar-form navbar-right">
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="Search">
     </div>
-
-    <ul class="nav navbar-nav navbar-right">
-      <li id="comb">
-        <button type="button" class="btn btn-info"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
-      </li>
-      <li> <div class="input-group">
-        <div class="input-group-btn">
-          <!-- Buttons -->
-        </div>
-        <input type="text" class="form-control" aria-label="..." id="caixa">
-      </div>
-      </li>
-
-      <li>
-        <div class="dropdown" id="comb">
-          <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-            <span class="caret"></span></button>
-          <ul class="dropdown-menu">
-            <li><a href="#">HTML</a></li>
-            <li><a href="#">CSS</a></li>
-            <li><a href="#">JavaScript</a></li>
-          </ul>
-        </div>
-
-      </li>
-
-      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-    </ul>
+    <button type="submit" class="btn btn-default">Procurar</button>
+  </form>
   </div>
 </nav>
 
@@ -88,12 +46,12 @@
       <br><a href="/client_area/index">ÁREA DE CLIENTE</a></br>
       <br>
       <div class="w3-dropdown-hover">
-        <a href="#">ENCOMENDAS</a>
+        <a href="/order/index">ENCOMENDAS</a>
         <div class="w3-dropdown-content w3-bar-block w3-card-4">
           <a href="/hold_order/index" class="w3-bar-item w3-button">Encomendas Pendentes</a>
           <a href="#" class="w3-bar-item w3-button">Encomendas para Revisão</a>
           <a href="#" class="w3-bar-item w3-button">Encomendas Concluídas</a>
-          <a href="/new_order/index" class="w3-bar-item w3-button">Nova Encomenda</a>
+          <a href="/order/new" class="w3-bar-item w3-button">Nova Encomenda</a>
         </div>
       </div>
     </div>
@@ -185,5 +143,9 @@
   </div>
 </div>
 
+<% flash.each do |key, value| %>
+    <%= value %>
+<% end %>
 
+<%= yield  %>
 

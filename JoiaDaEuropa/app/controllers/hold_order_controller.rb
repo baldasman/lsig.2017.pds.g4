@@ -1,7 +1,10 @@
 class HoldOrderController < ApplicationController
 
   def index
-    @client = Client.find(1)
-  end
+    @order = Order.find_by*
 
+    if @order.nil?
+      puts "There is no orders"
+    end
+   end
 end
