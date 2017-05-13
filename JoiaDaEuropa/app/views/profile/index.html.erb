@@ -4,15 +4,14 @@
     background-color: black;
   }
 
-  .row.content {height: 450px}
-
-  .navbar {background-color: black;}
+    .navbar {background-color: black;  }
 
   .sidenav {
     padding-top: 30px;
     background-color: black;
     height: 150%;
   }
+  .row.content {height: 450px}
 
   input[type=text] {
     width: 100%;
@@ -27,22 +26,6 @@
     background-color: ghostwhite;
   }
 
-  /*menu horizontal*/
-  .navbar {
-    overflow: hidden;
-    background-color: #333;
-    position: fixed;
-    top: 0;
-    width: 100%;
-  }
-  .navbar-inverse {
-    background-color: black!important;
-    border-color: #080808;
-  }
-  /*separação do menu horizontal com o resto*/
-#brow{
-  padding-top: 30px;
-}
   /*caixa de pesquisa*/
     #caixa{
       font-size: 9px;
@@ -59,9 +42,6 @@
   }
 
 </style>
-
-
-
 
 
 <!--menu horizontal-->
@@ -101,7 +81,22 @@
   </div>
 </nav>
 
-
+<div class="container-fluid text-left">
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+      <br><a href="/profile/index">PERFIL</a></br>
+      <br><a href="/client_area/index">ÁREA DE CLIENTE</a></br>
+      <br>
+      <div class="w3-dropdown-hover">
+        <a href="#">ENCOMENDAS</a>
+        <div class="w3-dropdown-content w3-bar-block w3-card-4">
+          <a href="/hold_order/index" class="w3-bar-item w3-button">Encomendas Pendentes</a>
+          <a href="#" class="w3-bar-item w3-button">Encomendas para Revisão</a>
+          <a href="#" class="w3-bar-item w3-button">Encomendas Concluídas</a>
+          <a href="/new_order/index" class="w3-bar-item w3-button">Nova Encomenda</a>
+        </div>
+      </div>
+    </div>
 
 
 
