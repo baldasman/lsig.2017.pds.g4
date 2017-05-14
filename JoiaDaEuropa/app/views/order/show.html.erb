@@ -60,6 +60,7 @@
       <table class="table table-striped">
         <thead>
         <tr>
+          <th>Nº</th>
           <th>Description</th>
           <th>Delivery Date</th>
           <th>Preço Unitário</th>
@@ -69,6 +70,7 @@
         </thead>
         <tbody>
         <tr class="odd gradeX">
+          <td><%= @order.id %></td>
           <td><%= @order.description %></td>
           <td><%= @order.delivery_date %></td>
           <td><%= @order.unit_price %></td>

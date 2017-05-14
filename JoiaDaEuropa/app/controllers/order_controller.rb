@@ -13,16 +13,15 @@ class OrderController < ApplicationController
   end
 
   def create
-    @order = Order.new(order_create_path)
+    @order = Order.new(params[:order_controller])
 
     if @order.save
-      redirect_to order_show_path #:notice => "Your Order was save"
-    #else       render "new"     end
+      redirect_to order_show_path, flash[:notice] => "Your Order was save"
+    else
+      render :action => "new"
     end
   end
 
-  def edit
-    @order = Order.new
-  end
+  #def edit    @order = Order.new  end
 
 end
