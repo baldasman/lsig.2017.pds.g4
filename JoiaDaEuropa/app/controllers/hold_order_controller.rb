@@ -1,10 +1,13 @@
 class HoldOrderController < ApplicationController
 
   def index
-    @order = Order.find_by*
+    @order = Order.find(1)
 
-    if @order.nil?
-      puts "There is no orders"
+    if id.nil?
+      show_message "There is no orders"
     end
-   end
+
+  end
+
+
 end

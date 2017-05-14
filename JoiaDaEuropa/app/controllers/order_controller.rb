@@ -5,9 +5,8 @@ class OrderController < ApplicationController
   end
 
   def show
-    @order = Order.find(params[:id])
+    @order = Order.find(1)
   end
-
 
   def new
     @order = Order.new
@@ -16,7 +15,7 @@ class OrderController < ApplicationController
   def create
     @order = Order.new(params[:order_index_path])
 
-    if @order.save
+    if order.save
       redirect_to order_index_path, :notice => "Your Order was save"
     else
       render "new"

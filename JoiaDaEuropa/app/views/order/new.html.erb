@@ -57,26 +57,31 @@
     </div>
 
     <div class="col-lg-10 text-left">
-<%= form_for @order, :url => url_for(:controller => 'order', :action => 'create') do |f| %>
+      <%= form_for @order, :url => url_for(:controller => 'order', :action => 'create',) do |f| %>
 
-    <%= f.label :description %>
-    <%= f.text_field :description %>
-<br>
-    <dd><%= f.label :delivery_date %></dd>
-    <dt><%= f.date_select :delivery_date %></dt>
-<br>
-    <dd><%= f.label :unit_price %></dd>
-    <dt><%= f.text_field :unit_price %></dt>
-          <p>
-<br>
-    <%= f.label :quantity %>
-    <%= f.text_field :quantity %>
-<br>
-    <%= f.label :state_id %>
-    <%= f.select_tag(:state_id, options_for_select([['Pendente', 1], ['Cancelada', 2], ['Concluida', 2]])) %>
-<br>
+          <dd><%= f.label t("description") %></dd>
+          <dt><%= f.text_field :description %></dt>
+          <br/>
 
-    <%= f.submit "Adicionar uma nova encomenda" %>
+          <dd><%= f.label t("delivery_date") %></dd>
+          <dt><%= f.date_select :delivery_date %></dt>
+          <br/>
 
-<% end %>
+          <dd><%= f.label t("unit_price") %></dd>
+          <dt><%= f.text_field :unit_price %></dt>
+          <br/>
+
+          <dd><%= f.label t("quantity") %></dd>
+          <dt><%= f.text_field :quantity %></dt>
+          <br/>
+
+          <dd><%= f.label t("state_id") %></dd>
+          <dt><%= f.select_tag(:state_id, options_for_select([['Pendente', 1], ['Cancelada', 2], ['Concluida', 2]])) %></dt>
+          <br/>
+
+          <%= f.submit t("add_new_order")%>
+
+      <% end %>
     </div>
+  </div>
+</div>

@@ -31,7 +31,8 @@ To use a different locale, set it with `I18n.locale`:
   delivery_date: "Data de Entrega"
   unit_price: "Preço Unitário"
   quantity: "Quantidade"
-  save: "Gravar"
+  state_id: "Estado"
+  save: "Guardar"
   submit: "Submeter"
   edit: "Editar"
   activerecord:

@@ -12,11 +12,10 @@ Rails.application.routes.draw do
   patch '/client_area/save_client'
 
 
-  #get '/new_order/index'
-  get '/order/new'
-  post '/order/create'
-
   get '/order/index'
+  get '/order/new'
+  get '/order/show'
+  post '/order/create'
 
   root to: 'profile#index'
   
