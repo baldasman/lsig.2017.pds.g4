@@ -59,20 +59,20 @@
     <div class="col-lg-10 text-left">
       <%= form_for @order, url: {action: "create"} do |f| %>
 
-                   <dd><%= f.label t("description") %></dd>
-          <dt><%= f.text_field :description %></dt>
+          <%= f.label t("description") %>
+          <%= f.text_field :description %>
           <br/>
 
-          <dd><%= f.label t("delivery_date") %></dd>
-          <dt><%= f.date_select :delivery_date %></dt>
+          <%= f.label t("delivery_date") %>
+          <%= f.date_select :delivery_date %>
           <br/>
 
-          <dd><%= f.label t("unit_price") %></dd>
-          <dt><%= f.text_field :unit_price %></dt>
+          <%= f.label t("unit_price") %>
+          <%= f.text_field :unit_price %>
           <br/>
 
-          <dd><%= f.label t("quantity") %></dd>
-          <dt><%= f.text_field :quantity %></dt>
+          <%= f.label t("quantity") %>
+          <%= f.text_field :quantity %>
           <br/>
 
           <dd><%= f.label t("state_id") %></dd>

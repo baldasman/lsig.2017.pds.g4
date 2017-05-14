@@ -13,7 +13,7 @@ class OrderController < ApplicationController
   end
 
   def create
-    @order = Order.new(params[:order_controller])
+    @order = Order.new(order_params)
 
     if @order.save
       redirect_to order_show_path, flash[:notice] => "Your Order was save"
