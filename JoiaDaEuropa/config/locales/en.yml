@@ -32,6 +32,7 @@ en:
   unit_price: "Preço Unitário"
   quantity: "Quantidade"
   state_id: "Estado"
+  client: "Cliente"
   save: "Guardar"
   submit: "Submeter"
   add_new_order: "Adicionar uma nova encomenda"

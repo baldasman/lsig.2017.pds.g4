@@ -1,11 +1,11 @@
 class HoldOrderController < ApplicationController
 
   def index
-    @order = Order.find(1)
+    @order = Order.find_by(params[:id])
 
-    if id.nil?
-      show_message "There is no orders"
-    end
+    #where @order.state_id("Pendente")
+
+    #if description.nil?      show_message "There is no orders"    end
 
   end
 
