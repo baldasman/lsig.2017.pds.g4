@@ -26,7 +26,10 @@
   input[type=text]:focus {
     background-color: ghostwhite;
   }
-
+/*menu horizontal*/
+  espaço {
+    padding-right: 70px!important;
+  }
     /*menu vertical*/
   .list-group-item-success {
     color: #3c763d;
@@ -48,7 +51,7 @@
 
 <nav class="navbar ">
   <a class="navbar-brand" href="/home/index"><img src="<%= asset_path '2.png' %>"></a>
-  <form class="navbar-form navbar-right">
+  <form class="navbar-form navbar-right" id="espaço">
     <div class="form-group">
       <input type="text" class="form-control" placeholder="Search">
     </div>
@@ -59,6 +62,7 @@
 
 <div class="container-fluid text-left">
   <div class="row content">
+    <!--menu vertical-->
     <div class="col-sm-2 sidenav">
 
       <div class="container-fluid">
