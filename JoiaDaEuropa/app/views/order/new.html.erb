@@ -46,7 +46,7 @@
       <br><a href="/client_area/index">ÁREA DE CLIENTE</a></br>
       <br>
       <div class="w3-dropdown-hover">
-        <a href="/order/index">ENCOMENDAS</a>
+        <a href="/order/show">ENCOMENDAS</a>
         <div class="w3-dropdown-content w3-bar-block w3-card-4">
           <a href="/hold_order/index" class="w3-bar-item w3-button">Encomendas Pendentes</a>
           <a href="#" class="w3-bar-item w3-button">Encomendas para Revisão</a>
@@ -57,9 +57,9 @@
     </div>
 
     <div class="col-lg-10 text-left">
-      <%= form_for @order, :url => url_for(:controller => 'order', :action => 'create',) do |f| %>
+      <%= form_for @order, url: {action: "create"} do |f| %>
 
-          <dd><%= f.label t("description") %></dd>
+                   <dd><%= f.label t("description") %></dd>
           <dt><%= f.text_field :description %></dt>
           <br/>
 
@@ -78,6 +78,9 @@
           <dd><%= f.label t("state_id") %></dd>
           <dt><%= f.select_tag(:state_id, options_for_select([['Pendente', 1], ['Cancelada', 2], ['Concluida', 2]])) %></dt>
           <br/>
+
+          <dd><%= f.label t("client") %></dd>
+          <dt><%= f.text_field :client_id %></dt>
 
           <%= f.submit t("add_new_order")%>
 
