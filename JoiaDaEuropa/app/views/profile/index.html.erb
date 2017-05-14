@@ -26,32 +26,11 @@
   input[type=text]:focus {
     background-color: ghostwhite;
   }
-/*menu horizontal*/
-  espaço {
-    padding-right: 70px!important;
-  }
-    /*menu vertical*/
-  .list-group-item-success {
-    color: #3c763d;
-    background-color: black;
-  }
-  a.list-group-item-success, button.list-group-item-success {
-    color: white;
-  }
-
-  a.list-group-item-success:focus, a.list-group-item-success:hover, button.list-group-item-success:focus, button.list-group-item-success:hover {
-    color: black;
-    background-color: white;
-  }
-
-  MainMenu{
-    width: 110%;
-  }
 </style>
 
 <nav class="navbar ">
   <a class="navbar-brand" href="/home/index"><img src="<%= asset_path '2.png' %>"></a>
-  <form class="navbar-form navbar-right" id="espaço">
+  <form class="navbar-form navbar-right">
     <div class="form-group">
       <input type="text" class="form-control" placeholder="Search">
     </div>
@@ -62,50 +41,19 @@
 
 <div class="container-fluid text-left">
   <div class="row content">
-    <!--menu vertical-->
     <div class="col-sm-2 sidenav">
-
-      <div class="container-fluid">
-
-        <div class="row">
-          <div class="col-md-12">
-
-            <!-- menu -->
-            <div id="MainMenu">
-              <div class="list-group panel">
-                <a href="/profile/index" class="list-group-item list-group-item-success" data-parent="#MainMenu">PÁGINA PRINCIPAL</a>
-                <a href="/client_area/index" class="list-group-item list-group-item-success" data-parent="#MainMenu">ÁREA DE CLIENTE</a>
-                <a href="#demo3" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#MainMenu">ENCOMENDAS<i class="fa fa-caret-down"></i></a>
-                <div class="collapse" id="demo3">
-                  <a href="/order/index" class="list-group-item" data-toggle="collapse" data-parent="#SubMenu1">LISTA DE ENCOMENDAS<i class="fa fa-caret-down"></i></a>
-                  <div class="collapse list-group-submenu" id="SubMenu1">
-                    <a href="#" class="list-group-item" data-parent="#SubMenu1">Subitem 1 a</a>
-                    <a href="#" class="list-group-item" data-parent="#SubMenu1">Subitem 2 b</a>
-                    <a href="#SubSubMenu1" class="list-group-item" data-toggle="collapse" data-parent="#SubSubMenu1">Subitem 3 c <i class="fa fa-caret-down"></i></a>
-                    <div class="collapse list-group-submenu list-group-submenu-1" id="SubSubMenu1">
-                      <a href="#" class="list-group-item" data-parent="#SubSubMenu1">Sub sub item 1</a>
-                      <a href="#" class="list-group-item" data-parent="#SubSubMenu1">Sub sub item 2</a>
-                    </div>
-                    <a href="#" class="list-group-item" data-parent="#SubMenu1">Subitem 4 d</a>
-                  </div>
-                  <a href="/hold_order/index" class="list-group-item">ENCOMENDAS PENDENTES</a>
-                  <a href="javascript:;" class="list-group-item">ENCOMENDAS PARA REVISÃO</a>
-                  <a href="javascript:;" class="list-group-item">ENCOMENDAS CONCLUÍDAS</a>
-                  <a href="/order/new" class="list-group-item">NOVA ENCOMENDA</a>
-                </div>
-                <a href="#demo4" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#MainMenu">Item 4  <i class="fa fa-caret-down"></i></a>
-                <div class="collapse" id="demo4">
-                  <a href="" class="list-group-item">Subitem 1</a>
-                  <a href="" class="list-group-item">Subitem 2</a>
-                  <a href="" class="list-group-item">Subitem 3</a>
-                </div>
-              </div>
-            </div>
-          </div>
+      <br><a href="/profile/index">PERFIL</a></br>
+      <br><a href="/client_area/index">ÁREA DE CLIENTE</a></br>
+      <br>
+      <div class="w3-dropdown-hover">
+        <a href="/order/show">ENCOMENDAS</a>
+        <div class="w3-dropdown-content w3-bar-block w3-card-4">
+          <a href="/hold_order/index" class="w3-bar-item w3-button">Encomendas Pendentes</a>
+          <a href="#" class="w3-bar-item w3-button">Encomendas para Revisão</a>
+          <a href="#" class="w3-bar-item w3-button">Encomendas Concluídas</a>
+          <a href="/order/new" class="w3-bar-item w3-button">Nova Encomenda</a>
         </div>
-
       </div>
-
     </div>
 
 <!--botões do meio-->
