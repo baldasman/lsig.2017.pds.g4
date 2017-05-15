@@ -1,62 +1,48 @@
-<style>
-  header {
-    padding: 5px;
-    background-color: black;
-  }
+<%= stylesheet_link_tag 'estilos', media: 'all', 'data-turbolinks-track': 'reload' %>
 
-  .row.content {height: 450px}
-
-  .navbar {background-color: black;}
-
-  .sidenav {
-    padding-top: 30px;
-    background-color: black;
-    height: 150%;
-  }
-
-  input[type=text] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border: 1px solid #555;
-    outline: none;
-  }
-
-  input[type=text]:focus {
-    background-color: ghostwhite;
-  }
-</style>
-
-<nav class="navbar ">
-  <a class="navbar-brand" href="/home/index"><img src="<%= asset_path '2.png' %>"></a>
-  <form class="navbar-form navbar-right">
-    <div class="form-group">
-      <input type="text" class="form-control" placeholder="Search">
+<nav data-spy="scroll" data-target=".navbar" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="button" href="/home/index"><img src="<%= asset_path '2.png' %>"></a>
     </div>
-    <button type="submit" class="btn btn-default">Procurar</button>
-  </form>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/profile/index">PERFIL</a></li>
+        <li><a href="/home/index/#q">QUEM SOMOS</a></li>
+        <li><a href="/home/index/#missao">MISSÃO</a></li>
+        <li><a href="/home/index/#linha">NOTÍCIAS</a></li>
+        <li><a href="/home/index/#contact">CONTACTOS</a></li>
+      </ul>
+    </div>
   </div>
 </nav>
+
+<p/>
+<form class="jumbotron text-center">
+  <div class="input-group">
+    <input type="search" class="form-control" placeholder="Search" required>
+    <div class="input-group-btn">
+      <button type="button" class="btn btn-danger">Procurar</button>
+    </div>
+  </div>
+</form>
+</div>
 
 <div class="container-fluid text-left">
   <div class="row content">
     <div class="col-sm-2 sidenav">
-      <br><a href="/profile/index">PERFIL</a></br>
-      <br><a href="/client_area/index">ÁREA DE CLIENTE</a></br>
-      <br>
-      <div class="w3-dropdown-hover">
-        <a href="/order/show">ENCOMENDAS</a>
-        <div class="w3-dropdown-content w3-bar-block w3-card-4">
-          <a href="/hold_order/index" class="w3-bar-item w3-button">Encomendas Pendentes</a>
-          <a href="#" class="w3-bar-item w3-button">Encomendas para Revisão</a>
-          <a href="#" class="w3-bar-item w3-button">Encomendas Concluídas</a>
-          <a href="/order/new" class="w3-bar-item w3-button">Nova Encomenda</a>
-        </div>
-      </div>
+      <p><a href="/profile/index" class="w3-bar-item w3-button">PERFIL</a></p>
+      <p><a href="/client_area/index" class="w3-bar-item w3-button">ÁREA DE CLIENTE</a></p>
+      <p><a href="/order/show" class="w3-bar-item w3-button">ENCOMENDAS</a></p>
     </div>
 
-      <div class="col-lg-10 text-left">
+
+    <div class="col-lg-10 text-left">
         <table class="table table-striped">
           <thead>
           <tr>
