@@ -13,7 +13,7 @@
   color: dimgrey !important;
 }
 .navbar-nav li a:hover, .navbar-nav li.active a {
-  color: midnightblue !important;
+  color: lightslategrey !important;
   background-color: #fff !important;
 }
 .navbar-default .navbar-toggle {
