@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get '/profile/index'
   get '/home/index'
   get '/client_area/index'
+  get '/end_order/index'
 
   get '/hold_order/index'
 
