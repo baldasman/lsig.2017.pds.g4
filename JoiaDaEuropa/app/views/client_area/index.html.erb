@@ -1,294 +1,85 @@
-<style>/*
-  header {
-    padding: 5px;
-    background-color: black;
+<style>
+  body {
+    font: 400 15px Lato, sans-serif;
+    line-height: 1.8;
+    color: dimgrey;
+  }
+  .jumbotron {
+    background-color: slategrey;
+    padding: 25px 10px;
+    font-family: Montserrat, sans-serif;
   }
 
-  .row.content {height: 450px}
-
-  .navbar {background-color: black;}
-
-  .sidenav {
-    padding-top: 30px;
-    background-color: black;
-    height: 150%;
+  .navbar {
+    margin-bottom: 0;
+    background-color: lightgrey;
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+    font-family: Montserrat, sans-serif;
   }
-
-  input[type=text] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border: 1px solid #555;
-    outline: none;
+  .navbar li a, .navbar .navbar-brand {
+    color: dimgrey !important;
   }
-
-  input[type=text]:focus {
-    background-color: ghostwhite;
-  }*/
-
-
-
-
-header {
-  padding: 5px;
-  background-color: black;
-}
-.row.content {height: 450px}
-.navbar {background-color: black;}
-.sidenav {
-  padding-top: 30px;
-  background-color: black;
-  height: 150%;
-}
-input[type=text] {
-  width: 100%;
-  padding: 10px 20px;
-  margin: 0px 0;
-  box-sizing: border-box;
-  border: 1px solid #555;
-  outline: none;
-}
-.navbar {
-  border-radius: 0px;
-}
-
-input[type=text]:focus {
-  background-color: ghostwhite;
-}
-
-espaço {
-  padding-right: 70px!important;
-}
-a {
-  color: white;
-  text-decoration: none;
-}
-
-/*menu vertical*/
-.list-group-item-success {
-  color: #3c763d;
-  background-color: black;
-}
-a.list-group-item-success, button.list-group-item-success {
-  color: white;
-}
-
-a.list-group-item-success:focus, a.list-group-item-success:hover, button.list-group-item-success:focus, button.list-group-item-success:hover {
-  color: black;
-  background-color: white;
-}
-
-MainMenu{
-  width: 110%;
-}
-#tam{
-  padding-right: 0px!important;
-  padding-left: 0px!important;
-}
-
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+    color: midnightblue !important;
+    background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+  }
+  .input-group
+  {
+    width: 30%;
+  }
 </style>
+<nav data-spy="scroll" data-target=".navbar" class="navbar navbar-default navbar-fixed-top">
 
-<nav class="navbar ">
-  <a class="navbar-brand" href="/home/index"><img src="<%= asset_path '2.png' %>"></a>
-  </div>
-  <div class="navbar-collapse collapse"><!--
-    <ul class="nav navbar-nav navbar-right">
-      <li><a href="#">Dashboard</a></li>
-      <li><a href="#">Settings</a></li>
-      <li><a href="#">Profile</a></li>
-      <li><a href="#">Help</a></li>
-    </ul>-->
-    <form class="navbar-form navbar-right" id="espaço">
-      <div class="form-group">
-        <input type="text" class="form-control" placeholder="Search">
-        <select>
-          <option value="volvo">Cliente</option>
-          <option value="saab">Encomendas</option>
-          <option value="opel">Opel</option>
-          <option value="audi">Audi</option>
-        </select>
-      </div>
-      <button type="submit" class="btn btn-default">Procurar</button>
-    </form>
-
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="button" href="/home/index"><img src="<%= asset_path '2.png' %>"></a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/profile/index">PERFIL</a></li>
+        <li><a href="/home/index/#q">QUEM SOMOS</a></li>
+        <li><a href="/home/index/#missao">MISSÃO</a></li>
+        <li><a href="/home/index/#linha">NOTÍCIAS</a></li>
+        <li><a href="/home/index/#contact">CONTACTOS</a></li>
+      </ul>
+    </div>
   </div>
 </nav>
 
-<div class="container-fluid text-left">
-  <div class="row content">
-    <!--menu vertical-->
-    <div class="col-sm-2 sidenav">
-
-      <div class="container-fluid">
-
-        <div class="row">
-          <div class="col-md-12" id="tam">
-
-            <!-- menu -->
-            <div id="MainMenu">
-              <div class="list-group panel">
-                <a href="/profile/index" class="list-group-item list-group-item-success" data-parent="#MainMenu">PÁGINA PRINCIPAL</a>
-                <a href="/client_area/index" class="list-group-item list-group-item-success" data-parent="#MainMenu">ÁREA DE CLIENTE</a>
-                <a href="#demo3" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#MainMenu">ENCOMENDAS<i class="fa fa-caret-down"></i></a>
-                <div class="collapse" id="demo3">
-                  <a href="/order/index" class="list-group-item" data-toggle="collapse" data-parent="#SubMenu1">LISTA DE ENCOMENDAS<i class="fa fa-caret-down"></i></a>
-                  <div class="collapse list-group-submenu" id="SubMenu1">
-                    <a href="#" class="list-group-item" data-parent="#SubMenu1">Subitem 1 a</a>
-                    <a href="#" class="list-group-item" data-parent="#SubMenu1">Subitem 2 b</a>
-                    <a href="#SubSubMenu1" class="list-group-item" data-toggle="collapse" data-parent="#SubSubMenu1">Subitem 3 c <i class="fa fa-caret-down"></i></a>
-                    <div class="collapse list-group-submenu list-group-submenu-1" id="SubSubMenu1">
-                      <a href="#" class="list-group-item" data-parent="#SubSubMenu1">Sub sub item 1</a>
-                      <a href="#" class="list-group-item" data-parent="#SubSubMenu1">Sub sub item 2</a>
-                    </div>
-                    <a href="#" class="list-group-item" data-parent="#SubMenu1">Subitem 4 d</a>
-                  </div>
-                  <a href="/hold_order/index" class="list-group-item">ENCOMENDAS PENDENTES</a>
-                  <a href="javascript:;" class="list-group-item">ENCOMENDAS PARA REVISÃO</a>
-                  <a href="javascript:;" class="list-group-item">ENCOMENDAS CONCLUÍDAS</a>
-                  <a href="/order/new" class="list-group-item">NOVA ENCOMENDA</a>
-                </div>
-                <a href="#demo4" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#MainMenu">Item 4  <i class="fa fa-caret-down"></i></a>
-                <div class="collapse" id="demo4">
-                  <a href="" class="list-group-item">Subitem 1</a>
-                  <a href="" class="list-group-item">Subitem 2</a>
-                  <a href="" class="list-group-item">Subitem 3</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-
-
-
-
-
-    <div class="col-sm-8 text-left">
-      <h1>Área de Cliente</h1>
-      <p>Bem Vindo à sua àrea de cliente</p>
-      <br><br>
-      <div class="col-lg-10 text-left">
-        <table width="100%" class="table table-striped">
-          <thead>
-          <tr>
-            <th>NOME</th>
-            <th>TELEFONE</th>
-            <th>NIB</th>
-            <th>MORADA</th>
-            <th></th>
-          </tr>
-          </thead>
-          <tbody>
-          <tr class="odd gradeX">
-            <td><dt><%= @client.name %></dt> </td>
-            <td><dt><%= @client.phone_number%></dt></td>
-            <td><dt><%= @client.nib%></dt></td>
-            <td><dt><%= @client.address%></dt></td>
-            <td algin="center"> <%= link_to t('edit'), client_area_edit_client_path %></td>
-          </tr>
-          </tbody>
-        </table>
-      </div>
+<p/>
+<form class="jumbotron text-center">
+  <div class="input-group">
+    <input type="search" class="form-control" placeholder="Search" required>
+    <div class="input-group-btn">
+      <button type="button" class="btn btn-danger">Procurar</button>
     </div>
   </div>
-</div>
-    <!--botões do meio
-    <div class="col-sm-10">
-      <div class="well">
-        <h4>Inicio</h4>
-      </div>
-      <div class="row">
-        <div class="col-sm-3">
-          <div class="well">
-            <span class="glyphicon glyphicon-list-alt" aria-hidden="true" style="font-size:70px;text-align: center"></span>
-            <h4>Nova Encomendas</h4>
-          </div>
-        </div>
-        <div class="col-sm-3">
-          <div class="well">
-            <span class="glyphicon glyphicon-folder-open" aria-hidden="true" style="font-size:70px;text-align: center"></span>
-            <h4>Encomendas Recentes</h4>
-          </div>
-        </div>
-        <div class="col-sm-3">
-          <div class="well">
-            <span class="glyphicon glyphicon-user" aria-hidden="true" style="font-size:70px;text-align: center"></span>
-            <h4>Novo Utilizador</h4>
+</form>
 
-          </div>
-        </div>
-        <div class="col-sm-3">
-          <div class="well">
-            <span class="glyphicon glyphicon-book" aria-hidden="true" style="font-size:70px;text-align: center"></span>
-            <h4>Notas</h4>
-
-          </div>
-        </div>
-      </div>
-
-
-    </div>
-    -->
-
-
-  </div>
+<!-- Sidebar -->
+<div class="w3-sidebar w3-bar-block" style="width:25%">
+  <a href="/profile/index" class="w3-bar-item w3-button">PERFIL</a></br>
+  <a href="/client_area/index" class="w3-bar-item w3-button">ÁREA DE CLIENTE</a></br>
+  <a href="/order/show" class="w3-bar-item w3-button">ENCOMENDAS</a>
 </div>
 
-<% flash.each do |key, value| %>
-    <%= value %>
-<% end %>
-
-<%= yield  %>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--
-
-<nav class="navbar ">
-  <a class="navbar-brand" href="/home/index"><img src="<%= asset_path '2.png' %>"></a>
-  <form class="navbar-form navbar-right">
-    <div class="form-group">
-      <input type="text" class="form-control" placeholder="Search">
-    </div>
-    <button type="submit" class="btn btn-default">Procurar</button>
-  </form>
-  </div>
-</nav>
-
-<div class="container-fluid text-left">
-  <div class="row content">
-    <div class="col-sm-2 sidenav">
-      <br><a href="/profile/index">PERFIL</a></br>
-      <br><a href="/client_area/index">ÁREA DE CLIENTE</a></br>
-      <br>
-      <div class="w3-dropdown-hover">
-        <a href="/order/show">ENCOMENDAS</a>
-        <div class="w3-dropdown-content w3-bar-block w3-card-4">
-          <a href="/hold_order/index" class="w3-bar-item w3-button">Encomendas Pendentes</a>
-          <a href="#" class="w3-bar-item w3-button">Encomendas para Revisão</a>
-          <a href="#" class="w3-bar-item w3-button">Encomendas Concluídas</a>
-          <a href="/order/new" class="w3-bar-item w3-button">Nova Encomenda</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-sm-8 text-left">
+<!-- Page Content -->
+<div style="margin-left:25%">
+  <div class="col-lg-10 text-left">
       <h1>Área de Cliente</h1>
       <p>Bem Vindo à sua àrea de cliente</p>
       <br><br>

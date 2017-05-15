@@ -22,6 +22,8 @@ class OrderController < ApplicationController
     end
   end
 
-  #def edit    @order = Order.new  end
+  def edit
+    @order = Order.new
+  end
 
 end
