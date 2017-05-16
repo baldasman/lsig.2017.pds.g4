@@ -46,7 +46,7 @@
       <br><a href="/client_area/index">ÁREA DE CLIENTE</a></br>
       <br>
       <div class="w3-dropdown-hover">
-        <a href="#">ENCOMENDAS</a>
+        <a href="/order/show">ENCOMENDAS</a>
         <div class="w3-dropdown-content w3-bar-block w3-card-4">
           <a href="/hold_order/index" class="w3-bar-item w3-button">Encomendas Pendentes</a>
           <a href="#" class="w3-bar-item w3-button">Encomendas para Revisão</a>
@@ -55,13 +55,26 @@
         </div>
       </div>
     </div>
-<<<<<<< Updated upstream
 
-=======
+    <div class="col-lg-10 text-left">
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th>Description</th>
+          <th>Delivery Date</th>
+          <th>Preço Unitário</th>
+          <th>Quantidade</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="odd gradeX">
+          <td><%= @order.description %></td>
+          <td><%= @order.delivery_date %></td>
+          <td><%= @order.unit_price %></td>
+          <td><%= @order.quantity %></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </div>
-<% @order.each do |order| %>
-<%= link_to order.description, order %>
-    <%= order.content %>
-<% end %>
->>>>>>> Stashed changes

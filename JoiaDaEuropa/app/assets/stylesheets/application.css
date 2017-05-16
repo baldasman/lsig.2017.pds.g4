@@ -10,35 +10,6 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
+ * require_tree .
  *= require_self
-*/<style>
-header {
-    padding: 5px;
-    background-color: black;
-}
-
-.row.content {height: 450px}
-
-.navbar {background-color: black;}
-
-.sidenav {
-    padding-top: 30px;
-    background-color: black;
-    height: 150%;
-}
-
-input[type=text] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border: 1px solid #555;
-    outline: none;
-}
-
-input[type=text]:focus {
-    background-color: ghostwhite;
-}
-</style>
-
+*/

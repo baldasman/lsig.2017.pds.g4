@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get '/home/index'
   get '/client_area/index'
   get '/end_order/index'
+  get '/cancel_order/index'
 
   get '/hold_order/index'
 
