@@ -150,6 +150,10 @@
     border-top-left-radius: 0;
     border-top-right-radius: 0;
   }
+    #SIMG{
+      height: 620px;
+      width:100%;
+    }
 </style>
 
 <nav class="navbar navbar-default navbar-fixed-top">
@@ -162,7 +166,7 @@
         <li><a href="/profile/index">PERFIL</a></li>
         <li><a href="#q">QUEM SOMOS</a></li>
         <li><a href="#missao">MISSÃO</a></li>
-        <li><a href="#linha">NOTÍCIAS</a></li>
+        <li><a href="#services">NOTÍCIAS</a></li>
         <li><a href="#contact">CONTACTOS</a></li>
         <li><a href="/users/sign_in">LOGIN</a></li>
         <li><a onclick="openNavl()">teste</a></li>
@@ -246,15 +250,20 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
       <div class="item active">
-        <img src="https://s3-us-west-1.amazonaws.com/powr/defaults/image-slider2.jpg" alt="Los Angeles" style="width:100%;">
+
+        <img src="<%= asset_path 'b1.jpg' %>"ID="SIMG">
+
       </div>
 
       <div class="item">
-        <img src="http://scontent.cdninstagram.com/t51.2885-15/s480x480/e35/c103.0.514.514/15535576_1174062096034748_1731205590786506752_n.jpg?ig_cache_key=MTQwNDU2NDgwNDc2NDc5NDMzNA%3D%3D.2.c" alt="Chicago" style="width:100%;">
+        <h1>feira na alemanha</h1>
+        <img src="<%= asset_path 'b2.jpg' %>"ID="SIMG">
       </div>
 
       <div class="item">
-        <img src="https://s3-us-west-1.amazonaws.com/powr/defaults/image-slider2.jpg" alt="New york" style="width:100%;">
+
+        <h1>feira na alemanha</h1>
+        <img src="<%= asset_path 'b3.jpg' %>" ID="SIMG">
       </div>
     </div>
 
