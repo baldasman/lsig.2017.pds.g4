@@ -27,7 +27,7 @@ en:
   phone_number: "Telefone"
   nib: "NIB"
   address: "Morada"
-  description: "Descricão"
+  description: "Descrição"
   delivery_date: "Data de Entrega"
   unit_price: "Preço Unitário"
   quantity: "Quantidade"
@@ -35,7 +35,7 @@ en:
   client: "Cliente"
   save: "Guardar"
   submit: "Submeter"
-  add_new_order: "Adicionar uma nova encomenda"
+  add: "Adicionar"
   edit: "Editar"
   activerecord:
       errors:

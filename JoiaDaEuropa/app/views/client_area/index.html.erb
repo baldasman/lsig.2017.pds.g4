@@ -1,6 +1,7 @@
 <%= stylesheet_link_tag 'estilos', media: 'all', 'data-turbolinks-track': 'reload' %>
 
 <nav data-spy="scroll" data-target=".navbar" class="navbar navbar-default navbar-fixed-top">
+
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -23,24 +24,20 @@
 </nav>
 
 <p/>
-<form class="jumbotron text-center">
+<form class="jumbotron">
   <div class="input-group">
-    <input type="search" class="form-control" placeholder="Search" required>
-    <div class="input-group-btn">
-      <button type="button" class="btn btn-danger">Procurar</button>
-    </div>
+    <a href="/order/new" class="btn btn-info" role="button">NOVA ENCOMENDA</a>
   </div>
 </form>
 </div>
 
 <div class="container-fluid text-left">
   <div class="row content">
-    <div class="col-sm-2 sidenav">
+    <div class="col-sm-2 sidebar4">
       <p><a href="/profile/index" class="w3-bar-item w3-button">PERFIL</a></p>
       <p><a href="/client_area/index" class="w3-bar-item w3-button">ÁREA DE CLIENTE</a></p>
-      <p><a href="/order/show" class="w3-bar-item w3-button">ENCOMENDAS</a></p>
+      <p><a href="/order/show" class="w3-bar-item w3-button">ENCOMENDAS</a>
     </div>
-
 
     <div class="col-lg-10 text-left">
       <h1>Área de Cliente</h1>

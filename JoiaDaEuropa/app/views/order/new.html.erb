@@ -1,6 +1,7 @@
-<nav data-spy="scroll" data-target=".navbar" class="navbar navbar-default navbar-fixed-top">
+<%= stylesheet_link_tag 'estilos', media: 'all', 'data-turbolinks-track': 'reload' %>
 
-  <div class="container">
+<nav data-spy="scroll" data-target=".navbar" class="navbar navbar-default navbar-fixed-top">
+<div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="icon-bar"></span>
@@ -22,47 +23,61 @@
 </nav>
 
 <p/>
-<form class="jumbotron text-center">
+<form class="jumbotron">
   <div class="input-group">
-    <input type="search" class="form-control" placeholder="Search" required>
-    <div class="input-group-btn">
-      <button type="button" class="btn btn-danger">Procurar</button>
-    </div>
+    <a href="/order/new" class="btn" role="button">NOVA ENCOMENDA</a>
   </div>
 </form>
 </div>
 
 <div class="container-fluid text-left">
   <div class="row content">
-    <div class="col-sm-2 sidenav">
+    <div class="col-sm-2 sidebar4">
       <p><a href="/profile/index" class="w3-bar-item w3-button">PERFIL</a></p>
       <p><a href="/client_area/index" class="w3-bar-item w3-button">ÁREA DE CLIENTE</a></p>
-      <p><a href="#">Link</a></p>
+      <p><a href="/order/show" class="w3-bar-item w3-button">ENCOMENDAS</a>
     </div>
 
-
     <div class="col-lg-10 text-left">
+      <h1><strong>NOVA ENCOMENDA</strong></h1>
+      <i>Faça a sua encomenda</i>
+      <br> <br>
 
-      <%= form_for @order, url:  {action: "create"} do |f| %>
+ <%= form_for @order, url:  {action: "create"} do |f| %>
 
-          <%= f.label t("description") %>
-          <%= f.text_field :description %>
+            <table class="w3-table">
+              <thead>
+              <tr>
+                <th><%= f.label t("description") %></th>
+                <th><%= f.label t("delivery_date") %></th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td><%= f.text_field :description %></td>
+                <td><%= f.date_select :delivery_date %></td>
+              </tr>
+              </tbody>
+            </table>
+<br/>
+          <table class="w3-table">
+          <thead>
+            <tr>
+              <th><%= f.label t("unit_price") %></th>
+              <th> <%= f.label t("quantity") %></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td><%= f.text_field :unit_price %></td>
+              <td><%= f.text_field :quantity %></td>
+            </tr>
+            </tbody>
+            </table>
+
           <br/>
-
-          <%= f.label t("delivery_date") %>
-          <%= f.date_select :delivery_date %>
-          <br/>
-
-          <%= f.label t("unit_price") %>
-          <%= f.text_field :unit_price %>
-          <br/>
-
-          <%= f.label t("quantity") %>
-          <%= f.text_field :quantity %>
-          <br/>
-
-          <%= f.submit t("add_new_order")%>
-
+          <%= f.submit t("add")%>
+          <a href="/order/show" class="btn" role="button">Cancelar</a>
       <% end %>
     </div>
   </div>
