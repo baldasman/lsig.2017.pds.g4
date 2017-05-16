@@ -1,6 +1,6 @@
+<%= stylesheet_link_tag 'estilos', media: 'all', 'data-turbolinks-track': 'reload' %>
 
 <nav data-spy="scroll" data-target=".navbar" class="navbar navbar-default navbar-fixed-top">
-
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -31,17 +31,18 @@
     </div>
   </div>
 </form>
-
-<!-- Sidebar -->
-<div class="w3-sidebar w3-bar-block" style="width:25%">
-  <a href="/profile/index" class="w3-bar-item w3-button">PERFIL</a></br>
-  <a href="/client_area/index" class="w3-bar-item w3-button">ÁREA DE CLIENTE</a></br>
-  <a href="/order/show" class="w3-bar-item w3-button">ENCOMENDAS</a>
 </div>
 
-<!-- Page Content -->
-<div style="margin-left:25%">
-  <div class="col-lg-10 text-left">
+<div class="container-fluid text-left">
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+      <p><a href="/profile/index" class="w3-bar-item w3-button">PERFIL</a></p>
+      <p><a href="/client_area/index" class="w3-bar-item w3-button">ÁREA DE CLIENTE</a></p>
+      <p><a href="/order/show" class="w3-bar-item w3-button">ENCOMENDAS</a></p>
+    </div>
+
+
+    <div class="col-lg-10 text-left">
       <h1>Área de Cliente</h1>
       <p>Bem Vindo à sua àrea de cliente</p>
       <br><br>

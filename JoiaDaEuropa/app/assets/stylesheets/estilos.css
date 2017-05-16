@@ -20,10 +20,18 @@
   border-color: transparent;
   color: #fff !important;
 }
-
 .jumbotron {
     background-color: slategrey;
     color: #fff;
     padding: 50px 25px;
+    font-family: Montserrat, sans-serif;
+}
+.sidenav{
+    background: lightgrey;
+    padding-bottom: 100%;
+    padding-top: 5%;
+    font-family: Montserrat, sans-serif;
+}
+body{
     font-family: Montserrat, sans-serif;
 }

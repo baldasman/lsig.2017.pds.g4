@@ -1,7 +1,7 @@
 class HoldOrderController < ApplicationController
 
   def index
-    @order = Order.find_by(params[:id])
+    @order = Order.where(order.state_id = "1")
 
     #where @order.state_id("Pendente")
 
