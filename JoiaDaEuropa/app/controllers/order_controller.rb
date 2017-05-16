@@ -1,11 +1,14 @@
 class OrderController < ApplicationController
 
+    #filter_attributes :status
+
     def index
         @order = Order.all
-    end
+        end
 
     def show
-        @order = Order.find(2)
+        @order = Order.find_by(params[:id])
+        #@order = Order.paginate :page => params[:page], :conditions => filter_conditions
     end
 
     def new
@@ -31,11 +34,19 @@ class OrderController < ApplicationController
         else
             render :action => "new"
         end
-
     end
 
     def edit
-        @order = Order.new
+        @order = Order.new(client_id: current_user.client.id, state_id: 1)
+
+        _order = params[:order]
+
+        @order.state_id = 1 # default state: pendent
+        @order.description = _order[:description]
+        @order.unit_price = _order[:unit_price]
+        @order.quantity = _order[:quantity]
+
+        @order.delivery_date = Date.new(_order['delivery_date(1i)'].to_i, _order['delivery_date(2i)'].to_i, _order['delivery_date(3i)'].to_i)
     end
 
     private
@@ -45,5 +56,4 @@ class OrderController < ApplicationController
         params[:order]
 
     end
-
 end
