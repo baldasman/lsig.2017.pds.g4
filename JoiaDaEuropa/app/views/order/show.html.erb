@@ -1,45 +1,4 @@
-<style>
-  body {
-    font: 400 15px Lato, sans-serif;
-    line-height: 1.8;
-    color: dimgrey;
-  }
-  .jumbotron {
-    background-color: slategrey;
-    padding: 25px 10px;
-    font-family: Montserrat, sans-serif;
-  }
-  h1
-  {
-    font: 30px Lato, sans-serif;
-  }
-  .navbar {
-    margin-bottom: 0;
-    background-color: lightgrey;
-    z-index: 9999;
-    border: 0;
-    font-size: 12px !important;
-    line-height: 1.42857143 !important;
-    letter-spacing: 4px;
-    border-radius: 0;
-    font-family: Montserrat, sans-serif;
-  }
-  .navbar li a, .navbar .navbar-brand {
-    color: dimgrey !important;
-  }
-  .navbar-nav li a:hover, .navbar-nav li.active a {
-    color: midnightblue !important;
-    background-color: #fff !important;
-  }
-  .navbar-default .navbar-toggle {
-    border-color: transparent;
-    color: #fff !important;
-  }
-  .input-group
-  {
-    width: 30%;
-  }
-</style>
+<%= stylesheet_link_tag 'estilos', media: 'all', 'data-turbolinks-track': 'reload' %>
 
 <nav data-spy="scroll" data-target=".navbar" class="navbar navbar-default navbar-fixed-top">
 
@@ -66,23 +25,24 @@
 
 <p/>
 <form class="jumbotron text-center">
-    <div class="input-group">
-      <input type="search" class="form-control" placeholder="Search" required>
-      <div class="input-group-btn">
-        <button type="button" class="btn btn-danger">Procurar</button>
-      </div>
+  <div class="input-group">
+    <input type="search" class="form-control" placeholder="Search" required>
+    <div class="input-group-btn">
+      <button type="button" class="btn btn-danger">Procurar</button>
     </div>
-  </form>
-
-<!-- Sidebar -->
-<div class="w3-sidebar w3-bar-block" style="width:25%">
-  <a href="/profile/index" class="w3-bar-item w3-button">PERFIL</a></br>
-  <a href="/client_area/index" class="w3-bar-item w3-button">ÁREA DE CLIENTE</a></br>
-  <a href="/order/show" class="w3-bar-item w3-button">ENCOMENDAS</a>
   </div>
+</form>
+</div>
 
-<!-- Page Content -->
-<div style="margin-left:25%">
+<div class="container-fluid text-left">
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+      <p><a href="/profile/index" class="w3-bar-item w3-button">PERFIL</a></p>
+      <p><a href="/client_area/index" class="w3-bar-item w3-button">ÁREA DE CLIENTE</a></p>
+      <p><a href="/order/show" class="w3-bar-item w3-button">ENCOMENDAS</a></p>
+    </div>
+
+
     <div class="col-lg-10 text-left">
       <h1>Listagem de Encomenda</h1>
       <p></p>

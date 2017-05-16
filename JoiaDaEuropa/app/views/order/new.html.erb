@@ -1,42 +1,3 @@
-<style>
-  body {
-    font: 400 15px Lato, sans-serif;
-    line-height: 1.8;
-    color: dimgrey;
-  }
-  .jumbotron {
-    background-color: slategrey;
-    padding: 25px 10px;
-    font-family: Montserrat, sans-serif;
-  }
-
-  .navbar {
-    margin-bottom: 0;
-    background-color: lightgrey;
-    z-index: 9999;
-    border: 0;
-    font-size: 12px !important;
-    line-height: 1.42857143 !important;
-    letter-spacing: 4px;
-    border-radius: 0;
-    font-family: Montserrat, sans-serif;
-  }
-  .navbar li a, .navbar .navbar-brand {
-    color: dimgrey !important;
-  }
-  .navbar-nav li a:hover, .navbar-nav li.active a {
-    color: midnightblue !important;
-    background-color: #fff !important;
-  }
-  .navbar-default .navbar-toggle {
-    border-color: transparent;
-    color: #fff !important;
-  }
-  .input-group
-  {
-    width: 30%;
-  }
-</style>
 <nav data-spy="scroll" data-target=".navbar" class="navbar navbar-default navbar-fixed-top">
 
   <div class="container">
@@ -69,17 +30,19 @@
     </div>
   </div>
 </form>
-
-<!-- Sidebar -->
-<div class="w3-sidebar w3-bar-block" style="width:25%">
-  <a href="/profile/index" class="w3-bar-item w3-button">PERFIL</a></br>
-  <a href="/client_area/index" class="w3-bar-item w3-button">ÁREA DE CLIENTE</a></br>
-  <a href="/order/show" class="w3-bar-item w3-button">ENCOMENDAS</a>
 </div>
 
-<!-- Page Content -->
-<div style="margin-left:25%">
-  <div class="col-lg-10 text-left">
+<div class="container-fluid text-left">
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+      <p><a href="/profile/index" class="w3-bar-item w3-button">PERFIL</a></p>
+      <p><a href="/client_area/index" class="w3-bar-item w3-button">ÁREA DE CLIENTE</a></p>
+      <p><a href="#">Link</a></p>
+    </div>
+
+
+    <div class="col-lg-10 text-left">
+
       <%= form_for @order, url:  {action: "create"} do |f| %>
 
           <%= f.label t("description") %>
@@ -98,16 +61,8 @@
           <%= f.text_field :quantity %>
           <br/>
 
-          <dd><%= f.label t("state_id") %></dd>
-          <dt><%= f.select_tag(:state_id, options_for_select([['Pendente', 1], ['Cancelada', 2], ['Concluida', 2]])) %></dt>
-          <br/>
-
-          <dd><%= f.label t("client") %></dd>
-          <dt><%= f.text_field :client_id %></dt>
-
           <%= f.submit t("add_new_order")%>
 
       <% end %>
     </div>
   </div>
-</div>
