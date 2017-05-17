@@ -42,11 +42,11 @@
     </div>
 
 
-        <%= @order.description %>
-        <%= @order.delivery_date %>
-        <%= @order.unit_price %>
-        <%= @order.quantity %>
-    <%= @order.state_id%>
+        <%= @order.try (:Description) %>
+        <%= @order.try (:delivery_date) %>
+        <%= @order.try (:unit_price) %>
+        <%= @order.try (:quantity) %>
+    <%= @order.try (:state_id)%>
 
       </div>
   </div>
