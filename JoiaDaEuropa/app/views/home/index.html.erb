@@ -154,6 +154,12 @@
       height: 620px;
       width:100%;
     }
+    #icone{
+      margin-top: -6px;
+    }
+    #morad{
+      font-size: 16px;
+    }
 </style>
 
 <nav class="navbar navbar-default navbar-fixed-top">
@@ -166,10 +172,9 @@
         <li><a href="/profile/index">PERFIL</a></li>
         <li><a href="#q">QUEM SOMOS</a></li>
         <li><a href="#missao">MISSÃO</a></li>
-        <li><a href="#services">NOTÍCIAS</a></li>
+        <li><a href="#linha">NOTÍCIAS</a></li>
         <li><a href="#contact">CONTACTOS</a></li>
-        <li><a href="/users/sign_in">LOGIN</a></li>
-        <li><a onclick="openNavl()">teste</a></li>
+        <li><a onclick="openNavl()">LOGIN</a></li>
 
       </ul>
     </div>
@@ -243,87 +248,43 @@
 
   <br><br>
 
-  <div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol>
-
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner">
-      <div class="item active">
-
-        <img src="<%= asset_path 'b1.jpg' %>"ID="SIMG">
-
-      </div>
-
-      <div class="item">
-        <h1>feira na alemanha</h1>
-        <img src="<%= asset_path 'b2.jpg' %>"ID="SIMG">
-      </div>
-
-      <div class="item">
-
-        <h1>feira na alemanha</h1>
-        <img src="<%= asset_path 'b3.jpg' %>" ID="SIMG">
-      </div>
-    </div>
-
-    <!-- Left and right controls -->
-    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div>
-</div>
-  <!--
   <div class="row slideanim">
     <div class="col-sm-4">
-      <!--modal1--><!--
+      <!--modal1-->
       <button type="button" class="btn btn-primary btn-lg"  onclick="openNav()">Feira na Alemanha 2016</button>
     </div>
     <div class="col-sm-4">
-      <!--modal2--><!--
+      <!--modal2-->
       <button type="button" class="btn btn-primary btn-lg"  onclick="openNav2()">Feira na Alemanha 2016</button>
     </div>
     <div class="col-sm-4">
-      <!--modal3--><!--
+      <!--modal3-->
       <button type="button" class="btn btn-primary btn-lg"  onclick="openNav3()">Feira na Alemanha 2016</button>
     </div>
   </div>
 
   <br>
   <br>
-<!--segunda fila de botões--><!--
+<!--segunda fila de botões-->
   <div class="row slideanim">
   <div class="col-sm-4">
-    <!--modal4--><!--
+    <!--modal4-->
     <button type="button" class="btn btn-primary btn-lg"  onclick="openNav4()">Feira na Alemanha 2016</button>
   </div>
    <div class="col-sm-4">
-     <!--modal5--><!--
+     <!--modal5-->
      <button type="button" class="btn btn-primary btn-lg"  onclick="openNav5()">Feira na Alemanha 2016</button>
     </div>
     <div class="col-sm-4">
-      <!--modal6--><!--
+      <!--modal6-->
       <button type="button" class="btn btn-primary btn-lg"  onclick="openNav6()">Feira na Alemanha 2016</button>
     </div>
   </div>
 </div>
 
--->
-
-
 
 
 <!modal1-->
-
 <div id="myNav" class="overlay">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <div class="container-fluid bg-grey" id="missao">
@@ -423,16 +384,10 @@
         <h2>Feira na Alemanha 20164</h2><br>
         <h4 id="m4">
           Uma empresa não se define pelo nome que tem, define-se pelo esforço e trabalho despendido por todos aqueles que fazem parte dela, os recursos humanos, fornecedores, clientes e todos os outros colaboradores são necessários para o sucesso de qualquer empresa, e Jóia da Europa conta com a ajuda de todos.
-
-
           A nossa missão centraliza-se em:
-
           Atender às necessidades de todos os nossos clientes, aperfeiçoando sempre os nossos produtos e serviços.
-
           Fornecer produtos de tal qualidade que os nossos clientes se sintam satisfeitos, e os nossos empregados e parceiros de negócios se beneficiem com nosso êxito.
-
           Oferecer soluções para qualquer ideia, contando com a nossa assistência.
-
           Apostar sempre em tecnologias inovadoras.
         </h4>
       </div>
@@ -452,16 +407,10 @@
         <h2>Feira na Alemanha 20164</h2><br>
         <h4 id="m4">
           Uma empresa não se define pelo nome que tem, define-se pelo esforço e trabalho despendido por todos aqueles que fazem parte dela, os recursos humanos, fornecedores, clientes e todos os outros colaboradores são necessários para o sucesso de qualquer empresa, e Jóia da Europa conta com a ajuda de todos.
-
-
           A nossa missão centraliza-se em:
-
           Atender às necessidades de todos os nossos clientes, aperfeiçoando sempre os nossos produtos e serviços.
-
           Fornecer produtos de tal qualidade que os nossos clientes se sintam satisfeitos, e os nossos empregados e parceiros de negócios se beneficiem com nosso êxito.
-
           Oferecer soluções para qualquer ideia, contando com a nossa assistência.
-
           Apostar sempre em tecnologias inovadoras.
         </h4>
       </div>
@@ -481,16 +430,10 @@
         <h2>Feira na Alemanha 20164</h2><br>
         <h4 id="m4">
           Uma empresa não se define pelo nome que tem, define-se pelo esforço e trabalho despendido por todos aqueles que fazem parte dela, os recursos humanos, fornecedores, clientes e todos os outros colaboradores são necessários para o sucesso de qualquer empresa, e Jóia da Europa conta com a ajuda de todos.
-
-
           A nossa missão centraliza-se em:
-
           Atender às necessidades de todos os nossos clientes, aperfeiçoando sempre os nossos produtos e serviços.
-
           Fornecer produtos de tal qualidade que os nossos clientes se sintam satisfeitos, e os nossos empregados e parceiros de negócios se beneficiem com nosso êxito.
-
           Oferecer soluções para qualquer ideia, contando com a nossa assistência.
-
           Apostar sempre em tecnologias inovadoras.
         </h4>
       </div>
@@ -502,7 +445,6 @@
 <div id="myNavl" class="overlay">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNavl()">&times;</a>
   <div class="container-fluid bg-grey" id="missao">
-
     <div class="wrapper">
       <form class="form-signin">
         <h2 class="form-signin-heading">Please login</h2>
@@ -511,12 +453,13 @@
         <label class="checkbox">
           <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> Remember me
         </label>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+        <button class="btn btn-lg btn-primary btn-block" type="submit" >Login</button>
       </form>
     </div>
-
   </div>
 </div>
+
+
 <!--script do modal1-->
 <script>
     function openNav() {
@@ -625,11 +568,18 @@
         <br>
         <br>
         <br>
-        <p><span class="glyphicon glyphicon-map-marker"></span> RUA SANTA MARIA, 437<BR>
+        <p id="morad"><span class="glyphicon glyphicon-map-marker"></span> RUA SANTA MARIA, 437<BR>
           BARROSAS<BR>
           4650-139 IDÃES FLG</p>
-        <p><span class="glyphicon glyphicon-phone"></span> +351 255 312 443 | Fax: +351 255 312 444</p>
-        <p><span class="glyphicon glyphicon-envelope"></span> geral@joiadaeuropa.com</p>
+        <p id="morad"><span class="glyphicon glyphicon-phone"></span> +351 255 312 443 | Fax: +351 255 312 444</p>
+        <br> <br><br>
+        <p id="morad"><span class="glyphicon glyphicon-envelope"></span> geral@joiadaeuropa.com</p>
+
+        <p id="morad"><img src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjE2cHgiIGhlaWdodD0iMTZweCIgdmlld0JveD0iMCAwIDk2LjEyNCA5Ni4xMjMiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDk2LjEyNCA5Ni4xMjM7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPGc+Cgk8cGF0aCBkPSJNNzIuMDg5LDAuMDJMNTkuNjI0LDBDNDUuNjIsMCwzNi41Nyw5LjI4NSwzNi41NywyMy42NTZ2MTAuOTA3SDI0LjAzN2MtMS4wODMsMC0xLjk2LDAuODc4LTEuOTYsMS45NjF2MTUuODAzICAgYzAsMS4wODMsMC44NzgsMS45NiwxLjk2LDEuOTZoMTIuNTMzdjM5Ljg3NmMwLDEuMDgzLDAuODc3LDEuOTYsMS45NiwxLjk2aDE2LjM1MmMxLjA4MywwLDEuOTYtMC44NzgsMS45Ni0xLjk2VjU0LjI4N2gxNC42NTQgICBjMS4wODMsMCwxLjk2LTAuODc3LDEuOTYtMS45NmwwLjAwNi0xNS44MDNjMC0wLjUyLTAuMjA3LTEuMDE4LTAuNTc0LTEuMzg2Yy0wLjM2Ny0wLjM2OC0wLjg2Ny0wLjU3NS0xLjM4Ny0wLjU3NUg1Ni44NDJ2LTkuMjQ2ICAgYzAtNC40NDQsMS4wNTktNi43LDYuODQ4LTYuN2w4LjM5Ny0wLjAwM2MxLjA4MiwwLDEuOTU5LTAuODc4LDEuOTU5LTEuOTZWMS45OEM3NC4wNDYsMC44OTksNzMuMTcsMC4wMjIsNzIuMDg5LDAuMDJ6IiBmaWxsPSIjRkZGRkZGIi8+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==" id="icone"/></span> https://www.facebook.com/</p>
+
+        <p id="morad"><img src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMS4xLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDE4IDE4IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAxOCAxODsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSIxNnB4IiBoZWlnaHQ9IjE2cHgiPgo8Zz4KCTxnIGlkPSJMYXllcl8xXzEwNl8iPgoJCTxnPgoJCQk8cGF0aCBkPSJNNy4wMzMsMTIuM2gtMS42VjcuMTAxaDEuNlYxMi4zeiBNNi4yMzMsNi40MzRjLTAuNTc3LDAtMC44NjYtMC4yNjctMC44NjYtMC44ICAgICBjMC0wLjIyMywwLjA4Mi0wLjQxMiwwLjI1LTAuNTY3YzAuMTY2LTAuMTU1LDAuMzcxLTAuMjMzLDAuNjE2LTAuMjMzYzAuNTc3LDAsMC44NjYsMC4yNjgsMC44NjYsMC44MDFTNi44MTEsNi40MzQsNi4yMzMsNi40MzR6ICAgICAgTTEyLjk2NywxMi4zaC0xLjYzM1Y5LjRjMC0wLjc1NS0wLjI2OC0xLjEzMy0wLjgwMS0xLjEzM2MtMC40MjIsMC0wLjY5OSwwLjIxMS0wLjgzNCwwLjYzM0M5LjY1Niw4Ljk2Nyw5LjYzMyw5LjEwMSw5LjYzMyw5LjMgICAgIHYzSDhWOC43NjdjMC0wLjgtMC4wMTItMS4zNTUtMC4wMzMtMS42NjZoMS40bDAuMSwwLjY5OWMwLjM2Ny0wLjU1NiwwLjktMC44MzMsMS42MzMtMC44MzNjMC41NTcsMCwxLjAwNiwwLjE5NCwxLjM1LDAuNTgzICAgICBjMC4zNDYsMC4zODksMC41MTgsMC45NSwwLjUxOCwxLjY4NFYxMi4zSDEyLjk2N3oiIGZpbGw9IiNGRkZGRkYiLz4KCQk8L2c+CgkJPGc+CgkJCTxwYXRoIGQ9Ik05LDE4Yy00Ljk2MywwLTktNC4wMzctOS05czQuMDM3LTksOS05czksNC4wMzcsOSw5UzEzLjk2MywxOCw5LDE4eiBNOSwyQzUuMTQxLDIsMiw1LjE0MSwyLDkgICAgIHMzLjE0MSw3LDcsN3M3LTMuMTQxLDctN1MxMi44NTksMiw5LDJ6IiBmaWxsPSIjRkZGRkZGIi8+CgkJPC9nPgoJPC9nPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo="  id="icone"/></span> https://pt.linkedin.com/in/joia-europa-61a96ab7</p>
+
+
       </div>
       <div class="col-sm-7 slideanim">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2995.8244340537403!2d-8.26794114893171!3d41.33443090713743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2465070c1b29cf%3A0x98bbd8be12c4332!2sJ%C3%B3ia+Da+Europa+-+Unipessoal%2C+Lda.!5e0!3m2!1spt-PT!2spt!4v1494173733000" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
@@ -640,3 +590,8 @@
 
   <!-- Add Google Maps -->
 </div>
+
+<footer class="container-fluid bg-2 text-left">
+<p>Parcerias</p>
+  <img src="<%= asset_path 'images.jpg' %>">
+</footer>
