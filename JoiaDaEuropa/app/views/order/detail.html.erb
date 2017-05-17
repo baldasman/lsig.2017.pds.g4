@@ -1,23 +1,16 @@
-<%= stylesheet_link_tag 'estilos', media: 'all', 'data-turbolinks-track': 'reload' %>
-
+<!-- g4navbar -->
 <nav data-spy="scroll" data-target=".navbar" class="navbar navbar-default navbar-fixed-top">
 
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="button" href="/home/index"><img src="<%= asset_path '2.png' %>"></a>
+      <a class="button" href="/home/index"><img src="<%= asset_path '2.png' %>" width="190px"></a>
     </div>
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav navbar-right">
         <li><a href="/profile/index">PERFIL</a></li>
-        <li><a href="/home/index/#q">QUEM SOMOS</a></li>
-        <li><a href="/home/index/#missao">MISSÃO</a></li>
-        <li><a href="/home/index/#linha">NOTÍCIAS</a></li>
-        <li><a href="/home/index/#contact">CONTACTOS</a></li>
+        <li><a href="/order/show">ENCOMENDAS</a></li>
+        <li><a href="/order/new">NOVA ENCOMENDA</a></li>
+        <li><input type="text" name="search" placeholder="Search.."></li>
       </ul>
     </div>
   </div>
@@ -25,26 +18,49 @@
 
 <p/>
 <form class="jumbotron">
-  <div class="input-group">
-    <a href="/order/new" class="btn btn-info" role="button">NOVA ENCOMENDA</a>
-  </div>
+  <body>
+  <header class="row" style="text-align: center;">
+    <div class="col-md-3">
+      <%= link_to 'PT', '/?lang=pt' %>
+      <span>|</span>
+      <%= link_to 'EN', '/?lang=en' %>
+    </div>
+    <div class="col-md-6">
+
+    </div>
+    <div class="col-md-3">
+      <% if current_user %>
+          <%= link_to 'Sign Out', destroy_user_session_path, {method: 'delete'} %>
+      <% else %>
+          <%= link_to 'Sign In', new_user_session_path %>
+      <% end %>
+    </div>
+  </header>
+
+  <%= yield %>
+
+  <% if notice %>
+      <div class="alert alert-info" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <%= notice %>
+      </div>
+  <% end %>
+  <% if alert %>
+      <div class="alert alert-warning" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <%= alert %>
+      </div>
+  <% end %>
+  </body>
 </form>
 </div>
 
-<div class="container-fluid text-left">
-  <div class="row content">
-    <div class="col-sm-2 sidebar4">
-      <p><a href="/profile/index" class="w3-bar-item w3-button">PERFIL</a></p>
-      <p><a href="/client_area/index" class="w3-bar-item w3-button">ÁREA DE CLIENTE</a></p>
-      <p><a href="/order/show" class="w3-bar-item w3-button">ENCOMENDAS</a>
-    </div>
-
-    <div class="col-lg-10 text-left">
-      <h1><b>ÁREA DE CLIENTE</b></h1>
-      <i>Bem Vindo à sua àrea de cliente</i>
+    <div class="col-lg-10 text-center">
+      <h1><b>DETALHES DE ENCOMENDA</b></h1>
+      <i></i>
       <br><br>
       <div class="col-lg-10 text-left">
-        <table width="100%" class="table table-striped">
+        <table width="100%" class="table-responsive table-striped">
   <thead>
   <tr>
     <th>Nº</th>
