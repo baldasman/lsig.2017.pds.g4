@@ -27,7 +27,7 @@ class OrderController < ApplicationController
 
 
         if @order.save
-            redirect_to order_show_path, flash[:notice] => "Your Order was save"
+            redirect_to order_detail_path, flash[:notice] => "Your Order was save"
         else
             render :action => "new"
         end
