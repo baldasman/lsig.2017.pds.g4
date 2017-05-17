@@ -59,6 +59,7 @@ thead{
 .w3-table{
     font-family: Montserrat, sans-serif;
 }
-.col-md-3{
-    color: white;
+.glyphicon-user{
+    width: 200%;
 }
+
