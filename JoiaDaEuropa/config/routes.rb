@@ -13,7 +13,8 @@ Rails.application.routes.draw do
   get '/client_area/edit_client'
   patch '/client_area/save_client'
 
-  get '/order/index'
+  get '/order/update'
+  get '/order/destroy'
   get '/order/new'
   get '/order/show'
   post '/order/create'
