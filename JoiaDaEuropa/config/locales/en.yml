@@ -37,6 +37,7 @@ en:
   submit: "Submeter"
   add: "Adicionar"
   edit: "Editar"
+  detail: "Detalhes"
   activerecord:
       errors:
         models:

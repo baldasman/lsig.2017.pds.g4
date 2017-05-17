@@ -8,11 +8,11 @@ class OrderController < ApplicationController
         #@order = Order.paginate :page => params[:page], :conditions => filter_conditions
   end
 
-    def new
+  def new
         @order = Order.new
     end
 
-    def create
+  def create
 
         @order = Order.new(client_id: current_user.client.id, state_id: 1)
 
@@ -33,12 +33,16 @@ class OrderController < ApplicationController
         end
     end
 
-  def edit
-    @order = current_order.order
+  def detail
+    @order = Order.find_by(params[:id])
   end
 
-    def update
-        @order = current_order.order
+  def edit
+    @order =Order.find_by(params[:id])
+  end
+
+  def update
+        @order = Order.find_by(params[:id])
 
         if @order.update
         redirect_to order_show_path
@@ -52,7 +56,7 @@ class OrderController < ApplicationController
 
     private
 
-    def order_params
+  def order_params
         params[:order]
     end
 end

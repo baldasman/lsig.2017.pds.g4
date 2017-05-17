@@ -4,7 +4,7 @@ class ProfileController < ApplicationController
 
   def index
     @user = current_user
-    @order = current_order
+    #@order = current_order
 
   end
 

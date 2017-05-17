@@ -189,9 +189,6 @@
 <img class="img-responsive" src="<%= asset_path '3.jpg' %>" width="1893" height="697">
 
 
-
-
-
 <div id="q" class="container-fluid" style="background-image: url(3.jpg);">
     <div class="row" id="qr">
     <div class="col-sm-8" id="q">
@@ -453,12 +450,20 @@
     <div class="wrapper">
       <form class="form-signin">
         <h2 class="form-signin-heading">Please login</h2>
-        <input type="text" class="form-control" name="username" placeholder="Email Address" required="" autofocus="" />
-        <input type="password" class="form-control" name="password" placeholder="Password" required=""/>
-        <label class="checkbox">
-          <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> Remember me
-        </label>
-        <button class="btn btn-lg btn-primary btn-block" type="submit" >Login</button>
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+            <div class="field">
+              <%= f.label :email %><br />
+              <%= f.email_field :email, autofocus: true %>
+            </div>
+
+            <div class="field">
+              <%= f.label :password %><br />
+              <%= f.password_field :password, autocomplete: "off" %>
+            </div>
+            <div class="actions">
+              <%= f.submit "Log in" %>
+            </div>
+        <% end %>
       </form>
     </div>
   </div>
@@ -600,7 +605,3 @@
 <p>Parcerias</p>
   <img id="anc" src="<%= asset_path 'images.jpg' %>">
 </footer>
-<%= link_to href: 'www.fatimalopes.com
-    <%= image_tag 'fat.png', width: 136, height: 67, alt: 'flopes'%>
-<% end %>
-
