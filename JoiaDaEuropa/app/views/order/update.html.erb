@@ -1,8 +1,0 @@
-<%= form_for @order, url {action: "update"} do |f| %>
-    <div class="form-group">
-
-      <label for="description"><%= t('description') %></label>
-      <%= f.text_field :description %>
-      <% if flash[:error] && flash[:error]['description'] %>
-          <div class="alert danger"><%= flash[:error]['description'].join('<br/>') %></div>
-      <% end %>

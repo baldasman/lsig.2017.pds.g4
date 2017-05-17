@@ -14,7 +14,6 @@ class ClientAreaController < ApplicationController
 
   end
 
-
   def save_client
 
     @client = current_user.client

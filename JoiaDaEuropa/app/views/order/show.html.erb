@@ -58,15 +58,17 @@
         </tr>
         </thead>
         <tbody>
+        <%= @order.each do |order| %>
         <tr class="odd gradeX">
-          <td><%= @order.id %></td>
-          <td><%= @order.description %></td>
-          <td><%= @order.delivery_date %></td>
-          <td><%= @order.unit_price %></td>
-          <td><%= @order.quantity %></td>
-          <td><!--<%= @order.state_id %>--></td>
-          <td><%= link_to t("update"), order_update_path%></td>
+          <td><%= order.id %></td>
+          <td><%= order.description %></td>
+          <td><%= order.delivery_date %></td>
+          <td><%= order.unit_price %></td>
+          <td><%= order.quantity %></td>
+          <td><%= order.state_id %></td>
+          <td><%= link_to t("update"), order_edit_path%></td>
         </tr>
+        <% end %>
         </tbody>
       </table>
     </div>

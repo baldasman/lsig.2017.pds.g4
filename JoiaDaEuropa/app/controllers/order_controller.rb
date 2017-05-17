@@ -3,11 +3,10 @@ class OrderController < ApplicationController
     #filter_attributes :status
     #before_action :check_order
 
-    def show
-        @order = Order.find_by(params[:id])
-        #@order = current_order.order
+  def show
+        @order = Order.all
         #@order = Order.paginate :page => params[:page], :conditions => filter_conditions
-    end
+  end
 
     def new
         @order = Order.new
@@ -34,23 +33,26 @@ class OrderController < ApplicationController
         end
     end
 
+  def edit
+    @order = current_order.order
+  end
+
     def update
-        @order = current_order.order.find(params[:id])
-        @order.update!(order_params)
+        @order = current_order.order
+
+        if @order.update
         redirect_to order_show_path
+        end
+    else
+        render :action => "edit"
     end
 
-    def destroy
-        @current_order = session[:current_order] = nil
-        redirect_to cancel_order_index_path
-    end
-    #end
+    #def destroy        @current_order = session[:current_order] = nil        redirect_to cancel_order_index_path
+   # end
 
     private
 
     def order_params
-
         params[:order]
-
     end
 end
