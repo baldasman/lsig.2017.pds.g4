@@ -32,6 +32,7 @@
       <span>|</span>
         <%= link_to 'EN', '/?lang=en' %>
       </a>
+    <span></span>
     <a class="col-md-3">
         <% if current_user %>
             <%= link_to 'Sign Out', destroy_user_session_path, {method: 'delete'} %>
@@ -39,7 +40,6 @@
             <%= link_to 'Sign In', new_user_session_path %>
         <% end %>
       </a>
-
     <%= yield %>
     <% if notice %>
         <div class="alert alert-info" role="alert">
@@ -60,7 +60,7 @@
 <!-- g4Sidebar -->
 <div class="container-fluid text-left">
   <div class="row content">
-    <div class="col-sm-2 sidebar4">
+    <div class="col-sm-2 sidebar">
       <p><a href="/profile/index" class="w3-bar-item w3-button">PERFIL</a></p>
       <p><a href="/client_area/index" class="w3-bar-item w3-button">ÁREA DE CLIENTE</a></p>
       <p><a href="/order/show" class="w3-bar-item w3-button">ENCOMENDAS</a>

@@ -1,7 +1,8 @@
 <%= stylesheet_link_tag 'estilos', media: 'all', 'data-turbolinks-track': 'reload' %>
 
+<!-- g4Navbar -->
 <nav data-spy="scroll" data-target=".navbar" class="navbar navbar-default navbar-fixed-top">
-<div class="container">
+  <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="icon-bar"></span>
@@ -26,18 +27,46 @@
 <form class="jumbotron">
   <div class="input-group">
     <a href="/order/new" class="btn" role="button">NOVA ENCOMENDA</a>
+    <a class="col-md-3">
+      <%= link_to 'PT', '/?lang=pt' %>
+      <span>|</span>
+      <%= link_to 'EN', '/?lang=en' %>
+    </a>
+    <span></span>
+    <a class="col-md-3">
+      <% if current_user %>
+          <%= link_to 'Sign Out', destroy_user_session_path, {method: 'delete'} %>
+      <% else %>
+          <%= link_to 'Sign In', new_user_session_path %>
+      <% end %>
+    </a>
+    <%= yield %>
+    <% if notice %>
+        <div class="alert alert-info" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <%= notice %>
+        </div>
+    <% end %>
+    <% if alert %>
+        <div class="alert alert-warning" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <%= alert %>
+        </div>
+    <% end %>
   </div>
 </form>
 </div>
 
+<!-- g4Sidebar -->
 <div class="container-fluid text-left">
   <div class="row content">
-    <div class="col-sm-2 sidebar4">
+    <div class="col-sm-2 sidebar">
       <p><a href="/profile/index" class="w3-bar-item w3-button">PERFIL</a></p>
       <p><a href="/client_area/index" class="w3-bar-item w3-button">ÁREA DE CLIENTE</a></p>
       <p><a href="/order/show" class="w3-bar-item w3-button">ENCOMENDAS</a>
     </div>
 
+    <!-- g4PageContent -->
     <div class="col-lg-10 text-left">
       <h1><strong>NOVA ENCOMENDA</strong></h1>
       <i>Faça a sua encomenda</i>
@@ -65,12 +94,14 @@
             <tr>
               <th><%= f.label t("unit_price") %></th>
               <th> <%= f.label t("quantity") %></th>
+              <th>Estado</th>
             </tr>
             </thead>
             <tbody>
             <tr>
               <td><%= f.text_field :unit_price %></td>
               <td><%= f.text_field :quantity %></td>
+              <td>PENDENTE</td>
             </tr>
             </tbody>
             </table>
