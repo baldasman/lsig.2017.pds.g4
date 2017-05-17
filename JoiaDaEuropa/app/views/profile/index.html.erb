@@ -1,24 +1,16 @@
-<%= stylesheet_link_tag 'estilos', media: 'all', 'data-turbolinks-track': 'reload' %>
-
-<!-- navbar -->
+<!-- g4navbar -->
 <nav data-spy="scroll" data-target=".navbar" class="navbar navbar-default navbar-fixed-top">
 
-  <div class="container">
+  <div class="container" onclick="myFunction(this)">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
       <a class="button" href="/home/index"><img src="<%= asset_path '2.png' %>"></a>
     </div>
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav navbar-right">
         <li><a href="/profile/index">PERFIL</a></li>
-        <li><a href="/home/index/#q">QUEM SOMOS</a></li>
-        <li><a href="/home/index/#missao">MISSÃO</a></li>
-        <li><a href="/home/index/#linha">NOTÍCIAS</a></li>
-        <li><a href="/home/index/#contact">CONTACTOS</a></li>
+        <li><a href="/order/show">ENCOMENDAS</a></li>
+        <li><a href="/order/new">NOVA ENCOMENDA</a></li>
+        <li><input type="text" name="search" placeholder="Search.."></li>
       </ul>
     </div>
   </div>
@@ -26,35 +18,40 @@
 
 <p/>
 <form class="jumbotron">
-  <div class="input-group">
-    <a href="/order/new" class="btn" role="button">NOVA ENCOMENDA</a>
-    <a class="col-md-3">
+  <body>
+  <header class="row" style="text-align: center;">
+    <div class="col-md-3">
       <%= link_to 'PT', '/?lang=pt' %>
       <span>|</span>
       <%= link_to 'EN', '/?lang=en' %>
-    </a>
-    <a class="col-md-3">
+    </div>
+    <div class="col-md-6">
+
+    </div>
+    <div class="col-md-3">
       <% if current_user %>
           <%= link_to 'Sign Out', destroy_user_session_path, {method: 'delete'} %>
       <% else %>
           <%= link_to 'Sign In', new_user_session_path %>
       <% end %>
-    </a>
+    </div>
+  </header>
 
-    <%= yield %>
-    <% if notice %>
-        <div class="alert alert-info" role="alert">
-          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <%= notice %>
-        </div>
-    <% end %>
-    <% if alert %>
-        <div class="alert alert-warning" role="alert">
-          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <%= alert %>
-        </div>
-    <% end %>
-  </div>
+  <%= yield %>
+
+  <% if notice %>
+      <div class="alert alert-info" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <%= notice %>
+      </div>
+  <% end %>
+  <% if alert %>
+      <div class="alert alert-warning" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <%= alert %>
+      </div>
+  <% end %>
+  </body>
 </form>
 </div>
 
@@ -69,37 +66,27 @@
 
     <!-- g4PageContent -->
     <div class="col-lg-10 text-left">
-      <div class="w3-row-padding w3-margin-bottom">
-        <div class="w3-quarter">
-          <div class="w3-container w3-red">
-            <div class="w3-left"><i class="fa fa-comment w3-xxxlarge"></i></div>
-            <div class="w3-right">
-              <h3><a href="/client_area/index">ÁREA DE CLIENTE</a></h3>
-            </div>
-            <div class="w3-clear"></div><!--g4-->
-            <h4><span class="glyphicon glyphicon-user"></span></h4>
-          </div>
-        </div>
-        <div class="w3-quarter">
-          <div class="w3-container w3-blue ">
-            <div class="w3-left"><i class="fa fa-eye w3-xxxlarge"></i></div>
-            <div class="w3-right">
-              <h3><a href="/order/show">ENCOMENDAS RECENTES</a></h3>
-            </div>
-            <div class="w3-clear"></div><!--g4-->
-            <h4><span class="glyphicon glyphicon-duplicate"></span></h4>
-          </div>
-        </div>
-        <div class="w3-quarter">
-          <div class="w3-container w3-teal">
-            <div class="w3-left"><i class="fa fa-share-alt w3-xxxlarge"></i></div>
-            <div class="w3-right">
-              <h3><a href="/hold_order/index">ENCOMENDAS PENDENTES</a></h3>
-            </div>
-            <div class="w3-clear"></div><!--g4-->
-            <h4><span class="glyphicon glyphicon-book"></span></h4>
-          </div>
+
+    <header class="w3-display-container w3-content w3-center">
+      <div class="img-responsive" <%= link_to image_tag("shoe.jpg"), "http://annstreetstudio.com/tag/heels/" %></div>
+      <div class="w3-display-middle w3-padding-large w3-border w3-wide w3-text-light-grey w3-center">
+        <h1 class="w3-hide-medium w3-hide-small w3-xxxlarge">JOIA DA EUROPA</h1>
+        <h5 class="w3-hide-large" style="white-space:nowrap">JOIA DA EUROPA</h5>
+        <h3 class="w3-hide-medium w3-hide-small">JOIA DA EUROPA</h3>
+
+        <div class="w3-bar w3-light-grey w3-round w3-display-bottommiddle w3-hide-small" style="bottom:-16px">
+          <a href="/client_area/index" class="w3-bar-item w3-button">ÁREA DE CLIENTE</a><p></p>
+          <a href="/order/show" class="w3-bar-item w3-button">ENCOMENDAS RECENTES</a><p></p>
+          <a href="/order/new" class="w3-bar-item w3-button">NOVA ENCOMENDA</a>
         </div>
       </div>
-    </div>
+    </header>
 
+    </div>
+<br><br><br>
+  <footer class="container-fluid text-center">
+    <a href="" title="To Top">
+      <span class="glyphicon glyphicon-chevron-up"></span>
+    </a>
+    <p>2016-2017 | PROJETO E DESENVOLVIMENTO DE SOFTWARE | GRUPO 4</p>
+  </footer>
