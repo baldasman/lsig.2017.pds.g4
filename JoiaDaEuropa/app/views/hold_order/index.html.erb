@@ -42,25 +42,12 @@
     </div>
 
 
-    <div class="col-lg-10 text-left">
-        <table class="table table-striped">
-          <thead>
-          <tr>
-            <th>Description</th>
-            <th>Delivery Date</th>
-            <th>Preço Unitário</th>
-            <th>Quantidade</th>
-          </tr>
-          </thead>
-          <tbody>
-          <tr class="odd gradeX">
-            <td><%= @order.description %></td>
-            <td><%= @order.delivery_date %></td>
-            <td><%= @order.unit_price %></td>
-            <td><%= @order.quantity %></td>
-          </tr>
-          </tbody>
-        </table>
+        <%= @order.description %>
+        <%= @order.delivery_date %>
+        <%= @order.unit_price %>
+        <%= @order.quantity %>
+    <%= @order.state_id%>
+
       </div>
   </div>
 </div>

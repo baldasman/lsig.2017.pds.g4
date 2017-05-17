@@ -1,5 +1,6 @@
 <%= stylesheet_link_tag 'estilos', media: 'all', 'data-turbolinks-track': 'reload' %>
 
+<!-- navbar -->
 <nav data-spy="scroll" data-target=".navbar" class="navbar navbar-default navbar-fixed-top">
 
   <div class="container">
@@ -31,6 +32,7 @@
 </form>
 </div>
 
+<!-- sidebar -->
 <div class="container-fluid text-left">
   <div class="row content">
     <div class="col-sm-2 sidebar4">
@@ -52,6 +54,7 @@
           <th>Preço Unitário</th>
           <th>Quantidade</th>
           <th>Estado</th>
+          <th></th>
         </tr>
         </thead>
         <tbody>
@@ -61,6 +64,8 @@
           <td><%= @order.delivery_date %></td>
           <td><%= @order.unit_price %></td>
           <td><%= @order.quantity %></td>
+          <td><!--<%= @order.state_id %>--></td>
+          <td><%= link_to t("update"), order_update_path%></td>
         </tr>
         </tbody>
       </table>

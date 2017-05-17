@@ -1,13 +1,8 @@
 class HoldOrderController < ApplicationController
 
   def index
-    @order = Order.where(order.state_id = "1")
-
-    #where @order.state_id("Pendente")
-
-    #if description.nil?      show_message "There is no orders"    end
-
-  end
-
-
+    #Order.all.each do |order|
+    #Order.where("state_id= 1 {params [:order]}")
+    #Order.where(state_id: [1])
+    end
 end
