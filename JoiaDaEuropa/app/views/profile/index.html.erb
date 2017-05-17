@@ -8,7 +8,7 @@
   .sidenav {
     padding-top: 30px;
     background-color: #e7e7e7;
-    height: 150%;
+    height: 100%;
   }
   input[type=text] {
     width: 100%;
@@ -127,10 +127,11 @@
   @media (min-width: 768px){
     #page-wrapper {
       padding: 0 30px;
-      min-height: 1300px;
+      min-height: 100px;
       border-left: 1px solid #2c3e50;
     }
   }
+
   #page-wrapper {
     padding: 0 15px;
     border: none;
@@ -322,6 +323,16 @@
     #ml{
       width:275px;
     }
+  .w3-sidebar {
+    height: 60%!important;
+    position: static!important;
+    z-index: 1;
+    overflow: auto;
+  }
+  .w3-green, .w3-hover-green:hover {
+    color: #fff !important;
+    background-color: #000 !important;
+  }
 </style>
 
 <nav class="navbar navbar-default">
@@ -380,9 +391,9 @@
           <div class="col-md-12">
 
             <div class="w3-sidebar w3-bar-block w3-light-grey w3-card-2" id="ml">
-              <a href="#" class="w3-bar-item w3-button">Link 1</a>
+              <a href="/profile/index" class="w3-bar-item w3-button">INICIO</a>
               <div class="w3-bar-item w3-button" onclick="myAccFunc()">
-                Accordion <i class="fa fa-caret-down"></i></div>
+                Encomendas <i class="fa fa-caret-down"></i></div>
               <div id="demoAcc" class="w3-hide w3-white w3-card-4">
                 <a href="#" class="w3-bar-item w3-button">Link</a>
                 <a href="#" class="w3-bar-item w3-button">Link</a>
@@ -397,7 +408,7 @@
                   <a href="#" class="w3-bar-item w3-button">Link</a>
                 </div>
               </div>
-              <a href="#" class="w3-bar-item w3-button">Link 2</a>
+              <a href="/client_area/index" class="w3-bar-item w3-button">ÁREA DE CLIENTE</a>
               <a href="#" class="w3-bar-item w3-button">Link 3</a>
             </div>
           </div>
@@ -616,11 +627,8 @@
 
 
         </div>
-      </div>
-    </div>
-  </div>
-</div>
 
+      </div>
       <script src="js/jquery-3.1.1.js"></script>
       <script src="js/bootstrap.js"></script>
 
@@ -664,3 +672,7 @@
 
 <%= yield  %>
 
+
+    </div>
+  </div>
+</div>
