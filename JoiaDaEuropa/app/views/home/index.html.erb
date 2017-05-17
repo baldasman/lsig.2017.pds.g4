@@ -1,169 +1,3 @@
-<%= stylesheet_link_tag 'estilos', media: 'all', 'data-turbolinks-track': 'reload' %>
-
-<style>
-  /*quem somos*/
-  #q{
-    padding-right: 60px;
-    padding-top: 111px;
-    padding-left: 60px;
-  }
-
-  #tq{
-    text-align: justify;
-    line-height: 2;
-  }
-  #qim{
-    padding-left: 10px;
-    padding-top: 215px;
-  }
-
-  /*missão*/
-  #missao{
-    padding-right: 60px;
-    padding-top: 257px;
-  }
-
-  #m4{
-    text-align: justify;
-    line-height: 2;
-  }
-  #qim2{
-    padding-right: 50px;
-    padding-top: 100px;
-    padding-left: 100px;
-  }
-
-  /*noticia*/
-
-  .container-fluid {
-    padding-top: 24px;
-  }
-/*contactos*/
-  #contact {
-    color: white;
-  }
-    /*modal*/
-  body {
-    margin: 0;
-    font-family: 'Lato', sans-serif;
-  }
-
-  .overlay {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: rgb(255, 255, 255);
-    background-color: rgba(255, 255, 255, 0.9);
-    overflow-x: hidden;
-    transition: 0.5s;
-  }
-
-  .overlay-content {
-    position: relative;
-    top: 25%;
-    width: 100%;
-    text-align: center;
-    margin-top: 30px;
-  }
-
-  .overlay a {
-    padding: 8px;
-    text-decoration: none;
-    font-size: 36px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-  }
-
-  .overlay a:hover, .overlay a:focus {
-    color: #f1f1f1;
-  }
-
-  .overlay .closebtn {
-    position: absolute;
-    top: 20px;
-    right: 45px;
-    font-size: 60px;
-  }
-
-  @media screen and (max-height: 450px) {
-    .overlay a {font-size: 20px}
-    .overlay .closebtn {
-      font-size: 40px;
-      top: 15px;
-      right: 35px;
-    }
-  }
-  /*linha*/
-  #linha{
-    padding-top: 260px;
-  }
-
-    /*contactos*/
-    #contact{
-    background-color: black;
-    }
-    /*login*/
-  body {
-    background: #eee !important;
-  }
-
-  .wrapper {
-    margin-top: 80px;
-    margin-bottom: 80px;
-  }
-
-  .form-signin {
-    max-width: 380px;
-    padding: 15px 35px 45px;
-    margin: 0 auto;
-    background-color: #fff;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-  }
-  .form-signin-heading,
-  .checkbox {
-    margin-bottom: 30px;
-  }
-
-  .checkbox {
-    font-weight: normal;
-  }
-
-  .form-control {
-    position: relative;
-    font-size: 16px;
-    height: auto;
-    padding: 10px;
-  @include box-sizing(border-box);}
-
-  input[type="text"] {
-    margin-bottom: -1px;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-  }
-
-  input[type="password"] {
-    margin-bottom: 20px;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-  }
-    #SIMG{
-      height: 620px;
-      width:100%;
-    }
-    #icone{
-      margin-top: -6px;
-    }
-    #morad{
-      font-size: 16px;
-    }
-    #anc
-    {
-    }
-</style>
 
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
@@ -173,11 +7,11 @@
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
         <li><a href="/profile/index">PERFIL</a></li>
-        <li><a href="#q">QUEM SOMOS</a></li>
+        <li><a href="#quem_somos">QUEM SOMOS</a></li>
         <li><a href="#missao">MISSÃO</a></li>
-        <li><a href="#linha">NOTÍCIAS</a></li>
-        <li><a href="#contact">CONTACTOS</a></li>
-        <li><a href="#anc">PARCERIAS</a></li>
+        <li><a href="#noticia">NOTÍCIAS</a></li>
+        <li><a href="#contacto">CONTACTOS</a></li>
+        <li><a href="#parceria">PARCERIAS</a></li>
         <li><a onclick="openNavl()">LOGIN</a></li>
 
       </ul>
@@ -187,11 +21,11 @@
 
 <img class="img-responsive" src="<%= asset_path '3.jpg' %>" width="1893" height="697">
 
-<div id="q" class="container-fluid" style="background-image: url(3.jpg);">
+<div id="quem_somos" class="container-fluid" style="background-image: url(3.jpg);">
     <div class="row" id="qr">
     <div class="col-sm-8" id="q">
-      <h2 class="teste">QUEM SOMOS</h2><br>
-      <h4 id="tq"> Em 2006, ano de novas oportunidades e desafios, António Bento Da Costa Ferreira inicia-se por conta própria, criando a empresa Jóia Da Europa, que se dedica inteiramente à fabricação de calçado.
+      <h2>QUEM SOMOS</h2><br>
+      <p> Em 2006, ano de novas oportunidades e desafios, António Bento Da Costa Ferreira inicia-se por conta própria, criando a empresa Jóia Da Europa, que se dedica inteiramente à fabricação de calçado.
 
         Jóia da Europa, é mais um dos casos de sucesso nacional e internacional, isto porque a inovação e a qualidade dos seus produtos é difícil de encontrar. Lentamente, ano após ano, esta empresa tem crescido, e não põe de parte qualquer desafio vindo à sua direcção. Para esta empresa tudo é possível.
 
@@ -200,7 +34,7 @@
         A qualidade dos nossos serviços advém também do valor que têm as matérias – primas seleccionadas para a nossa fabricação. Em todas as épocas, os nossos clientes podem contar com uma colecção completa e diferente.
 
 
-        Se procura qualidade, inovação, transformação, diferenciação de produtos, venha conhecer a nossa empresa, porque aqui encontra tudo o que precisa.</h4><br>
+        Se procura qualidade, inovação, transformação, diferenciação de produtos, venha conhecer a nossa empresa, porque aqui encontra tudo o que precisa.</><br>
 
 
     </div>
@@ -221,8 +55,7 @@
     </div>
     <div class="col-sm-8" > <!--id="m"-->
       <h2>MISSÃO</h2><br>
-      <h4 id="m4">
-        Uma empresa não se define pelo nome que tem, define-se pelo esforço e trabalho despendido por todos aqueles que fazem parte dela, os recursos humanos, fornecedores, clientes e todos os outros colaboradores são necessários para o sucesso de qualquer empresa, e Jóia da Europa conta com a ajuda de todos.
+        <p>Uma empresa não se define pelo nome que tem, define-se pelo esforço e trabalho despendido por todos aqueles que fazem parte dela, os recursos humanos, fornecedores, clientes e todos os outros colaboradores são necessários para o sucesso de qualquer empresa, e Jóia da Europa conta com a ajuda de todos.
 
 
         A nossa missão centraliza-se em:
@@ -233,12 +66,11 @@
 
         Oferecer soluções para qualquer ideia, contando com a nossa assistência.
 
-        Apostar sempre em tecnologias inovadoras.
-      </h4>
+          Apostar sempre em tecnologias inovadoras. </p>
     </div>
   </div>
 </div>
-<div class="row" id="linha">
+<div class="row" id="noticia">
 
 </div><
 
@@ -353,7 +185,7 @@
       </div>
       <div class="col-sm-8" > <!--id="m"-->
         <h2>Feira na Alemanha 2016</h2><br>
-        <h4 id="m4">
+        <p>
           Uma empresa não se define pelo nome que tem, define-se pelo esforço e trabalho despendido por todos aqueles que fazem parte dela, os recursos humanos, fornecedores, clientes e todos os outros colaboradores são necessários para o sucesso de qualquer empresa, e Jóia da Europa conta com a ajuda de todos.
 
 
@@ -366,7 +198,7 @@
           Oferecer soluções para qualquer ideia, contando com a nossa assistência.
 
           Apostar sempre em tecnologias inovadoras.
-        </h4>
+        </p>
       </div>
     </div>
   </div>
@@ -544,7 +376,7 @@
 
 
 
-<div class="row" id="linha">
+<div class="row" id="noticia">
 
 </div>
 
@@ -555,8 +387,9 @@
 <div id="portfolio" class="container-fluid text-center bg-grey">
 
   <!-- Container (Contact Section) -->
-  <div id="contact" class="container-fluid bg-grey">
+  <div id="contacto" class="container-fluid bg-grey">
     <h2 class="text-center">CONTACTOS</h2>
+    <br>
     <div class="row">
       <div class="col-sm-5" >
         <br>
@@ -568,9 +401,10 @@
         <p id="morad"><span class="glyphicon glyphicon-phone"></span> +351 255 312 443 | Fax: +351 255 312 444</p>
         <br> <br><br>
         <p id="morad"><span class="glyphicon glyphicon-envelope"></span> geral@joiadaeuropa.com</p>
-
-        <%= link_to image_tag("face.png"), "https://www.facebook.com"%>
-        <%= link_to image_tag("linkedin-128.png"), "https://pt.linkedin.com/in/joia-europa-61a96ab7"%>
+<br>
+        <a href="https://www.facebook.com"><img src="<%= asset_path 'face.png' %>" width="5%" ></a>
+        <span></span>
+        <a href="https://pt.linkedin.com/in/joia-europa-61a96ab7"><img src="<%= asset_path 'linkedin-128.png' %>" width="5%" ></a>
 
       </div>
       <div class="col-sm-7 slideanim">
@@ -582,10 +416,10 @@
 
   <!-- Add Google Maps -->
 </div>
-<div class="container-fluid bg-grey" id="anc">
-<footer  class="container-fluid bg-2 text-left">
-<p>Parcerias</p>
-  <%= link_to image_tag("images.jpg"), "http://www.fatimalopes.com" %>
+<div class="container-fluid bg-grey" id="parceria">
+<footer  class="container-fluid bg-2 text-center">
+  <h2>PARCERIAS</h2>
+  <a href="http://www.fatimalopes.com"><img src="<%= asset_path 'fl.jpg' %>"></a>
 
 </footer>
 </div>

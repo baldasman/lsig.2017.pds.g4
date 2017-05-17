@@ -20,9 +20,9 @@
   border-color: transparent;
   color: #fff !important;
 }
+
 .jumbotron {
     background-color: slategrey;
-    color: #fff;
     padding-top: 30px;
     padding-bottom: 10px;
     font-family: Montserrat, sans-serif;
@@ -43,7 +43,10 @@
     }
 body{
     font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    text-align: justify;
 }
+/*formulário*/
 input[type=text] {
     padding: 10px 10px;
     margin: 3px 0;
@@ -53,6 +56,7 @@ input[type=text] {
     transition: 0.5s;
     outline: none;
 }
+/*cabeçalho das tabelas*/
 thead{
     background-color: slategrey;
     color: whitesmoke;
@@ -60,18 +64,82 @@ thead{
 .w3-table{
     font-family: Montserrat, sans-serif;
 }
+/*links*/
 a {
-    color: white;
+    color: lightgrey;
 }
 .glyphicon{
-    font-size: 30px;
-    color: midnightblue;
+    font-size: 20px;
+    color: lightslategrey;
 }
 .w3-container{
     padding: 15px;
     background: lightslategrey;
 }
+/*rodape*/
 .footer{
-    font-size: small;
+    font-size: x-small;
 }
 
+
+/*pagina inicial*/
+#quem_somos{
+    padding-right: 60px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 60px;
+}
+#missao{
+    padding-right: 60px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+#noticia{
+    padding-bottom: 200px;
+}
+#contacto {
+    color: white;
+    background: black;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+#parceria {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+}
