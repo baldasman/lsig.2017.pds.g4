@@ -1,685 +1,105 @@
-<style>
-  header {
-    padding: 5px;
-    background-color: #e7e7e7;
-  }
-  .row.content {height: 450px}
-  .navbar {background-color: #e7e7e7;}
-  .sidenav {
-    padding-top: 30px;
-    background-color: #e7e7e7;
-    height: 100%;
-  }
-  input[type=text] {
-    width: 100%;
-    padding: 10px 30px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border: 1px solid #555;
-    outline: none;
-  }
-  input[type=text]:focus {
-    background-color: ghostwhite;
-  }
-/*menu horizontal*/
-  espaço {
-    padding-right: 70px!important;
-  }
-  .navbar-default {
-    background-color: #e7e7e7;
-    border-color: #e7e7e7;
-  }
-  MainMenu{
-    width: 110%;
-  }
-</style>
+<%= stylesheet_link_tag 'estilos', media: 'all', 'data-turbolinks-track': 'reload' %>
 
-<style>
-  body{background-color: #ecf0f1;}
-  .navbar {
-    position: relative;
-    min-height: 50px;
-    margin-bottom: 0px;
-    border: 0px solid transparent;
-  }
-  .navbar-nav > li > a {
-    padding-top: 20px;
-    padding-bottom: 10px;
-    line-height: 20px;
-  }
-  @media (min-width: 768px){
+<!-- navbar -->
+<nav data-spy="scroll" data-target=".navbar" class="navbar navbar-default navbar-fixed-top">
 
-    .navbar {
-      border-radius: 0px;
-    }}
-  .navbar-brand {
-    float: left;
-    height: auto;
-    padding: 15px 15px;
-    font-size: 18px;
-    line-height: 20px;
-  }
-  .social-icon li a:focus{
-    color:#fff;
-    text-decoration:none;
-  }
-  .dropdown-menu {
-    position: absolute;
-    top: 100%;
-    left: -105px;
-    z-index: 1000;
-    display: none;
-    float: left;
-    min-width: 160px;
-    padding: 5px 0;
-    margin: 2px 0 0;
-    font-size: 14px;
-    text-align: left;
-    list-style: none;
-    background-color: #fff;
-    -webkit-background-clip: padding-box;
-    background-clip: padding-box;
-    border: 1px solid #ccc;
-    border: 1px solid rgba(0, 0, 0, .15);
-    border-radius: 4px;
-    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
-  }
-
-
-  /*sidr-NAVBAR=======START========*/
-
-  .close-btn .fa-window-close{color:#fff;font-size: 25px;}
-  .side-user a{
-    color:#fff;
-  }
-  .dashboard>a{
-    color:#fff;
-  }
-  .side-nav li {
-    border-top: 1px solid #54677a;
-    border-bottom: 1px solid #142638;
-  }
-  .side-nav>li>a:active {
-    text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
-    outline: none;
-    color: #fff;
-    background-color: #34495e;
-  }
-  .panel>a{
-    position: relative;
-    display: block;
-    padding: 10px 15px;
-    color: #fff;
-  }
-  .panel>ul>li>a {
-    position: relative;
-    display: block;
-    padding: 10px 15px;
-    color: darkcyan;
-    background: black;
-  }
-  .nav > li > a:hover, .nav > li > a:focus {
-    text-decoration: none;
-    background-color: #3d566e;
-  }
-  /*sidr-NAVBAR=======END========*/
-  @media (min-width: 768px){
-    #page-wrapper {
-      padding: 0 30px;
-      min-height: 100px;
-      border-left: 1px solid #2c3e50;
-    }
-  }
-
-  #page-wrapper {
-    padding: 0 15px;
-    border: none;
-
-  }
-  .date-picker{
-    border-color: #138871;
-    color: #fff;
-    background-color: #149077;
-    margin-top: -7px;
-    border-radius: 0px;
-    margin-right: -15px;
-  }
-  #page-wrapper .breadcrumb {
-    padding: 8px 15px;
-    margin-bottom: 20px;
-    list-style: none;
-    background-color: #e0e7e8;
-    border-radius: 0px;
-  }
-  @media (min-width: 768px){
-    .circle-tile {
-      margin-bottom: 30px;
-    }
-  }
-  .circle-tile {
-    margin-bottom: 15px;
-    text-align: center;
-  }
-  .circle-tile-heading {
-    position: relative;
-    width: 80px;
-    height: 80px;
-    margin: 0 auto -40px;
-    border: 3px solid rgba(255,255,255,0.3);
-    border-radius: 100%;
-    color: #fff;
-    transition: all ease-in-out .3s;
-  }
-  /* -- Background Helper Classes */
-  /* Use these to cuztomize the background color of a div. These are used along with tiles, or any other div you want to customize. */
-
-  .dark-blue {
-    background-color: #34495e;
-  }
-  .green {
-    background-color: #16a085;
-  }
-  .blue {
-    background-color: #2980b9;
-  }
-  .orange {
-    background-color: #f39c12;
-  }
-  .red {
-    background-color: #e74c3c;
-  }
-  .purple {
-    background-color: #8e44ad;
-  }
-  .text-faded {
-    color: rgba(255,255,255,0.7);
-  }
-  .circle-tile-heading .fa {
-    line-height: 80px;
-  }
-  .circle-tile-content {
-    padding-top: 50px;
-  }
-  .circle-tile-description {
-    text-transform: uppercase;
-  }
-  .text-faded {
-    color: rgba(255,255,255,0.7);
-  }
-  .circle-tile-number {
-    padding: 5px 0 15px;
-    font-size: 26px;
-    font-weight: 700;
-    line-height: 1;
-  }
-  .circle-tile-footer {
-    display: block;
-    padding: 5px;
-    color: rgba(255,255,255,0.5);
-    background-color: rgba(0,0,0,0.1);
-    transition: all ease-in-out .3s;
-  }
-  .circle-tile-footer:hover {
-    text-decoration: none;
-    color: rgba(255,255,255,0.5);
-    background-color: rgba(0,0,0,0.2);
-  }
-    #icone{
-      font-size: 43px;
-      margin-top: 14px;
-    }
-</style>
-
-<style>
-  body,html{
-    height: 100%;
-  }
-  nav.sidebar, .main{
-    -webkit-transition: margin 200ms ease-out;
-    -moz-transition: margin 200ms ease-out;
-    -o-transition: margin 200ms ease-out;
-    transition: margin 200ms ease-out;
-  }
-  @media (min-width: 765px) {
-    nav.sidebar:hover + .main{
-      margin-left: 200px;
-    }
-    nav.sidebar.navbar.sidebar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
-      margin-left: 0px;
-    }
-    nav.sidebar .navbar-brand, nav.sidebar .navbar-header{
-      text-align: center;
-      width: 100%;
-      margin-left: 0px;
-    }
-    nav.sidebar a{
-      padding-right: 13px;
-    }
-    nav.sidebar .navbar-nav > li:first-child{
-      border-top: 1px #e5e5e5 solid;
-    }
-    nav.sidebar .navbar-nav > li{
-      border-bottom: 1px #e5e5e5 solid;
-    }
-    nav.sidebar .navbar-nav .open .dropdown-menu {
-      position: static;
-      float: none;
-      width: auto;
-      margin-top: 0;
-      background-color: transparent;
-      border: 0;
-      -webkit-box-shadow: none;
-      box-shadow: none;
-    }
-    nav.sidebar .navbar-collapse, nav.sidebar .container-fluid{
-      padding: 0 0px 0 0px;
-    }
-    .navbar-inverse .navbar-nav .open .dropdown-menu>li>a {
-      color: #777;
-    }
-    nav.sidebar{
-      width: 200px;
-      height: 100%;
-      margin-left: -160px;
-      float: left;
-      margin-bottom: 0px;
-    }
-    nav.sidebar li {
-      width: 100%;
-    }
-    nav.sidebar:hover{
-      margin-left: 0px;
-    }
-  }
-  @media (min-width: 1330px) {
-    nav.sidebar{
-      margin-left: 0px;
-      float: left;
-    }
-
-    nav.sidebar .forAnimate{
-      opacity: 1;
-    }
-  }
-  nav.sidebar .navbar-nav .open .dropdown-menu>li>a:hover, nav.sidebar .navbar-nav .open .dropdown-menu>li>a:focus {
-    color: #CCC;
-    background-color: transparent;
-  }
-  nav:hover .forAnimate{
-    opacity: 1;
-  }
-  section{
-    padding-left: 15px;
-  }
-
-  .w3-light-grey {
-    color: #000 !important;
-    background-color: #e7e7e7 !important;
-  }
-.w3-card-2 {
-    box-shadow: 0 0px 0px 0 rgba(0,0,0,0.0),0 0px 0px 0 rgba(0,0,0,0.12)!important;
-  }
-    #ml{
-      width:275px;
-    }
-  .w3-sidebar {
-    height: 60%!important;
-    position: static!important;
-    z-index: 1;
-    overflow: auto;
-  }
-  .w3-green, .w3-hover-green:hover {
-    color: #fff !important;
-    background-color: #000 !important;
-  }
-</style>
-
-<nav class="navbar navbar-default">
-<div class="container-fluid">
-<!-- Brand and toggle get grouped for better mobile display -->
+  <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/home/index"><img src="<%= asset_path '2.png' %>"></a>
+      <a class="button" href="/home/index"><img src="<%= asset_path '2.png' %>"></a>
     </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li><a href="#"> <span class="sr-only">(current)</span></a></li>
-        <li><a href="#"></a></li>
-        <li><a href="#"></a></li>
-        <li><a href="#"></a></li>
-        <li><a href="#"></a></li>
-      </ul>
-      <form class="navbar-form navbar-left">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
-        </div>
-        <button type="submit" class="btn btn-default">Pesquisar</button>
-      </form>
+    <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav navbar-right">
-        <li class="dropdown">
-          <a class="dropdown-toggle" role="button" data-toggle="dropdown" href="#">
-            <i class="glyphicon glyphicon-user"></i> Admin <span class="caret"></span></a>
-          <ul id="g-account-menu" class="dropdown-menu" role="menu">
-            <li><a href="#">My Profile</a></li>
-            <li><a href="#"><i class="glyphicon glyphicon-lock"></i> Logout</a></li>
-          </ul>
-        </li>
-        <li><a href="#"><i class="glyphicon glyphicon-lock"></i> Logout</a></li>
+        <li><a href="/profile/index">PERFIL</a></li>
+        <li><a href="/home/index/#q">QUEM SOMOS</a></li>
+        <li><a href="/home/index/#missao">MISSÃO</a></li>
+        <li><a href="/home/index/#linha">NOTÍCIAS</a></li>
+        <li><a href="/home/index/#contact">CONTACTOS</a></li>
       </ul>
-
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
-
-
-<div class="container-fluid text-left">
-  <div class="row content">
-    <!--menu vertical-->
-    <div class="col-sm-2 sidenav">
-
-      <div class="container-fluid">
-
-        <div class="row">
-          <div class="col-md-12">
-
-            <div class="w3-sidebar w3-bar-block w3-light-grey w3-card-2" id="ml">
-              <a href="/profile/index" class="w3-bar-item w3-button">INICIO</a>
-              <div class="w3-bar-item w3-button" onclick="myAccFunc()">
-                Encomendas <i class="fa fa-caret-down"></i></div>
-              <div id="demoAcc" class="w3-hide w3-white w3-card-4">
-                <a href="/order/show" class="w3-bar-item w3-button">LISTA DE ENCOMENDAS</a>
-                <a href="#" class="w3-bar-item w3-button">ENCOMENDAS PENDENTES</a>
-                <a href="#" class="w3-bar-item w3-button">ENCOMENDAS PARA REVISÃO</a>
-                <a href="#" class="w3-bar-item w3-button">ENCOMENDAS CONCLUÍDAS</a>
-                <a href="/order/new" class="w3-bar-item w3-button">NOVA ENCOMENDA</a>
-              </div>
-
-              <div class="w3-dropdown-click">
-                <div class="w3-bar-item w3-button" onclick="myDropFunc()">
-                  Dropdown <i class="fa fa-caret-down"></i>
-                </div>
-                <div id="demoDrop" class="w3-dropdown-content w3-white w3-card-4">
-                  <a href="#" class="w3-bar-item w3-button">Link</a>
-                  <a href="#" class="w3-bar-item w3-button">Link</a>
-                </div>
-              </div>
-              <a href="/client_area/index" class="w3-bar-item w3-button">ÁREA DE CLIENTE</a>
-              <a href="#" class="w3-bar-item w3-button">Link 3</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-            <script>
-                function myAccFunc() {
-                    var x = document.getElementById("demoAcc");
-                    if (x.className.indexOf("w3-show") == -1) {
-                        x.className += " w3-show";
-                        x.previousElementSibling.className += " w3-green";
-                    } else {
-                        x.className = x.className.replace(" w3-show", "");
-                        x.previousElementSibling.className =
-                            x.previousElementSibling.className.replace(" w3-green", "");
-                    }
-                }
-
-                function myDropFunc() {
-                    var x = document.getElementById("demoDrop");
-                    if (x.className.indexOf("w3-show") == -1) {
-                        x.className += " w3-show";
-                        x.previousElementSibling.className += " w3-green";
-                    } else {
-                        x.className = x.className.replace(" w3-show", "");
-                        x.previousElementSibling.className =
-                            x.previousElementSibling.className.replace(" w3-green", "");
-                    }
-                }
-            </script>
-
-
-
-
-
-
-
-
-            <!-- menu
-            <div id="MainMenu">
-              <div class="list-group panel">
-                <a href="/profile/index" class="list-group-item list-group-item-success" data-parent="#MainMenu">PÁGINA PRINCIPAL</a>
-                <a href="/client_area/index" class="list-group-item list-group-item-success" data-parent="#MainMenu">ÁREA DE CLIENTE</a>
-
-
-                <a href="#demo3" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#MainMenu">ENCOMENDAS<i class="fa fa-caret-down"></i></a>
-                <div class="collapse" id="demo3">
-
-
-                  <a href="/order/index" class="list-group-item" data-toggle="collapse" data-parent="#SubMenu1">LISTA DE ENCOMENDAS<i class="fa fa-caret-down"></i></a>
-                  <div class="collapse list-group-submenu" id="SubMenu1">
-                    <a href="#" class="list-group-item" data-parent="#SubMenu1">Subitem 1 a</a>
-                    <a href="#" class="list-group-item" data-parent="#SubMenu1">Subitem 2 b</a>
-                    <a href="#SubSubMenu1" class="list-group-item" data-toggle="collapse" data-parent="#SubSubMenu1">Subitem 3 c <i class="fa fa-caret-down"></i></a>
-                    <div class="collapse list-group-submenu list-group-submenu-1" id="SubSubMenu1">
-                      <a href="#" class="list-group-item" data-parent="#SubSubMenu1">Sub sub item 1</a>
-                      <a href="#" class="list-group-item" data-parent="#SubSubMenu1">Sub sub item 2</a>
-                    </div>
-                    <a href="#" class="list-group-item" data-parent="#SubMenu1">Subitem 4 d</a>
-                  </div>
-                  <a href="/hold_order/index" class="list-group-item">ENCOMENDAS PENDENTES</a>
-                  <a href="javascript:;" class="list-group-item">ENCOMENDAS PARA REVISÃO</a>
-                  <a href="javascript:;" class="list-group-item">ENCOMENDAS CONCLUÍDAS</a>
-                  <a href="/order/new" class="list-group-item">NOVA ENCOMENDA</a>
-                </div>
-                <a href="#demo4" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#MainMenu">Item 4  <i class="fa fa-caret-down"></i></a>
-                <div class="collapse" id="demo4">
-                  <a href="" class="list-group-item">Subitem 1</a>
-                  <a href="" class="list-group-item">Subitem 2</a>
-                  <a href="" class="list-group-item">Subitem 3</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
--->
-<!--botões do meio-->
-    <div class="col-sm-10">
-      <div class="container-2">
-        <div id="page-wrapper">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="page-title">
-                <h2>Inicio<small></small></h2>
-                <ol class="breadcrumb">
-                  <li class="active"><i class="fa fa-dashboard"></i>Inicio</li>
-                  <li class="pull-right">
-                    <div id="reportrange" class="btn btn-green btn-square date-picker">
-                      <i class="fa fa-calendar"></i>
-                      <span class="date-range">February 15, 2017 - March 16, 2017</span> <i class="fa fa-caret-down"></i>
-                    </div>
-                  </li>
-                </ol>
-              </div>
-            </div>
-          </div>
-
-          <div class="row" >
-            <div class="col-lg-2 col-sm-6">
-              <div class="circle-tile">
-                <a href="#">
-                  <div class="circle-tile-heading dark-blue">
-                    <span class="glyphicon glyphicon-list-alt" aria-hidden="true" id="icone"></span>
-                  </div>
-                </a>
-                <div class="circle-tile-content dark-blue">
-                  <div class="circle-tile-description text-faded">
-                    Utilizadores
-                  </div>
-                  <div class="circle-tile-number text-faded">
-                    10
-                    <span id="sparklineA"></span>
-                  </div>
-                  <a href="#" class="circle-tile-footer">Mais Info <i class="fa fa-chevron-circle-right"></i></a>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-2 col-sm-6">
-              <div class="circle-tile">
-
-                <a href="#">
-                  <div class="circle-tile-heading green">
-                    <span class="glyphicon glyphicon-folder-open" aria-hidden="true" id="icone"></span>
-                  </div>
-                </a>
-                <div class="circle-tile-content green">
-                  <div class="circle-tile-description text-faded">
-                    Encomendas Recentes
-                  </div>
-                  <div class="circle-tile-number text-faded">
-                    4 Novas
-                  </div>
-                  <a href="#" class="circle-tile-footer">Mais Info <i class="fa fa-chevron-circle-right"></i></a>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-2 col-sm-6">
-              <div class="circle-tile">
-                <a href="#">
-                  <div class="circle-tile-heading orange">
-                    <span class="glyphicon glyphicon-user" aria-hidden="true" id="icone"></span>
-                  </div>
-                </a>
-                <div class="circle-tile-content orange">
-                  <div class="circle-tile-description text-faded">
-                    Novo Utilizador
-                  </div>
-                  <div class="circle-tile-number text-faded">
-                    2 Novos
-                  </div>
-                  <a href="#" class="circle-tile-footer">Mais Info <i class="fa fa-chevron-circle-right"></i></a>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-2 col-sm-6">
-              <div class="circle-tile">
-                <a href="#">
-                  <div class="circle-tile-heading blue">
-                    <span class="glyphicon glyphicon-book" aria-hidden="true" id="icone"></span>
-                  </div>
-                </a>
-                <div class="circle-tile-content blue">
-                  <div class="circle-tile-description text-faded">
-                    Notas
-                  </div>
-                  <div class="circle-tile-number text-faded">
-                    10
-                    <span id="sparklineB"></span>
-                  </div>
-                  <a href="#" class="circle-tile-footer">Mais Info <i class="fa fa-chevron-circle-right"></i></a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-2 col-sm-6">
-              <div class="circle-tile">
-                <a href="#">
-                  <div class="circle-tile-heading red">
-                    <span class="glyphicon glyphicon-pencil" aria-hidden="true" id="icone"></span>
-                  </div>
-                </a>
-                <div class="circle-tile-content red">
-                  <div class="circle-tile-description text-faded">
-                    Nova Encomenda
-                  </div>
-                  <div class="circle-tile-number text-faded">
-                    Criar
-                    <span id="sparklineC"></span>
-                  </div>
-                  <a href="#" class="circle-tile-footer">Mais Info <i class="fa fa-chevron-circle-right"></i></a>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-2 col-sm-6">
-              <div class="circle-tile">
-                <a href="#">
-                  <div class="circle-tile-heading purple">
-                    <span class="glyphicon glyphicon-tasks" aria-hidden="true" id="icone"></span>
-                  </div>
-                </a>
-                <div class="circle-tile-content purple">
-                  <div class="circle-tile-description text-faded">
-                   Lista de Encomendas
-                  </div>
-                  <div class="circle-tile-number text-faded">
-                    120
-                    <span id="sparklineD"></span>
-                  </div>
-                  <a href="#" class="circle-tile-footer">Mais Info <i class="fa fa-chevron-circle-right"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-        </div>
-
-      </div>
-      <script src="js/jquery-3.1.1.js"></script>
-      <script src="js/bootstrap.js"></script>
-
-
-
-      <script type="text/javascript">
-          $(document).ready(function(){
-              $(".sidebar-toggle").click(function(){
-                  $(this).hide();
-
-                  $("#user-profil").show();
-
-                  $("#hide-btn").show();
-
-                  $(".container-2").css("width", "85%");
-
-
-              });
-
-              $("#hide-btn").click(function(){
-                  $(this).hide();
-
-                  $("#user-profil").hide();
-
-                  $(".sidebar-toggle").show();
-
-                  $(".container-2").css("width", "100%");
-
-
-              });
-          });
-      </script>
-
-
-
-
-
-<% flash.each do |key, value| %>
-    <%= value %>
-<% end %>
-
-<%= yield  %>
-
-
     </div>
   </div>
+</nav>
+
+<p/>
+<form class="jumbotron">
+  <div class="input-group">
+    <a href="/order/new" class="btn" role="button">NOVA ENCOMENDA</a>
+    <a class="col-md-3">
+      <%= link_to 'PT', '/?lang=pt' %>
+      <span>|</span>
+      <%= link_to 'EN', '/?lang=en' %>
+    </a>
+    <a class="col-md-3">
+      <% if current_user %>
+          <%= link_to 'Sign Out', destroy_user_session_path, {method: 'delete'} %>
+      <% else %>
+          <%= link_to 'Sign In', new_user_session_path %>
+      <% end %>
+    </a>
+
+    <%= yield %>
+    <% if notice %>
+        <div class="alert alert-info" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <%= notice %>
+        </div>
+    <% end %>
+    <% if alert %>
+        <div class="alert alert-warning" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <%= alert %>
+        </div>
+    <% end %>
+  </div>
+</form>
 </div>
+
+<!-- g4Sidebar -->
+<div class="container-fluid text-left">
+  <div class="row content">
+    <div class="col-sm-2 sidebar4">
+      <p><a href="/profile/index" class="w3-bar-item w3-button">PERFIL</a></p>
+      <p><a href="/client_area/index" class="w3-bar-item w3-button">ÁREA DE CLIENTE</a></p>
+      <p><a href="/order/show" class="w3-bar-item w3-button">ENCOMENDAS</a>
+    </div>
+
+    <!-- g4PageContent -->
+    <div class="col-lg-10 text-left">
+      <div class="w3-row-padding w3-margin-bottom">
+        <div class="w3-quarter">
+          <div class="w3-container w3-red w3-padding-16">
+            <div class="w3-left"><i class="fa fa-comment w3-xxxlarge"></i></div>
+            <div class="w3-right">
+              <h3><a href="/client_area/index">ÁREA DE CLIENTE</a></h3>
+            </div>
+            <div class="w3-clear"></div><!--g4-->
+            <h4><span class="glyphicon glyphicon-user"></span></h4>
+          </div>
+        </div>
+        <div class="w3-quarter">
+          <div class="w3-container w3-blue w3-padding-16">
+            <div class="w3-left"><i class="fa fa-eye w3-xxxlarge"></i></div>
+            <div class="w3-right">
+              <h3><a href="/order/show">ENCOMENDAS RECENTES</a></h3>
+            </div>
+            <div class="w3-clear"></div><!--g4-->
+            <h4><span class="glyphicon glyphicon-duplicate"></span></h4>
+          </div>
+        </div>
+        <div class="w3-quarter">
+          <div class="w3-container w3-teal w3-padding-16">
+            <div class="w3-left"><i class="fa fa-share-alt w3-xxxlarge"></i></div>
+            <div class="w3-right">
+              <h3><a href="/hold_order/index">ENCOMENDAS PENDENTES</a></h3>
+            </div>
+            <div class="w3-clear"></div><!--g4-->
+            <h4><span class="glyphicon glyphicon-book"></span></h4>
+          </div>
+        </div>
+      </div>
+    </div>
+
