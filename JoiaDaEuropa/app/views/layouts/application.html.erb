@@ -43,10 +43,8 @@
     </div>
   </nav>
 
-  <p/>
-
   <div class="jumbotron">
-    <header class="row" style="text-align: center;">
+    <header class="row">
       <div class="col-md-3">
         <%= link_to 'PT', '/?lang=pt' %>
         <span>|</span>
@@ -63,9 +61,7 @@
       </div>
     </header>
   </div>
-
     <%= yield %>
-
     <% if notice %>
         <div class="alert alert-info" role="alert">
           <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -78,21 +74,17 @@
           <%= alert %>
         </div>
     <% end %>
-    </body>
-  </div>
-  </div>
 
   <!-- g4Sidebar -->
   <div class="container-fluid text-left">
     <div class="row content">
       <div class="w3-sidebar w3-bar-block">
-        <p><a href="/profile/index" class="w3-bar-item w3-button">PERFIL</a></p>
-        <p><a href="/client_area/index" class="w3-bar-item w3-button">ÁREA DE CLIENTE</a></p>
-        <p><a href="/order/show" class="w3-bar-item w3-button">ENCOMENDAS</a>
+        <p><a href="/profile/index" class="w3-bar-item">PERFIL</a></p>
+        <p><a href="/client_area/index" class="w3-bar-item">ÁREA DE CLIENTE</a></p>
+        <p><a href="/order/show" class="w3-bar-item">ENCOMENDAS</a>
       </div>
     </div>
   </div>
-
   </body>
 
   <!-- g4Footer -->

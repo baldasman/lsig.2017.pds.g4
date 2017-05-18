@@ -1,15 +1,12 @@
-    <!-- g4PageContent -->
-    <div class="col-lg-10">
-
-    <header class="w3-display-container w3-content w3-center">
-      <div class="img-responsive" <%= link_to image_tag("shoe.jpg"), "http://annstreetstudio.com/tag/heels/" %>>
-        <div class="w3-bar w3-light-grey w3-round w3-display-bottommiddle w3-hide-small" style="bottom:-16px">
-          <a href="/client_area/index" class="w3-bar-item w3-button">ÁREA DE CLIENTE</a><p></p>
-          <a href="/order/show" class="w3-bar-item w3-button">ENCOMENDAS RECENTES</a><p></p>
-          <a href="/order/new" class="w3-bar-item w3-button">NOVA ENCOMENDA</a>
-        </div>
-      </div>
-      </div>
-    </header>
+<!-- g4PageContent -->
+<div class="col-lg-10">
+  <div class="w3-display-container">
+    <img class="img-responsive" src="<%= asset_path 'shoe.jpg' %>">
+    <div class="w3-display-topright">
+      <p><a href="/client_area/index" class="w3-button w3-padding-large w3-large">ÁREA DE CLIENTE</a></p>
+      <p><a href="/order/show" class="w3-button w3-padding-large w3-large">ENCOMENDAS RECENTES</a></p>
+      <a href="/order/new" class="w3-button w3-padding-large w3-large">NOVA ENCOMENDA</a>
     </div>
+  </div>
 </div>
+

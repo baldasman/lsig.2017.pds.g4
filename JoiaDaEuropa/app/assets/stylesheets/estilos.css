@@ -22,9 +22,10 @@
 }
 .jumbotron {
     background-color: slategrey;
-    padding-top: 50px;
+    padding-top: 55px;
     padding-bottom: 10px;
     font-family: Montserrat, sans-serif;
+    text-align: center;
 }
 .w3-sidebar{
     background: whitesmoke;
@@ -80,6 +81,16 @@ a {
     padding: 15px;
     background: lightslategrey;
 }
+.w3-bar{
+    background-color: lightgrey;
+}
+.w3-display-topright{
+    color: white;
+    padding:24px 48px;
+}
+.w3-button{
+    background-color: black;
+}
 /*rodape*/
 .footer{
     font-size: x-small;
@@ -93,7 +104,10 @@ a {
     padding-bottom: 100px;
     padding-left: 60px;
 }
-
+.col-sm-4{
+    padding-right: 20px;
+    padding-left: 20px;
+}
 #missao{
     padding-right: 60px;
     padding-top: 100px;
@@ -217,7 +231,7 @@ input[type=text], input[type=password] {
     border: 1px solid darkgrey;
     box-sizing: border-box;
 }
-.actions input[type=submit]{
+.actions, input[type=submit]{
     width: 100px;
     padding-top: 5px;
     padding-bottom: 5px;
