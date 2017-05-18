@@ -10,7 +10,12 @@
         <li><a href="/profile/index">PERFIL</a></li>
         <li><a href="/order/show">ENCOMENDAS</a></li>
         <li><a href="/order/new">NOVA ENCOMENDA</a></li>
-        <li><input type="text" name="search" placeholder="Search.."></li>
+        <!--<% form_tag order_show_path, :method => 'get' do %>
+              <p>
+                <%= text_field_tag :search, params[:search] %>
+                <%= submit_tag "Search", :name => nil %>
+              </p>
+          <% end %>-->
       </ul>
     </div>
   </div>
@@ -64,12 +69,11 @@
       <p><a href="/order/show" class="w3-bar-item w3-button">ENCOMENDAS</a>
     </div>
 
-
     <!-- g4PageContent -->
     <div class="col-lg-10 text-left">
       <h1><b>ENCOMENDAS</b></h1>
       <br><br> <span></span>
-      <table class="table table-bordered">
+      <table class="table table-left">
         <thead>
         <tr>
           <th>Nº</th>
@@ -99,6 +103,7 @@
   </div>
 </div>
 
+<!-- g4Footer -->
 <div class="footer container-fluid text-center">
   <a href="" title="To Top">
     <span class="glyphicon glyphicon-chevron-up"></span>

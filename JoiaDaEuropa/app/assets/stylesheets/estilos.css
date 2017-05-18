@@ -64,8 +64,10 @@ thead{
     background-color: slategrey;
     color: whitesmoke;
 }
+/*tabelas*/
 .w3-table{
     font-family: Montserrat, sans-serif;
+    margin-left: -20%;
 }
 /*links*/
 a {
@@ -145,7 +147,4 @@ a {
     position: absolute;
     top: 20px;
     right: 45px;
-}
-.table {
-    margin-left: -20%;
 }

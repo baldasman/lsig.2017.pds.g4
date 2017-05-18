@@ -5,6 +5,7 @@ class OrderController < ApplicationController
 
   def show
         @order = Order.all
+        #@order = Order.search(params[:search])
         #@order = Order.paginate :page => params[:page], :conditions => filter_conditions
   end
 
@@ -45,17 +46,16 @@ class OrderController < ApplicationController
         @order = Order.find_by(params[:id])
 
         if @order.update
-        redirect_to order_show_path
+          redirect_to order_show_path
         end
-    else
-        render :action => "edit"
-    end
-
+  else
+    render :action => "edit"
+  end
     #def destroy        @current_order = session[:current_order] = nil        redirect_to cancel_order_index_path
    # end
 
-    private
 
+    private
   def order_params
         params[:order]
     end
