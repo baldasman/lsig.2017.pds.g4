@@ -18,6 +18,10 @@ class OrderController < ApplicationController
         @orders = Order.where(state_id: 3)
     end
 
+    def recent
+        @orders = Order.last(limit[10])
+    end
+
     def new
         @order = Order.new
     end
