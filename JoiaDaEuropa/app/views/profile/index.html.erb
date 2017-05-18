@@ -19,7 +19,11 @@
 <p/>
 <form class="jumbotron">
   <body>
-  <header class="row" style="text-align: center;">
+
+  <header>
+
+
+  class="row" style="text-align: center;">
     <div class="col-md-3">
       <%= link_to 'PT', '/?lang=pt' %>
       <span>|</span>
@@ -36,6 +40,7 @@
       <% end %>
     </div>
   </header>
+
 
   <%= yield %>
 
@@ -69,7 +74,7 @@
     <div class="col-lg-10">
 
     <header class="w3-display-container w3-content w3-center">
-      <div class="img-responsive" <%= link_to image_tag("shoe.jpg"), "http://annstreetstudio.com/tag/heels/" %>
+      <div class="img-responsive" <%= link_to image_tag("shoe.jpg"), "http://annstreetstudio.com/tag/heels/" %>>
       <div class="w3-display-middle w3-padding-large w3-border w3-wide w3-text-light-grey w3-center">
         <h1 class="w3-hide-medium w3-hide-small w3-xxxlarge">JOIA DA EUROPA</h1>
         <h5 class="w3-hide-large" style="white-space:nowrap">JOIA DA EUROPA</h5>
@@ -81,7 +86,7 @@
           <a href="/order/new" class="w3-bar-item w3-button">NOVA ENCOMENDA</a>
         </div>
       </div>
-    </div>
+      </div>
     </header>
     </div>
 </div>
@@ -91,3 +96,4 @@
   <div class="footer container-fluid text-center">
     <p>2016-2017 | PROJETO E DESENVOLVIMENTO DE SOFTWARE | GRUPO 4</p>
   </div>
+</div>
