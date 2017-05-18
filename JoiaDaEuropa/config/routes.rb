@@ -13,9 +13,9 @@ Rails.application.routes.draw do
   get '/client_area/edit_client'
   patch '/client_area/save_client'
 
-  get '/order/detail'
-  get '/order/edit'
-  patch '/order/update'
+  get '/order/detail/:id', to: 'order#detail', as: 'order_detail'
+  get '/order/edit/:id', to: 'order#edit', as: 'order_edit'
+  post '/order/update'
   delete '/order/destroy'
   get '/order/new'
   get '/order/show'

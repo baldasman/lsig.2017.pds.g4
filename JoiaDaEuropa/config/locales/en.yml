@@ -37,7 +37,11 @@ en:
   submit: "Submeter"
   add: "Adicionar"
   edit: "Editar"
-  detail: "Detalhes"
+  detail: "Details"
+  order_state:
+    pending: 'Pending'
+    concluded: 'Concluded'
+    cancelled: 'Cancelled'
   activerecord:
       errors:
         models:

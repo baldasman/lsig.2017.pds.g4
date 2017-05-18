@@ -86,15 +86,15 @@
         </tr>
         </thead>
         <tbody>
-        <%= @order.each do |order| %>
+        <% @order.each do |order| %>
         <tr>
           <td><%= order.id %></td>
           <td><%= order.description %></td>
           <td><%= order.delivery_date %></td>
           <td><%= order.unit_price %></td>
           <td><%= order.quantity %></td>
-          <td><%= order.state_id %></td>
-          <td><%= link_to t("detail"), order_detail_path %></td>
+          <td><%= order.state.description %></td>
+          <td><%= link_to t("detail"), order_detail_path(order.id) %></td>
         </tr>
         <% end %>
         </tbody>

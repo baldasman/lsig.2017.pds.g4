@@ -11,7 +11,7 @@
 #     <%= t('hello') %>
 #
 # pds
-To use a different locale, set it with `I18n.locale`:
+# To use a different locale, set it with `I18n.locale`:
 #
 #     I18n.locale = :es
 #
@@ -35,6 +35,11 @@ To use a different locale, set it with `I18n.locale`:
   save: "Guardar"
   submit: "Submeter"
   edit: "Editar"
+  detail: "Detalhes"
+  order_state:
+    pending: 'Pendente'
+    concluded: 'Concluída'
+    cancelled: 'Cancelada'
   activerecord:
     errors:
       models:

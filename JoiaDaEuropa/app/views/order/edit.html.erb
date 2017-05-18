@@ -1,65 +1,66 @@
 <!-- g4navbar -->
 <nav data-spy="scroll" data-target=".navbar" class="navbar navbar-default navbar-fixed-top">
 
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="button" href="/home/index"><img src="<%= asset_path '2.png' %>"></a>
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="button" href="/home/index"><img src="<%= asset_path '2.png' %>"></a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <li class="nav navbar-nav navbar-right">
+            <li><a href="/profile/index">PERFIL</a></li>
+            <li><a href="/order/show">ENCOMENDAS</a></li>
+            <li><a href="/order/new">NOVA ENCOMENDA</a></li>
+            <li></li>
+
+
+            </ul>
+        </div>
     </div>
-    <div class="collapse navbar-collapse">
-      <li class="nav navbar-nav navbar-right">
-        <li><a href="/profile/index">PERFIL</a></li>
-        <li><a href="/order/show">ENCOMENDAS</a></li>
-        <li><a href="/order/new">NOVA ENCOMENDA</a></li>
-        <li></li>
-
-
-
-      </ul>
-    </div>
-  </div>
 </nav>
 
 <p/>
 <form class="jumbotron">
-  <body>
-  <header class="row" style="text-align: center;">
-    <div class="col-md-3">
-      <%= link_to 'PT', '/?lang=pt' %>
-      <span>|</span>
-      <%= link_to 'EN', '/?lang=en' %>
-    </div>
-    <div class="col-md-6">
+    <body>
+    <header class="row" style="text-align: center;">
+        <div class="col-md-3">
+            <%= link_to 'PT', '/?lang=pt' %>
+            <span>|</span>
+            <%= link_to 'EN', '/?lang=en' %>
+        </div>
+        <div class="col-md-6">
 
-    </div>
-    <div class="col-md-3">
-      <% if current_user %>
-          <%= link_to 'Sign Out', destroy_user_session_path, {method: 'delete'} %>
-      <% else %>
-          <%= link_to 'Sign In', new_user_session_path %>
-      <% end %>
-    </div>
-  </header>
+        </div>
+        <div class="col-md-3">
+            <% if current_user %>
+                <%= link_to 'Sign Out', destroy_user_session_path, {method: 'delete'} %>
+            <% else %>
+                <%= link_to 'Sign In', new_user_session_path %>
+            <% end %>
+        </div>
+    </header>
 
-  <%= yield %>
+    <%= yield %>
 
-  <% if notice %>
-      <div class="alert alert-info" role="alert">
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <%= notice %>
-      </div>
-  <% end %>
-  <% if alert %>
-      <div class="alert alert-warning" role="alert">
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <%= alert %>
-      </div>
-  <% end %>
-  </body>
+    <% if notice %>
+        <div class="alert alert-info" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span></button>
+            <%= notice %>
+        </div>
+    <% end %>
+    <% if alert %>
+        <div class="alert alert-warning" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span></button>
+            <%= alert %>
+        </div>
+    <% end %>
+    </body>
 </form>
 </div>
 
@@ -68,33 +69,35 @@
 
 <br/> <br/>
 
-<%= form_for @order, :url => url_for(:controller => 'order', :action => 'update'), html: {class: 'container'}  do |f| %>
+<%= form_for @order, :url => url_for(:controller => 'order', :action => 'update'), :method => 'post', html: {class: 'container'} do |f| %>
+    <%= f.hidden_field :id %>
     <div class="form-group">
 
-      <label for="description"><%= t('description') %></label>
-      <%= f.text_field :description %>
-      <% if flash[:error] && flash[:error]['description'] %>
-          <div class="alert danger"><%= flash[:error]['description'].join('<br/>') %></div>
-      <% end %>
+        <label for="description"><%= t('description') %></label>
+        <%= f.text_field :description %>
+        <% if flash[:error] && flash[:error]['description'] %>
+            <div class="alert danger"><%= flash[:error]['description'].join('<br/>') %></div>
+        <% end %>
 
-      <label for="delivery_date"><%= t('description') %></label>
-      <%= f.text_field :description %>
-      <% if flash[:error] && flash[:error]['description'] %>
-          <div class="alert danger"><%= flash[:error]['description'].join('<br/>') %></div>
-      <% end %>
+        <label for="delivery_date"><%= t('delivery_date') %></label>
+        <%= f.date_select :delivery_date %>
+        <% if flash[:error] && flash[:error]['delivery_date'] %>
+            <div class="alert danger"><%= flash[:error]['delivery_date'].join('<br/>') %></div>
+        <% end %>
 
-      <label for="unit_price"><%= t('unit_price') %></label>
-      <%= f.text_field :unit_price %>
-      <% if flash[:error] && flash[:error]['unit_price'] %>
-          <div class="alert danger"><%= flash[:error]['unit_price'].join('<br/>') %></div>
-      <% end %>
+        <label for="unit_price"><%= t('unit_price') %></label>
+        <%= f.text_field :unit_price %>
+        <% if flash[:error] && flash[:error]['unit_price'] %>
+            <div class="alert danger"><%= flash[:error]['unit_price'].join('<br/>') %></div>
+        <% end %>
 
-      <label for="quantity"><%= t('quantity') %></label>
-      <%= f.text_field :quantity %>
-      <% if flash[:error] && flash[:error]['quantity'] %>
-          <div class="alert danger"><%= flash[:error]['quantity'].join('<br/>') %></div>
-      <% end %>
+        <label for="quantity"><%= t('quantity') %></label>
+        <%= f.text_field :quantity %>
+        <% if flash[:error] && flash[:error]['quantity'] %>
+            <div class="alert danger"><%= flash[:error]['quantity'].join('<br/>') %></div>
+        <% end %>
 
-         <div align="right"><%= f.submit t('save')%></div>
-      <button><%= link_to t('cancel'), order_show_path%></button>
-      <% end %>
+        <div align="right"><%= f.submit t('save') %></div>
+        <button><%= link_to t('cancel'), order_show_path %></button>
+    </div>
+<% end %>

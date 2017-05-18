@@ -1,72 +1,82 @@
-
 <nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="/home/index"><img src="<%= asset_path '2.png' %>"></a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="/profile/index">PERFIL</a></li>
-        <li><a href="#quem_somos">QUEM SOMOS</a></li>
-        <li><a href="#missao">MISSÃO</a></li>
-        <li><a href="#noticia">NOTÍCIAS</a></li>
-        <li><a href="#contacto">CONTACTOS</a></li>
-        <li><a href="#parceria">PARCERIAS</a></li>
-        <li><a onclick="openNavl()">LOGIN</a></li>
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/home/index"><img src="<%= asset_path '2.png' %>"></a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/profile/index">PERFIL</a></li>
+                <li><a href="#quem_somos">QUEM SOMOS</a></li>
+                <li><a href="#missao">MISSÃO</a></li>
+                <li><a href="#noticia">NOTÍCIAS</a></li>
+                <li><a href="#contacto">CONTACTOS</a></li>
+                <li><a href="#parceria">PARCERIAS</a></li>
+                <li><a onclick="openNav('myNavl')">LOGIN</a></li>
 
-      </ul>
+            </ul>
+        </div>
     </div>
-  </div>
 </nav>
 
 <img class="img-responsive" src="<%= asset_path '3.jpg' %>" width="1893" height="697">
 
 <div id="quem_somos" class="container-fluid" style="background-image: url(3.jpg);">
     <div class="col-sm-8" id="q">
-      <h2>QUEM SOMOS</h2><br>
-      <p> Em 2006, ano de novas oportunidades e desafios, António Bento Da Costa Ferreira inicia-se por conta própria, criando a empresa Jóia Da Europa, que se dedica inteiramente à fabricação de calçado.
+        <h2>QUEM SOMOS</h2><br>
+        <p> Em 2006, ano de novas oportunidades e desafios, António Bento Da Costa Ferreira inicia-se por conta própria,
+            criando a empresa Jóia Da Europa, que se dedica inteiramente à fabricação de calçado.
 
-        Jóia da Europa, é mais um dos casos de sucesso nacional e internacional, isto porque a inovação e a qualidade dos seus produtos é difícil de encontrar. Lentamente, ano após ano, esta empresa tem crescido, e não põe de parte qualquer desafio vindo à sua direcção. Para esta empresa tudo é possível.
+            Jóia da Europa, é mais um dos casos de sucesso nacional e internacional, isto porque a inovação e a
+            qualidade dos seus produtos é difícil de encontrar. Lentamente, ano após ano, esta empresa tem crescido, e
+            não põe de parte qualquer desafio vindo à sua direcção. Para esta empresa tudo é possível.
 
-        Ao longo destes anos, Jóia da Europa tem feito apostas ao nível de novas tecnologias, tanto em máquinas, como em programas informáticos, o que faz com que exista uma margem bastante reduzida de erro, e permite à empresa dar resposta a todas as propostas que lhe sejam submetidas, nos prazos subordinados.
+            Ao longo destes anos, Jóia da Europa tem feito apostas ao nível de novas tecnologias, tanto em máquinas,
+            como em programas informáticos, o que faz com que exista uma margem bastante reduzida de erro, e permite à
+            empresa dar resposta a todas as propostas que lhe sejam submetidas, nos prazos subordinados.
 
-        A qualidade dos nossos serviços advém também do valor que têm as matérias – primas seleccionadas para a nossa fabricação. Em todas as épocas, os nossos clientes podem contar com uma colecção completa e diferente.
+            A qualidade dos nossos serviços advém também do valor que têm as matérias – primas seleccionadas para a
+            nossa fabricação. Em todas as épocas, os nossos clientes podem contar com uma colecção completa e diferente.
 
 
-        Se procura qualidade, inovação, transformação, diferenciação de produtos, venha conhecer a nossa empresa, porque aqui encontra tudo o que precisa.</p><br>
+            Se procura qualidade, inovação, transformação, diferenciação de produtos, venha conhecer a nossa empresa,
+            porque aqui encontra tudo o que precisa.</p><br>
 
 
     </div>
     <div class="col-sm-4" id="qim">
-      <img class="img-responsive" src="<%= asset_path 'red.jpg' %>" width="1893" height="697">
+        <img class="img-responsive" src="<%= asset_path 'red.jpg' %>" width="1893" height="697">
     </div>
 
 
-  </div>
+</div>
 </div>
 
 <div class="container-fluid bg-grey" id="missao">
 
-  <div class="row">
-    <div class="col-sm-4" id="qim2" >
-      <img class="img-responsive" src="<%= asset_path 'red.jpg' %>" width="1893" height="697">
+    <div class="row">
+        <div class="col-sm-4" id="qim2">
+            <img class="img-responsive" src="<%= asset_path 'red.jpg' %>" width="1893" height="697">
+        </div>
+        <div class="col-sm-8"> <!--id="m"-->
+            <h2>MISSÃO</h2><br>
+            <p>Uma empresa não se define pelo nome que tem, define-se pelo esforço e trabalho despendido por todos
+                aqueles que fazem parte dela, os recursos humanos, fornecedores, clientes e todos os outros
+                colaboradores são necessários para o sucesso de qualquer empresa, e Jóia da Europa conta com a ajuda de
+                todos.
+
+
+                A nossa missão centraliza-se em:
+
+                Atender às necessidades de todos os nossos clientes, aperfeiçoando sempre os nossos produtos e serviços.
+
+                Fornecer produtos de tal qualidade que os nossos clientes se sintam satisfeitos, e os nossos empregados
+                e parceiros de negócios se beneficiem com nosso êxito.
+
+                Oferecer soluções para qualquer ideia, contando com a nossa assistência.
+
+                Apostar sempre em tecnologias inovadoras. </p>
+        </div>
     </div>
-    <div class="col-sm-8" > <!--id="m"-->
-      <h2>MISSÃO</h2><br>
-        <p>Uma empresa não se define pelo nome que tem, define-se pelo esforço e trabalho despendido por todos aqueles que fazem parte dela, os recursos humanos, fornecedores, clientes e todos os outros colaboradores são necessários para o sucesso de qualquer empresa, e Jóia da Europa conta com a ajuda de todos.
-
-
-        A nossa missão centraliza-se em:
-
-        Atender às necessidades de todos os nossos clientes, aperfeiçoando sempre os nossos produtos e serviços.
-
-        Fornecer produtos de tal qualidade que os nossos clientes se sintam satisfeitos, e os nossos empregados e parceiros de negócios se beneficiem com nosso êxito.
-
-        Oferecer soluções para qualquer ideia, contando com a nossa assistência.
-
-          Apostar sempre em tecnologias inovadoras. </p>
-    </div>
-  </div>
 </div>
 <div class="row" id="noticia">
 
@@ -74,302 +84,277 @@
 
 <!-- noticias -->
 <div id="services" class="container-fluid text-center">
-  <h2>NOTICIAS</h2>
+    <h2>NOTICIAS</h2>
 
-  <br><br>
+    <br><br>
 
-  <div class="row slideanim">
-    <div class="col-sm-4">
-      <!--modal1-->
-      <button type="button" class="btn btn-primary btn-lg"  onclick="openNav()">Feira na Alemanha 2016</button>
+    <div class="row slideanim">
+        <div class="col-sm-4">
+            <!--modal1-->
+            <button type="button" class="btn btn-primary btn-lg" onclick="openNav('myNav')">Feira na Alemanha 2016
+            </button>
+        </div>
+        <div class="col-sm-4">
+            <!--modal2-->
+            <button type="button" class="btn btn-primary btn-lg" onclick="openNav('myNav2')">Feira na Alemanha 2016
+            </button>
+        </div>
+        <div class="col-sm-4">
+            <!--modal3-->
+            <button type="button" class="btn btn-primary btn-lg" onclick="openNav('myNav3')">Feira na Alemanha 2016
+            </button>
+        </div>
     </div>
-    <div class="col-sm-4">
-      <!--modal2-->
-      <button type="button" class="btn btn-primary btn-lg"  onclick="openNav2()">Feira na Alemanha 2016</button>
-    </div>
-    <div class="col-sm-4">
-      <!--modal3-->
-      <button type="button" class="btn btn-primary btn-lg"  onclick="openNav3()">Feira na Alemanha 2016</button>
-    </div>
-  </div>
 
-  <br>
-  <br>
-<!--segunda fila de botões-->
-  <div class="row slideanim">
-  <div class="col-sm-4">
-    <!--modal4-->
-    <button type="button" class="btn btn-primary btn-lg"  onclick="openNav4()">Feira na Alemanha 2016</button>
-  </div>
-   <div class="col-sm-4">
-     <!--modal5-->
-     <button type="button" class="btn btn-primary btn-lg"  onclick="openNav5()">Feira na Alemanha 2016</button>
+    <br>
+    <br>
+    <!--segunda fila de botões-->
+    <div class="row slideanim">
+        <div class="col-sm-4">
+            <!--modal4-->
+            <button type="button" class="btn btn-primary btn-lg" onclick="openNav('myNav4')">Feira na Alemanha 2016
+            </button>
+        </div>
+        <div class="col-sm-4">
+            <!--modal5-->
+            <button type="button" class="btn btn-primary btn-lg" onclick="openNav('myNav5')">Feira na Alemanha 2016
+            </button>
+        </div>
+        <div class="col-sm-4">
+            <!--modal6-->
+            <button type="button" class="btn btn-primary btn-lg" onclick="openNav('myNav6')">Feira na Alemanha 2016
+            </button>
+        </div>
     </div>
-    <div class="col-sm-4">
-      <!--modal6-->
-      <button type="button" class="btn btn-primary btn-lg"  onclick="openNav6()">Feira na Alemanha 2016</button>
-    </div>
-  </div>
 </div>
 
 
 
-<!modal1-->
+<!-- modal1-->
 <div id="myNav" class="overlay">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <div class="container-fluid bg-grey" id="missao">
-    <div class="row">
-      <div class="col-sm-4" id="qim2" >
-        <img class="img-responsive" src="<%= asset_path '3.jpg' %>" width="1893" height="697">
-      </div>
-      <div class="col-sm-8" > <!--id="m"-->
-        <h2>Feira na Alemanha 2016</h2><br>
-        <h4 id="m4">
-          Uma empresa não se define pelo nome que tem, define-se pelo esforço e trabalho despendido por todos aqueles que fazem parte dela, os recursos humanos, fornecedores, clientes e todos os outros colaboradores são necessários para o sucesso de qualquer empresa, e Jóia da Europa conta com a ajuda de todos.
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav('myNav')">&times;</a>
+    <div class="container-fluid bg-grey" id="missao">
+        <div class="row">
+            <div class="col-sm-4" id="qim2">
+                <img class="img-responsive" src="<%= asset_path '3.jpg' %>" width="1893" height="697">
+            </div>
+            <div class="col-sm-8"> <!--id="m"-->
+                <h2>Feira na Alemanha 2016</h2><br>
+                <h4 id="m4">
+                    Uma empresa não se define pelo nome que tem, define-se pelo esforço e trabalho despendido por todos
+                    aqueles que fazem parte dela, os recursos humanos, fornecedores, clientes e todos os outros
+                    colaboradores são necessários para o sucesso de qualquer empresa, e Jóia da Europa conta com a ajuda
+                    de todos.
 
 
-          A nossa missão centraliza-se em:
+                    A nossa missão centraliza-se em:
 
-          Atender às necessidades de todos os nossos clientes, aperfeiçoando sempre os nossos produtos e serviços.
+                    Atender às necessidades de todos os nossos clientes, aperfeiçoando sempre os nossos produtos e
+                    serviços.
 
-          Fornecer produtos de tal qualidade que os nossos clientes se sintam satisfeitos, e os nossos empregados e parceiros de negócios se beneficiem com nosso êxito.
+                    Fornecer produtos de tal qualidade que os nossos clientes se sintam satisfeitos, e os nossos
+                    empregados e parceiros de negócios se beneficiem com nosso êxito.
 
-          Oferecer soluções para qualquer ideia, contando com a nossa assistência.
+                    Oferecer soluções para qualquer ideia, contando com a nossa assistência.
 
-          Apostar sempre em tecnologias inovadoras.
-        </h4>
-      </div>
+                    Apostar sempre em tecnologias inovadoras.
+                </h4>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
 
 
 <!--modal 2-->
 <div id="myNav2" class="overlay">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav2()">&times;</a>
-  <div class="container-fluid bg-grey" id="missao">
-    <div class="row">
-      <div class="col-sm-4" id="qim2" >
-        <img class="img-responsive" src="<%= asset_path '3.jpg' %>" width="1893" height="697">
-      </div>
-      <div class="col-sm-8" > <!--id="m"-->
-        <h2>Feira na Alemanha 2016</h2><br>
-        <h4 id="m4">
-          Uma empresa não se define pelo nome que tem, define-se pelo esforço e trabalho despendido por todos aqueles que fazem parte dela, os recursos humanos, fornecedores, clientes e todos os outros colaboradores são necessários para o sucesso de qualquer empresa, e Jóia da Europa conta com a ajuda de todos.
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav('myNav2')">&times;</a>
+    <div class="container-fluid bg-grey" id="missao">
+        <div class="row">
+            <div class="col-sm-4" id="qim2">
+                <img class="img-responsive" src="<%= asset_path '3.jpg' %>" width="1893" height="697">
+            </div>
+            <div class="col-sm-8"> <!--id="m"-->
+                <h2>Feira na Alemanha 2016</h2><br>
+                <h4 id="m4">
+                    Uma empresa não se define pelo nome que tem, define-se pelo esforço e trabalho despendido por todos
+                    aqueles que fazem parte dela, os recursos humanos, fornecedores, clientes e todos os outros
+                    colaboradores são necessários para o sucesso de qualquer empresa, e Jóia da Europa conta com a ajuda
+                    de todos.
 
 
-          A nossa missão centraliza-se em:
+                    A nossa missão centraliza-se em:
 
-          Atender às necessidades de todos os nossos clientes, aperfeiçoando sempre os nossos produtos e serviços.
+                    Atender às necessidades de todos os nossos clientes, aperfeiçoando sempre os nossos produtos e
+                    serviços.
 
-          Fornecer produtos de tal qualidade que os nossos clientes se sintam satisfeitos, e os nossos empregados e parceiros de negócios se beneficiem com nosso êxito.
+                    Fornecer produtos de tal qualidade que os nossos clientes se sintam satisfeitos, e os nossos
+                    empregados e parceiros de negócios se beneficiem com nosso êxito.
 
-          Oferecer soluções para qualquer ideia, contando com a nossa assistência.
+                    Oferecer soluções para qualquer ideia, contando com a nossa assistência.
 
-          Apostar sempre em tecnologias inovadoras.
-        </h4>
-      </div>
+                    Apostar sempre em tecnologias inovadoras.
+                </h4>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
 
 <!--modal 3-->
 <div id="myNav3" class="overlay">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav3()">&times;</a>
-  <div class="container-fluid bg-grey" id="missao">
-    <div class="row">
-      <div class="col-sm-4" id="qim2" >
-        <img class="img-responsive" src="<%= asset_path '3.jpg' %>" width="1893" height="697">
-      </div>
-      <div class="col-sm-8" > <!--id="m"-->
-        <h2>Feira na Alemanha 2016</h2><br>
-        <p>
-          Uma empresa não se define pelo nome que tem, define-se pelo esforço e trabalho despendido por todos aqueles que fazem parte dela, os recursos humanos, fornecedores, clientes e todos os outros colaboradores são necessários para o sucesso de qualquer empresa, e Jóia da Europa conta com a ajuda de todos.
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav('myNav3')">&times;</a>
+    <div class="container-fluid bg-grey" id="missao">
+        <div class="row">
+            <div class="col-sm-4" id="qim2">
+                <img class="img-responsive" src="<%= asset_path '3.jpg' %>" width="1893" height="697">
+            </div>
+            <div class="col-sm-8"> <!--id="m"-->
+                <h2>Feira na Alemanha 2016</h2><br>
+                <p>
+                    Uma empresa não se define pelo nome que tem, define-se pelo esforço e trabalho despendido por todos
+                    aqueles que fazem parte dela, os recursos humanos, fornecedores, clientes e todos os outros
+                    colaboradores são necessários para o sucesso de qualquer empresa, e Jóia da Europa conta com a ajuda
+                    de todos.
 
 
-          A nossa missão centraliza-se em:
+                    A nossa missão centraliza-se em:
 
-          Atender às necessidades de todos os nossos clientes, aperfeiçoando sempre os nossos produtos e serviços.
+                    Atender às necessidades de todos os nossos clientes, aperfeiçoando sempre os nossos produtos e
+                    serviços.
 
-          Fornecer produtos de tal qualidade que os nossos clientes se sintam satisfeitos, e os nossos empregados e parceiros de negócios se beneficiem com nosso êxito.
+                    Fornecer produtos de tal qualidade que os nossos clientes se sintam satisfeitos, e os nossos
+                    empregados e parceiros de negócios se beneficiem com nosso êxito.
 
-          Oferecer soluções para qualquer ideia, contando com a nossa assistência.
+                    Oferecer soluções para qualquer ideia, contando com a nossa assistência.
 
-          Apostar sempre em tecnologias inovadoras.
-        </p>
-      </div>
+                    Apostar sempre em tecnologias inovadoras.
+                </p>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
 
 <!--modal 4-->
 <div id="myNav4" class="overlay">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav4()">&times;</a>
-  <div class="container-fluid bg-grey" id="missao">
-    <div class="row">
-      <div class="col-sm-4" id="qim2" >
-        <img class="img-responsive" src="<%= asset_path '3.jpg' %>" width="1893" height="697">
-      </div>
-      <div class="col-sm-8" > <!--id="m"-->
-        <h2>Feira na Alemanha 20164</h2><br>
-        <h4 id="m4">
-          Uma empresa não se define pelo nome que tem, define-se pelo esforço e trabalho despendido por todos aqueles que fazem parte dela, os recursos humanos, fornecedores, clientes e todos os outros colaboradores são necessários para o sucesso de qualquer empresa, e Jóia da Europa conta com a ajuda de todos.
-          A nossa missão centraliza-se em:
-          Atender às necessidades de todos os nossos clientes, aperfeiçoando sempre os nossos produtos e serviços.
-          Fornecer produtos de tal qualidade que os nossos clientes se sintam satisfeitos, e os nossos empregados e parceiros de negócios se beneficiem com nosso êxito.
-          Oferecer soluções para qualquer ideia, contando com a nossa assistência.
-          Apostar sempre em tecnologias inovadoras.
-        </h4>
-      </div>
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav('myNav4')">&times;</a>
+    <div class="container-fluid bg-grey" id="missao">
+        <div class="row">
+            <div class="col-sm-4" id="qim2">
+                <img class="img-responsive" src="<%= asset_path '3.jpg' %>" width="1893" height="697">
+            </div>
+            <div class="col-sm-8"> <!--id="m"-->
+                <h2>Feira na Alemanha 20164</h2><br>
+                <h4 id="m4">
+                    Uma empresa não se define pelo nome que tem, define-se pelo esforço e trabalho despendido por todos
+                    aqueles que fazem parte dela, os recursos humanos, fornecedores, clientes e todos os outros
+                    colaboradores são necessários para o sucesso de qualquer empresa, e Jóia da Europa conta com a ajuda
+                    de todos.
+                    A nossa missão centraliza-se em:
+                    Atender às necessidades de todos os nossos clientes, aperfeiçoando sempre os nossos produtos e
+                    serviços.
+                    Fornecer produtos de tal qualidade que os nossos clientes se sintam satisfeitos, e os nossos
+                    empregados e parceiros de negócios se beneficiem com nosso êxito.
+                    Oferecer soluções para qualquer ideia, contando com a nossa assistência.
+                    Apostar sempre em tecnologias inovadoras.
+                </h4>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
 
 <!--modal 5-->
 <div id="myNav5" class="overlay">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav5()">&times;</a>
-  <div class="container-fluid bg-grey" id="missao">
-    <div class="row">
-      <div class="col-sm-4" id="qim2" >
-        <img class="img-responsive" src="<%= asset_path '3.jpg' %>" width="1893" height="697">
-      </div>
-      <div class="col-sm-8" > <!--id="m"-->
-        <h2>Feira na Alemanha 20164</h2><br>
-        <h4 id="m4">
-          Uma empresa não se define pelo nome que tem, define-se pelo esforço e trabalho despendido por todos aqueles que fazem parte dela, os recursos humanos, fornecedores, clientes e todos os outros colaboradores são necessários para o sucesso de qualquer empresa, e Jóia da Europa conta com a ajuda de todos.
-          A nossa missão centraliza-se em:
-          Atender às necessidades de todos os nossos clientes, aperfeiçoando sempre os nossos produtos e serviços.
-          Fornecer produtos de tal qualidade que os nossos clientes se sintam satisfeitos, e os nossos empregados e parceiros de negócios se beneficiem com nosso êxito.
-          Oferecer soluções para qualquer ideia, contando com a nossa assistência.
-          Apostar sempre em tecnologias inovadoras.
-        </h4>
-      </div>
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav('myNav5')">&times;</a>
+    <div class="container-fluid bg-grey" id="missao">
+        <div class="row">
+            <div class="col-sm-4" id="qim2">
+                <img class="img-responsive" src="<%= asset_path '3.jpg' %>" width="1893" height="697">
+            </div>
+            <div class="col-sm-8"> <!--id="m"-->
+                <h2>Feira na Alemanha 20164</h2><br>
+                <h4 id="m4">
+                    Uma empresa não se define pelo nome que tem, define-se pelo esforço e trabalho despendido por todos
+                    aqueles que fazem parte dela, os recursos humanos, fornecedores, clientes e todos os outros
+                    colaboradores são necessários para o sucesso de qualquer empresa, e Jóia da Europa conta com a ajuda
+                    de todos.
+                    A nossa missão centraliza-se em:
+                    Atender às necessidades de todos os nossos clientes, aperfeiçoando sempre os nossos produtos e
+                    serviços.
+                    Fornecer produtos de tal qualidade que os nossos clientes se sintam satisfeitos, e os nossos
+                    empregados e parceiros de negócios se beneficiem com nosso êxito.
+                    Oferecer soluções para qualquer ideia, contando com a nossa assistência.
+                    Apostar sempre em tecnologias inovadoras.
+                </h4>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
 
 <!--modal 6-->
 <div id="myNav6" class="overlay">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav6()">&times;</a>
-  <div class="container-fluid bg-grey" id="missao">
-    <div class="row">
-      <div class="col-sm-4" id="qim2" >
-        <img class="img-responsive" src="<%= asset_path '3.jpg' %>" width="1893" height="697">
-      </div>
-      <div class="col-sm-8" > <!--id="m"-->
-        <h2>Feira na Alemanha 20164</h2><br>
-        <h4 id="m4">
-          Uma empresa não se define pelo nome que tem, define-se pelo esforço e trabalho despendido por todos aqueles que fazem parte dela, os recursos humanos, fornecedores, clientes e todos os outros colaboradores são necessários para o sucesso de qualquer empresa, e Jóia da Europa conta com a ajuda de todos.
-          A nossa missão centraliza-se em:
-          Atender às necessidades de todos os nossos clientes, aperfeiçoando sempre os nossos produtos e serviços.
-          Fornecer produtos de tal qualidade que os nossos clientes se sintam satisfeitos, e os nossos empregados e parceiros de negócios se beneficiem com nosso êxito.
-          Oferecer soluções para qualquer ideia, contando com a nossa assistência.
-          Apostar sempre em tecnologias inovadoras.
-        </h4>
-      </div>
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav('myNav6')">&times;</a>
+    <div class="container-fluid bg-grey" id="missao">
+        <div class="row">
+            <div class="col-sm-4" id="qim2">
+                <img class="img-responsive" src="<%= asset_path '3.jpg' %>" width="1893" height="697">
+            </div>
+            <div class="col-sm-8"> <!--id="m"-->
+                <h2>Feira na Alemanha 20164</h2><br>
+                <h4 id="m4">
+                    Uma empresa não se define pelo nome que tem, define-se pelo esforço e trabalho despendido por todos
+                    aqueles que fazem parte dela, os recursos humanos, fornecedores, clientes e todos os outros
+                    colaboradores são necessários para o sucesso de qualquer empresa, e Jóia da Europa conta com a ajuda
+                    de todos.
+                    A nossa missão centraliza-se em:
+                    Atender às necessidades de todos os nossos clientes, aperfeiçoando sempre os nossos produtos e
+                    serviços.
+                    Fornecer produtos de tal qualidade que os nossos clientes se sintam satisfeitos, e os nossos
+                    empregados e parceiros de negócios se beneficiem com nosso êxito.
+                    Oferecer soluções para qualquer ideia, contando com a nossa assistência.
+                    Apostar sempre em tecnologias inovadoras.
+                </h4>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
 
 <!--modal login-->
 <div id="myNavl" class="overlay">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNavl()">&times;</a>
-  <div class="container-fluid bg-grey" id="login">
-    <div class="wrapper">
-      <form class="form-signin">
-        <h2 class="form-signin-heading">Please login</h2>
-      </form>
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav('myNavl')">&times;</a>
+    <div class="container-fluid bg-grey" id="login">
+        <div class="wrapper">
+
+
+            <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: 'form-signin'}) do |f| %>
+                <h2 class="form-signin-heading">Please login</h2>
+                <h2>LOGIN</h2>
+                <div class="field">
+                    <%= f.label :email %><br/>
+                    <%= f.email_field :email, autofocus: true %>
+                </div>
+
+                <div class="field">
+                    <%= f.label :password %><br/>
+                    <%= f.password_field :password, autocomplete: "off" %>
+                </div>
+
+                <% if devise_mapping.rememberable? -%>
+                    <div class="field">
+                        <%= f.check_box :remember_me %>
+                        <%= f.label :remember_me %>
+                    </div>
+                <% end -%>
+
+                <div class="actions">
+                    <%= f.submit "Log in" %>
+                </div>
+            <% end %>
+
+            <%= render "devise/shared/links" %>
+
+            </form>
+        </div>
     </div>
-  </div>
 </div>
-
-
-<!--script do modal1-->
-<script>
-    function openNav() {
-        document.getElementById("myNav").style.width = "100%";
-    }
-
-    function closeNav() {
-        document.getElementById("myNav").style.width = "0%";
-    }
-</script>
-<!--script do modal2-->
-<script>
-
-    function openNav2() {
-        document.getElementById("myNav2").style.width = "100%";
-    }
-
-    function closeNav2() {
-        document.getElementById("myNav2").style.width = "0%";
-    }
-</script>
-
-<!--script do modal3-->
-<script>
-
-    function openNav3() {
-        document.getElementById("myNav3").style.width = "100%";
-    }
-
-    function closeNav3() {
-        document.getElementById("myNav3").style.width = "0%";
-    }
-</script>
-
-<!--script do modal4-->
-<script>
-
-    function openNav4() {
-        document.getElementById("myNav4").style.width = "100%";
-    }
-
-    function closeNav4() {
-        document.getElementById("myNav4").style.width = "0%";
-    }
-</script>
-
-<!--script do modal5-->
-<script>
-
-    function openNav5() {
-        document.getElementById("myNav5").style.width = "100%";
-    }
-
-    function closeNav5() {
-        document.getElementById("myNav5").style.width = "0%";
-    }
-</script>
-
-<!--script do modal6-->
-<script>
-
-    function openNav6() {
-        document.getElementById("myNav6").style.width = "100%";
-    }
-
-    function closeNav6() {
-        document.getElementById("myNav6").style.width = "0%";
-    }
-</script>
-
-<!--script do login-->
-<script>
-
-    function openNavl() {
-        document.getElementById("myNavl").style.width = "100%";
-    }
-
-    function closeNavl() {
-        document.getElementById("myNavl").style.width = "0%";
-    }
-</script>
-
-
-
-
-
 
 
 
@@ -384,48 +369,62 @@
 <!-- contactos wq-->
 <div id="portfolio" class="container-fluid text-center bg-grey">
 
-  <!-- Container (Contact Section) -->
-  <div id="contacto" class="container-fluid bg-grey">
-    <h2 class="text-center">CONTACTOS</h2>
-    <br>
-    <div class="row">
-      <div class="col-sm-5" >
+    <!-- Container (Contact Section) -->
+    <div id="contacto" class="container-fluid bg-grey">
+        <h2 class="text-center">CONTACTOS</h2>
         <br>
-        <br>
-        <br>
-        <p id="morad"><span class="glyphicon glyphicon-map-marker"></span> RUA SANTA MARIA, 437<BR>
-          BARROSAS<BR>
-          4650-139 IDÃES FLG</p>
-        <p id="morad"><span class="glyphicon glyphicon-phone"></span> +351 255 312 443 | Fax: +351 255 312 444</p>
-        <br> <br><br>
-        <p id="morad"><span class="glyphicon glyphicon-envelope"></span> geral@joiadaeuropa.com</p>
-<br>
-        <a href="https://www.facebook.com"><img src="<%= asset_path 'face.png' %>" width="5%" ></a>
-        <span></span>
-        <a href="https://pt.linkedin.com/in/joia-europa-61a96ab7"><img src="<%= asset_path 'linkedin-128.png' %>" width="5%" ></a>
+        <div class="row">
+            <div class="col-sm-5">
+                <br>
+                <br>
+                <br>
+                <p id="morad"><span class="glyphicon glyphicon-map-marker"></span> RUA SANTA MARIA, 437<BR>
+                    BARROSAS<BR>
+                    4650-139 IDÃES FLG</p>
+                <p id="morad"><span class="glyphicon glyphicon-phone"></span> +351 255 312 443 | Fax: +351 255 312 444
+                </p>
+                <br> <br><br>
+                <p id="morad"><span class="glyphicon glyphicon-envelope"></span> geral@joiadaeuropa.com</p>
+                <br>
+                <a href="https://www.facebook.com"><img src="<%= asset_path 'face.png' %>" width="5%"></a>
+                <span></span>
+                <a href="https://pt.linkedin.com/in/joia-europa-61a96ab7"><img src="<%= asset_path 'linkedin-128.png' %>" width="5%"></a>
 
-      </div>
-      <div class="col-sm-7 slideanim">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2995.8244340537403!2d-8.26794114893171!3d41.33443090713743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2465070c1b29cf%3A0x98bbd8be12c4332!2sJ%C3%B3ia+Da+Europa+-+Unipessoal%2C+Lda.!5e0!3m2!1spt-PT!2spt!4v1494173733000" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+            <div class="col-sm-7 slideanim">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2995.8244340537403!2d-8.26794114893171!3d41.33443090713743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2465070c1b29cf%3A0x98bbd8be12c4332!2sJ%C3%B3ia+Da+Europa+-+Unipessoal%2C+Lda.!5e0!3m2!1spt-PT!2spt!4v1494173733000" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 
-      </div>
+            </div>
+        </div>
     </div>
-  </div>
 
-  <!-- Add Google Maps -->
+    <!-- Add Google Maps -->
 </div>
 <div class="container-fluid bg-grey" id="parceria">
-<footer  class="container-fluid bg-2 text-center">
-  <h2>PARCERIAS</h2>
-  <a href="http://www.fatimalopes.com"><img src="<%= asset_path 'fl.jpg' %>"></a>
+    <footer class="container-fluid bg-2 text-center">
+        <h2>PARCERIAS</h2>
+        <a href="http://www.fatimalopes.com"><img src="<%= asset_path 'fl.jpg' %>"></a>
 
-</footer>
+    </footer>
 </div>
 
 
 <div class="footer container-fluid text-center">
-  <a href="" title="To Top">
-    <span class="glyphicon glyphicon-chevron-up"></span>
-  </a>
-  <p>2016-2017 | PROJETO E DESENVOLVIMENTO DE SOFTWARE | GRUPO 4</p>
+    <a href="" title="To Top">
+        <span class="glyphicon glyphicon-chevron-up"></span>
+    </a>
+    <p>2016-2017 | PROJETO E DESENVOLVIMENTO DE SOFTWARE | GRUPO 4</p>
 </div>
+
+
+
+<!--script do modal1-->
+<script>
+    function openNav(id) {
+        document.getElementById(id).style.width = "100%";
+    }
+
+    function closeNav(id) {
+        document.getElementById(id).style.width = "0%";
+    }
+</script>
