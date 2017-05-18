@@ -106,7 +106,6 @@ a {
     margin-left: 5%;
     line-height: 2.5
 }
-
 #missimg{
     margin-left: 10%
 }
@@ -117,12 +116,30 @@ a {
 #noticia{
     padding-bottom: 200px;
 }
+#nm{
+    width: 92%;
+    margin-left: 4%;
+}
+#nd{
+    padding-right: 8%;
+}
+#ne{
+    padding-left: 8%;
+}
+
 #contacto {
     color: white;
     background: black;
     padding-top: 100px;
     padding-bottom: 100px;
 }
+#f{
+    width:5%;
+}
+#cm{
+    border:0;
+}
+
 #parceria {
     padding-top: 100px;
     padding-bottom: 100px;
