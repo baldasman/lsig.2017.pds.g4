@@ -1,97 +1,38 @@
-
-<nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="/home/index"><img src="<%= asset_path '2.png' %>"></a>
-        </div>
-        <div class="collapse navbar-collapse" id="myNavbar">
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="/profile/index">PERFIL</a></li>
-                <li><a href="#quem_somos">QUEM SOMOS</a></li>
-                <li><a href="#missao">MISSÃO</a></li>
-                <li><a href="#noticia">NOTÍCIAS</a></li>
-                <li><a href="#contacto">CONTACTOS</a></li>
-                <li><a href="#parceria">PARCERIAS</a></li>
-                <li><a onclick="openNav('myNavl')">LOGIN</a></li>
-
-            </ul>
-        </div>
-    </div>
-</nav>
-
-
-<style>
-
-
-
-</style>
-
-
-<div class="container2" style="width: 100%;">
+<div class="container2">
   <div class="row">
     <!-- Carousel -->
     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
       <!-- Indicators -->
       <ol class="carousel-indicators">
         <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2" class="active"></li>
       </ol>
       <!-- Wrapper for slides -->
       <div class="carousel-inner">
         <div class="item active">
-          <img class="img-responsive" src="<%= asset_path '3.jpg' %>" width="1893" height="697">
-          <!-- Static Header -->
-          <div class="header-text hidden-xs">
-            <div class="col-md-12 text-center">
-              <h2>
-                <span>NEW :D <strong>Feira das Cenas</strong></span>
-              </h2>
-              <br>
-              <h3>
-                <span>palha,palha,palha,palha,palha,palha,palha,palha,palha,</span>
-              </h3>
-              <br>
-              <div class="">
-                <a class="btn btn-theme btn-sm btn-min-block" onclick="openNav('myNavl')">Login</a><a class="btn btn-theme btn-sm btn-min-block" href="#">Register</a></div>
-            </div>
-          </div><!-- /header-text -->
+          <img class="img-responsive" src="<%= asset_path 'multi.jpg' %>" width="1893" height="697">
+        <header>
+          <div class="w3-display-middle w3-padding-large w3-border w3-wide w3-text-light-grey w3-center">
+            <h1 class="w3-hide-medium w3-hide-small w3-xxxlarge">JOIA DA EUROPA</h1>
+            <h3 class="w3-hide-medium w3-hide-small">BEM-VINDO</h3>
+        </header>
         </div>
         <div class="item">
-          <img src="http://unsplash.s3.amazonaws.com/batch%209/barcelona-boardwalk.jpg" alt="Second slide">
-          <!-- Static Header -->
-          <div class="header-text hidden-xs">
-            <div class="col-md-12 text-center">
-              <h2>
-                <span>Welcome to LOREM IPSUM</span>
-              </h2>
-              <br>
-              <h3>
-                <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
-              </h3>
-              <br>
-              <div class="">
-                <a class="btn btn-theme btn-sm btn-min-block" href="#">Login</a><a class="btn btn-theme btn-sm btn-min-block" href="#">Register</a></div>
-            </div>
-          </div><!-- /header-text -->
+          <img class="img-responsive" href="http://heelsfans.tumblr.com/" src="<%= asset_path '3.jpg'%>" width="1893" height="697" alt="Second slide">
+        <header>
+          <div class="w3-display-middle w3-padding-large w3-border w3-wide w3-text-light-grey w3-center">
+            <h1 class="w3-hide-medium w3-hide-small w3-xxxlarge">JOIA DA EUROPA</h1>
+            <h3 class="w3-hide-medium w3-hide-small">BEM-VINDO</h3>
+        </header>
         </div>
         <div class="item">
-          <img src="http://unsplash.s3.amazonaws.com/batch%209/barcelona-boardwalk.jpg" alt="Third slide">
-          <!-- Static Header -->
-          <div class="header-text hidden-xs">
-            <div class="col-md-12 text-center">
-              <h2>
-                <span>Welcome to LOREM IPSUM</span>
-              </h2>
-              <br>
-              <h3>
-                <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
-              </h3>
-              <br>
-              <div class="">
-                <a class="btn btn-theme btn-sm btn-min-block" href="#">Login</a><a class="btn btn-theme btn-sm btn-min-block" href="#">Register</a></div>
-            </div>
-          </div><!-- /header-text -->
+          <img class="img-responsive" href="http://lovelyfantaisie.tumblr.com/post/120463504840" src="<%= asset_path 'multi.jpg' %>" width="1893" height="697" alt="Third slide">
+        <header>
+          <div class="w3-display-middle w3-padding-large w3-border w3-wide w3-text-light-grey w3-center">
+            <h1 class="w3-hide-medium w3-hide-small w3-xxxlarge">JOIA DA EUROPA</h1>
+            <h3 class="w3-hide-medium w3-hide-small">BEM-VINDO</h3>
+        </header>
         </div>
       </div>
       <!-- Controls -->
@@ -101,15 +42,10 @@
       <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
         <span class="glyphicon glyphicon-chevron-right"></span>
       </a>
-    </div><!-- /carousel -->
+    </div>
   </div>
 </div>
 
-
-
-<!--
-<img class="img-responsive" src="<%= asset_path '3.jpg' %>" width="1893" height="697">
--->
 <div id="quem_somos" class="container-fluid">
     <div class="col-sm-8" id="q">
         <h2>QUEM SOMOS</h2><br>
@@ -159,7 +95,7 @@
 
 </div>
 
-<!-- noticias  -->
+<!-- g4noticias  -->
 <div id="services" class="container-fluid text-center">
     <h2>NOTICIAS</h2>
     <br><br>
@@ -169,7 +105,7 @@
         <h3>Feira Alemanha</h3>
       </div>
         <div class="col-lg-4" onclick="openNav('myNav2')">
-          <img     class="img-responsive" src="<%= asset_path 'red.jpg' %>" width="1893" height="697" id="nm" >
+          <img     class="img-responsive" src="<%= asset_path 'flt.jpg' %>" width="1893" height="697" id="nm" >
           <h3>Feira Alemanha</h3>
         </div>
       <div class="col-lg-4" onclick="openNav('myNav')">
@@ -182,7 +118,7 @@
 </div>
 
 
-<!-- modal1-->
+<!-- gMod4al1-->
 <div id="myNav" class="overlay">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav('myNav')">&times;</a>
     <div class="container-fluid bg-grey" id="missao">
@@ -275,100 +211,13 @@
     </div>
 </div>
 
-<!--modal 4-->
-<div id="myNav4" class="overlay">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav('myNav4')">&times;</a>
-    <div class="container-fluid bg-grey" id="missao">
-        <div class="row">
-            <div class="col-sm-4" id="qim2">
-                <img class="img-responsive" src="<%= asset_path '3.jpg' %>" width="1893" height="697">
-            </div>
-            <div class="col-sm-8"> <!--id="m"-->
-                <h2>Feira na Alemanha 20164</h2><br>
-                <h4 id="m4">
-                    Uma empresa não se define pelo nome que tem, define-se pelo esforço e trabalho despendido por todos
-                    aqueles que fazem parte dela, os recursos humanos, fornecedores, clientes e todos os outros
-                    colaboradores são necessários para o sucesso de qualquer empresa, e Jóia da Europa conta com a ajuda
-                    de todos.
-                    A nossa missão centraliza-se em:
-                    Atender às necessidades de todos os nossos clientes, aperfeiçoando sempre os nossos produtos e
-                    serviços.
-                    Fornecer produtos de tal qualidade que os nossos clientes se sintam satisfeitos, e os nossos
-                    empregados e parceiros de negócios se beneficiem com nosso êxito.
-                    Oferecer soluções para qualquer ideia, contando com a nossa assistência.
-                    Apostar sempre em tecnologias inovadoras.
-                </h4>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!--modal 5-->
-<div id="myNav5" class="overlay">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav('myNav5')">&times;</a>
-    <div class="container-fluid bg-grey" id="missao">
-        <div class="row">
-            <div class="col-sm-4" id="qim2">
-                <img class="img-responsive" src="<%= asset_path '3.jpg' %>" width="1893" height="697">
-            </div>
-            <div class="col-sm-8"> <!--id="m"-->
-                <h2>Feira na Alemanha 20164</h2><br>
-                <h4 id="m4">
-                    Uma empresa não se define pelo nome que tem, define-se pelo esforço e trabalho despendido por todos
-                    aqueles que fazem parte dela, os recursos humanos, fornecedores, clientes e todos os outros
-                    colaboradores são necessários para o sucesso de qualquer empresa, e Jóia da Europa conta com a ajuda
-                    de todos.
-                    A nossa missão centraliza-se em:
-                    Atender às necessidades de todos os nossos clientes, aperfeiçoando sempre os nossos produtos e
-                    serviços.
-                    Fornecer produtos de tal qualidade que os nossos clientes se sintam satisfeitos, e os nossos
-                    empregados e parceiros de negócios se beneficiem com nosso êxito.
-                    Oferecer soluções para qualquer ideia, contando com a nossa assistência.
-                    Apostar sempre em tecnologias inovadoras.
-                </h4>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!--modal 6-->
-<div id="myNav6" class="overlay">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav('myNav6')">&times;</a>
-    <div class="container-fluid bg-grey" id="missao">
-        <div class="row">
-            <div class="col-sm-4" id="qim2">
-                <img class="img-responsive" src="<%= asset_path '3.jpg' %>" width="1893" height="697">
-            </div>
-            <div class="col-sm-8"> <!--id="m"-->
-                <h2>Feira na Alemanha 20164</h2><br>
-                <h4 id="m4">
-                    Uma empresa não se define pelo nome que tem, define-se pelo esforço e trabalho despendido por todos
-                    aqueles que fazem parte dela, os recursos humanos, fornecedores, clientes e todos os outros
-                    colaboradores são necessários para o sucesso de qualquer empresa, e Jóia da Europa conta com a ajuda
-                    de todos.
-                    A nossa missão centraliza-se em:
-                    Atender às necessidades de todos os nossos clientes, aperfeiçoando sempre os nossos produtos e
-                    serviços.
-                    Fornecer produtos de tal qualidade que os nossos clientes se sintam satisfeitos, e os nossos
-                    empregados e parceiros de negócios se beneficiem com nosso êxito.
-                    Oferecer soluções para qualquer ideia, contando com a nossa assistência.
-                    Apostar sempre em tecnologias inovadoras.
-                </h4>
-            </div>
-        </div>
-    </div>
-</div>
-
 <!--modal login-->
 <div id="myNavl" class="overlay">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav('myNavl')">&times;</a>
-    <div class="container-fluid bg-grey" id="login">
-        <div class="wrapper">
-
-
-            <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: 'form-signin'}) do |f| %>
-                <h2 class="form-signin-heading">Please login</h2>
-                <h2>LOGIN</h2>
+    <div class="container-fluid bg-grey">
+        <div class="wrapper text-center">
+          <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: 'form-signin'}) do |f| %>
+              <h2>LOGIN</h2>
                 <div class="field">
                     <%= f.label :email %><br/>
                     <%= f.email_field :email, autofocus: true %>
@@ -425,9 +274,9 @@
                 <br> <br><br>
                 <p id="morad"><span class="glyphicon glyphicon-envelope"></span> geral@joiadaeuropa.com</p>
                 <br>
-                <a href="https://www.facebook.com"><img src="<%= asset_path 'face.png' %>" id="f"></a>
+                <a href="https://www.facebook.com"><img src="<%= asset_path 'face.png' %>" width="5%"></a>
                 <span></span>
-                <a href="https://pt.linkedin.com/in/joia-europa-61a96ab7"><img src="<%= asset_path 'linkedin-128.png' %>" id="f"></a>
+                <a href="https://pt.linkedin.com/in/joia-europa-61a96ab7"><img src="<%= asset_path 'linkedin-128.png' %>" width="5%"></a>
             </div>
             <div class="col-sm-7 slideanim">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2995.8244340537403!2d-8.26794114893171!3d41.33443090713743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2465070c1b29cf%3A0x98bbd8be12c4332!2sJ%C3%B3ia+Da+Europa+-+Unipessoal%2C+Lda.!5e0!3m2!1spt-PT!2spt!4v1494173733000" width="600" height="450" frameborder="0" id="cm" allowfullscreen></iframe>
@@ -438,24 +287,9 @@
     <!-- Add Google Maps -->
 </div>
 <div class="container-fluid bg-grey" id="parceria">
-    <footer class="container-fluid bg-2 text-center">
+    <div class="container-fluid bg-2 text-center">
         <h2>PARCERIAS</h2>
         <a href="http://www.fatimalopes.com"><img src="<%= asset_path 'fl.jpg' %>"></a>
 
-    </footer>
+    </div>
 </div>
-
-
-
-
-
-<!--script do modal1-->
-<script>
-    function openNav(id) {
-        document.getElementById(id).style.width = "100%";
-    }
-
-    function closeNav(id) {
-        document.getElementById(id).style.width = "0%";
-    }
-</script>
