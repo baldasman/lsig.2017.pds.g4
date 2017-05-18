@@ -1,12 +1,21 @@
 class OrderController < ApplicationController
 
-    #filter_attributes :status
-    #before_action :check_order
-
-    def show
+    def all
         @order = Order.all
         #@order = Order.search(params[:search])
         #@order = Order.paginate :page => params[:page], :conditions => filter_conditions
+    end
+
+    def hold
+        @orders = Order.where(state_id: 1)
+    end
+
+    def cancel
+        @orders = Order.where(state_id: 2)
+    end
+
+    def end
+        @orders = Order.where(state_id: 3)
     end
 
     def new
