@@ -61,10 +61,6 @@ class OrderController < ApplicationController
 
     end
 
-    #def destroy        @current_order = session[:current_order] = nil        redirect_to cancel_order_index_path
-    # end
-
-
     private
     def order_params
         params[:order]
