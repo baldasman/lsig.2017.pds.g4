@@ -1,34 +1,42 @@
 <!-- g4PagContent -->
-        <div class="col-lg-10 text-center">
-            <h1><b>DETALHES DE ENCOMENDA</b></h1>
-            <i></i>
-            <br><br>
-            <div class="col-lg-10 text-left">
-                <table width="100%" class="table-responsive table-striped">
-                    <thead>
-                    <tr>
-                        <th>Nº</th>
-                        <th>Descrição</th>
-                        <th>Data de Entrega</th>
-                        <th>Preço Unitário</th>
-                        <th>Quantidade</th>
-                        <th>Estado</th>
-                        <th></th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr class="odd gradeX">
-                        <td><%= @order.id %></td>
-                        <td><%= @order.description %></td>
-                        <td><%= @order.delivery_date %></td>
-                        <td><%= @order.unit_price %></td>
-                        <td><%= @order.quantity %></td>
-                        <td><%= @order.state.description %></td>
-                        <td><%= link_to t("edit"), order_edit_path %></td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
+<div class="col-lg-10 text-left">
+  <h1><b>DETALHES DE ENCOMENDA</b></h1>
+  <br><br>
+  <div class="col-lg-10">
+    <table class="w3-table table-responsive">
+              <thead>
+              <tr>
+                <th>NÚMERO</th>
+                <th>DESCRIÇÃO</th>
+              </tr>
+              </thead>
+           <tbody>
+           <tr>
+             <td><%= @order.id %></td>
+             <td><%= @order.description %></td>
+           </tr>
+           </tbody>
+            </table>
+  </div>
+  <div class="col-lg-10" style="padding-top: 25px">
+              <table class="w3-table table-responsive">
+              <thead>
+              <tr>
+                <th>DATA DE ENTREGA</th>
+                <th>PREÇO UNITÁRIO</th>
+                <th>QUANTIDADE</th>
+                <th>ESTADO</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td><%= @order.delivery_date %></td>
+                <td><%= @order.unit_price %></td>
+                <td><%= @order.quantity %></td>
+                <td><%= @order.state.description %></td>
+                <td class="w2-button"><%= link_to t("edit"), order_edit_path %></td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
 </div>

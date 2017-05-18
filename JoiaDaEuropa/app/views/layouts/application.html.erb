@@ -15,8 +15,8 @@
     <!-- Global styles here -->
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
-  <body>
-  <!-- g4navbar -->
+    <body>
+  <!-- N4vbar -->
   <nav data-spy="scroll" data-target=".navbar" class="navbar navbar-default navbar-fixed-top">
 
     <div class="container">
@@ -32,18 +32,12 @@
           <li><a href="#contacto">CONTACTOS</a></li>
           <li><a href="#parceria">PARCERIAS</a></li>
           <li><a onclick="openNav('myNavl')">LOGIN</a></li>
-          <!--<% form_tag order_show_path, :method => 'get' do %>
-              <p>
-                <%= text_field_tag :search, params[:search] %>
-                <%= submit_tag "Search", :name => nil %>
-              </p>
-          <% end %>-->
         </ul>
       </div>
     </div>
   </nav>
 
-  <div class="jumbotron">
+    <div class="jumbotron">
     <header class="row">
       <div class="col-md-3">
         <%= link_to 'PT', '/?lang=pt' %>
@@ -61,6 +55,27 @@
       </div>
     </header>
   </div>
+
+    <div align="right">
+      <%= form_tag("/search", method: "get") do %>
+          <%= text_field_tag(:q) %>
+          <%= submit_tag("Search") %>
+      <% end %>
+    </div>
+
+  <!-- Sid4bar -->
+  <div class="container-fluid text-left">
+    <div class="row content">
+      <div class="w3-sidebar w3-bar-block">
+        <p><a href="/profile/index" class="w3-bar-item">PERFIL</a></p>
+        <p><a href="/client_area/index" class="w3-bar-item">ÁREA DE CLIENTE</a></p>
+        <p><a href="/order/all" class="w3-bar-item">ENCOMENDAS</a></p>
+        <p><a href="/order/new" class="w3-bar-item">NOVA ENCOMENDA</a></p>
+      </div>
+    </div>
+  </div>
+  </body>
+
     <%= yield %>
     <% if notice %>
         <div class="alert alert-info" role="alert">
@@ -75,22 +90,10 @@
         </div>
     <% end %>
 
-  <!-- g4Sidebar -->
-  <div class="container-fluid text-left">
-    <div class="row content">
-      <div class="w3-sidebar w3-bar-block">
-        <p><a href="/profile/index" class="w3-bar-item">PERFIL</a></p>
-        <p><a href="/client_area/index" class="w3-bar-item">ÁREA DE CLIENTE</a></p>
-        <p><a href="/order/all" class="w3-bar-item">ENCOMENDAS</a>
-      </div>
+    <!-- Fo4ter -->
+    <div class="footer container-fluid text-center">
+      <a href="" title="To Top">
+        <span class="glyphicon glyphicon-chevron-up"></span>
+      </a>
+      <p>2016-2017 | PROJETO E DESENVOLVIMENTO DE SOFTWARE | GRUPO 4</p>
     </div>
-  </div>
-  </body>
-
-  <!-- g4Footer -->
-  <div class="footer container-fluid text-center">
-    <a href="" title="To Top">
-      <span class="glyphicon glyphicon-chevron-up"></span>
-    </a>
-    <p>2016-2017 | PROJETO E DESENVOLVIMENTO DE SOFTWARE | GRUPO 4</p>
-  </div>

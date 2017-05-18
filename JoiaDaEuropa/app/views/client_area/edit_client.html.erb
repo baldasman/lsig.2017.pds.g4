@@ -1,10 +1,10 @@
 <!-- g4PageContent -->
-<h1><i align="center">Área de Cliente</i></h1>
+<h1 align="center"><i>ÁREA DE CLIENTE</i></h1>
 
 <br/> <br/>
 
 <%= form_for @client, :url => url_for(:controller => 'client_area', :action => 'save_client'), html: {class: 'container'} do |f| %>
-    <div class="form-group">
+    <div class="form-group text-center">
 
       <label for="name"><%= t('name') %></label>
       <%= f.text_field :name %>
@@ -17,7 +17,7 @@
       <% if flash[:error] && flash[:error]['phone_number'] %>
           <div class="alert danger"><%= flash[:error]['phone_number'].join('<br/>') %></div>
       <% end %>
-
+<br />
       <label for="nib"><%= t('nib') %></label>
       <%= f.text_field :nib %>
       <% if flash[:error] && flash[:error]['nib'] %>
@@ -33,6 +33,6 @@
     </div>
 
     <div align="right"><%= f.submit t('save')%></div>
-    <button><%= link_to t('cancel'), client_area_index_path%></button>
+    <button class="w2-button"><%= link_to t('cancel'), client_area_index_path%></button>
 
 <% end %>

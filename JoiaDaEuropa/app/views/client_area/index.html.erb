@@ -2,28 +2,38 @@
     <div class="col-lg-10">
       <h1><b>ÁREA DE CLIENTE</b></h1>
       <i>Bem Vindo à sua àrea de cliente</i>
-      <br><br>
+      <br /><br />
       <div class="col-lg-10">
-       <table class="w3-table table-bordered">
+       <table class="table table-responsive" style="margin-left: -20%">
           <thead>
             <tr>
               <th>NOME</th>
               <th>TELEFONE</th>
-              <th>NIB</th>
-              <th>MORADA</th>
-              <th></th>
             </tr>
           </thead>
           <tbody>
             <tr class="odd gradeX">
               <td><dt><%= @client.name %></dt> </td>
               <td><dt><%= @client.phone_number%></dt></td>
-              <td><dt><%= @client.nib%></dt></td>
-              <td><dt><%= @client.address%></dt></td>
-              <td algin="center"> <%= link_to t('edit'), client_area_edit_client_path %></td>
             </tr>
           </tbody>
        </table>
+        <table class="table table-responsive" style="margin-left: -20%">
+          <thead>
+          <tr>
+            <th>NIB</th>
+            <th>MORADA</th>
+            <th></th></td>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td><dt><%= @client.nib%></dt></td>
+            <td><dt><%= @client.address%></dt></td>
+            <td class="w2-button"> <%= link_to t('edit'), client_area_edit_client_path %></td>
+          </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </div>

@@ -5,21 +5,22 @@ Rails.application.routes.draw do
   get '/profile/index'
   get '/home/index'
   get '/client_area/index'
-  get '/end_order/index'
-  get '/cancel_order/index'
-
-  get '/hold_order/index'
+  #get '/search'
 
   get '/client_area/edit_client'
   patch '/client_area/save_client'
 
+  get '/order/recent'
+  get '/order/hold'
+  get '/order/cancel'
+  get '/order/end'
   get '/order/detail/:id', to: 'order#detail', as: 'order_detail'
   get '/order/edit/:id', to: 'order#edit', as: 'order_edit'
   post '/order/update'
-  delete '/order/destroy'
   get '/order/new'
-  get '/order/show'
+  get '/order/all'
   post '/order/create'
+
 
   root to: 'home#index'
   

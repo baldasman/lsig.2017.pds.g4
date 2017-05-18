@@ -6,7 +6,7 @@
 
  <%= form_for @order, url:  {action: "create"} do |f| %>
 
-            <table class="w3-table table-responsive">
+            <table class="table table-responsive">
               <thead>
               <tr>
                 <th><%= f.label t("description") %></th>
@@ -21,7 +21,7 @@
               </tbody>
             </table>
 <br/>
-          <table class="w3-table">
+          <table class="table table-responsive">
           <thead>
             <tr>
               <th><%= f.label t("unit_price") %></th>
@@ -42,10 +42,4 @@
           <%= f.submit t("add")%>
           <a href="/order/show" class="btn" role="button">Cancelar</a>
       <% end %>
-    </div>
-  </div>
-
-  <br><br><br>
-  <div class="footer container-fluid text-center">
-    <p>2016-2017 | PROJETO E DESENVOLVIMENTO DE SOFTWARE | GRUPO 4</p>
   </div>

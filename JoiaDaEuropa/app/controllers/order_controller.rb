@@ -11,16 +11,21 @@ class OrderController < ApplicationController
     end
 
     def cancel
-        @orders = Order.where(state_id: 2)
-    end
-
-    def end
         @orders = Order.where(state_id: 3)
     end
 
-    def recent
-        @orders = Order.last(limit[10])
+    def end
+        @orders = Order.where(state_id: 2)
     end
+
+    #def upload
+       # uploaded_io = params[:order][:picture]
+       # File.open(Rails.root.join('public', 'uploads', uploaded_io.original_filename), 'wb') do |file|
+        #    file.write(uploaded_io.read)
+      #  end
+    #end
+
+    #def recent        @order = Order.last    end
 
     def new
         @order = Order.new
@@ -67,7 +72,7 @@ class OrderController < ApplicationController
         @order.quantity = _order[:quantity]
 
         if @order.save
-            redirect_to order_show_path
+            redirect_to order_all_path
         else
             redirect_to order_edit_path(_order[:id])
         end

@@ -64,14 +64,15 @@ thead{
     background-color: slategrey;
     color: whitesmoke;
 }
-/*tabelas*/
+tbody{
+    background-color: transparent;
+}
 .w3-table{
-    font-family: Montserrat, sans-serif;
     margin-left: -20%;
 }
 /*links*/
 a {
-    color: lightgrey;
+    color: white;
 }
 .glyphicon{
     font-size: 20px;
@@ -90,6 +91,11 @@ a {
 }
 .w3-button{
     background-color: black;
+}
+.w2-button{
+    width: 5%;
+    background-color: darkslategrey;
+    color: white;
 }
 /*rodape*/
 .footer{
@@ -231,7 +237,7 @@ input[type=text], input[type=password] {
     border: 1px solid darkgrey;
     box-sizing: border-box;
 }
-.actions, input[type=submit]{
+.actions input[type=submit]{
     width: 100px;
     padding-top: 5px;
     padding-bottom: 5px;
