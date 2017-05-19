@@ -70,6 +70,7 @@ class OrderController < ApplicationController
 
     def edit
         @order =Order.find_by(id: params[:id])
+        @states = State.all.map { |state| [state.description, state.id] }
     end
 
     def update
@@ -82,6 +83,7 @@ class OrderController < ApplicationController
         @order.delivery_date = Date.new(_order['delivery_date(1i)'].to_i, _order['delivery_date(2i)'].to_i, _order['delivery_date(3i)'].to_i)
         @order.unit_price = _order[:unit_price]
         @order.quantity = _order[:quantity]
+        @order.state_id = _order[:state_id]
 
         if @order.save
             redirect_to order_all_path

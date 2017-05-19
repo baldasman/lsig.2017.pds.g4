@@ -31,6 +31,8 @@
             <div class="alert danger"><%= flash[:error]['quantity'].join('<br/>') %></div>
         <% end %>
 
+        <%= f.select :state_id, options_for_select(@states, @order.state_id) %>
+
       <label for="order_state.pending"><%= t('order_state.pending') %></label>
 <br>
       <div align="right"> <%= f.submit t('save') %> </div>
