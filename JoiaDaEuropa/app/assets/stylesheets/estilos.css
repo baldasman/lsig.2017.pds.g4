@@ -98,6 +98,9 @@ a {
     background-color: darkslategrey;
     color: white;
 }
+.col-md-3{
+    text-align: center;
+}
 /*rodape*/
 .footer{
     font-size: x-small;
