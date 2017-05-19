@@ -32,18 +32,37 @@
   unit_price: "Preço Unitário"
   quantity: "Quantidade"
   state_id: "Estado"
+  client: "Cliente"
   save: "Guardar"
   submit: "Submeter"
+  add: "Adicionar"
   edit: "Editar"
   detail: "Detalhes"
+  upload_id: "Ficheiro"
+  order_detail: "Detalhes de Encomendas"
+  profile: "PERFIL"
+  about_us: "QUEM SOMOS"
+  mission: "MISSÃO"
+  news: "NOTICIAS"
+  contact: "CONTACTOS"
+  partnerships: "PARCERIAS"
+  client_area: "ÁREA DE CLIENTE"
+  orders: "ENCOMENDAS"
+  new_order: "NOVA ENCOMENDA"
+  recent_orders: "ENCOMENDAS RECENTES"
+  welcome: "BEM-VINDO"
+  hold_orders: "ENCOMENDAS PENDENTES"
+  cancel_orders: "ENCOMENDAS CANCELADAS"
+  end_orders: "ENCOMENDAS CONCLUIDAS"
+  update_order: "ATUALIZAR ENCOMENDA"
   order_state:
     pending: 'Pendente'
-    concluded: 'Concluída'
+    concluded: 'Concluida'
     cancelled: 'Cancelada'
   activerecord:
-    errors:
-      models:
-        account:
-          attributes:
-            name:
-              blank: "O nome não pode estar vazio"
+          errors:
+            models:
+              account:
+                attributes:
+                  name:
+                    blank: "O nome não pode estar vazio"

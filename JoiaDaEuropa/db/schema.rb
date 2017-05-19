@@ -10,21 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170518101505) do
-
-  create_table "client_area_order_states", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "client_area_orders", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.datetime "date"
-    t.decimal  "total",      precision: 10
-    t.integer  "state_id"
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
-  end
+ActiveRecord::Schema.define(version: 20170519081647) do
 
   create_table "clients", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
@@ -47,14 +33,24 @@ ActiveRecord::Schema.define(version: 20170518101505) do
     t.datetime "updated_at",                   null: false
     t.integer  "state_id"
     t.integer  "client_id"
+    t.integer  "upload_id"
     t.index ["client_id"], name: "index_orders_on_client_id", using: :btree
     t.index ["state_id"], name: "index_orders_on_state_id", using: :btree
+    t.index ["upload_id"], name: "index_orders_on_upload_id", using: :btree
   end
 
   create_table "states", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "state"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "uploads", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "imageable_type"
+    t.integer  "imageable_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.index ["imageable_type", "imageable_id"], name: "index_uploads_on_imageable_type_and_imageable_id", using: :btree
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|

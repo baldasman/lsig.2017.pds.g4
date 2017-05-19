@@ -1,14 +1,14 @@
    <!-- g4PageContent -->
     <div class="col-lg-10">
-      <h1><b>ÁREA DE CLIENTE</b></h1>
-      <i>Bem Vindo à sua àrea de cliente</i>
+      <h1><b><%= t("client_area") %></b></h1>
+      <i><%= t("welcome") %></i>
       <br /><br />
       <div class="col-lg-10">
        <table class="table table-responsive" style="margin-left: -20%">
           <thead>
             <tr>
-              <th>NOME</th>
-              <th>TELEFONE</th>
+              <th><%= t("name") %></th>
+              <th><%= t("phone_number") %></th>
             </tr>
           </thead>
           <tbody>
@@ -21,14 +21,14 @@
         <table class="table table-responsive" style="margin-left: -20%">
           <thead>
           <tr>
-            <th>NIB</th>
-            <th>MORADA</th>
+            <th><%= t("nib") %></th>
+            <th><%= t("address") %></th>
             <th></th></td>
           </tr>
           </thead>
           <tbody>
           <tr>
-            <td><dt><%= @client.nib%></dt></td>
+            <td><dt><%= @client.nib %></dt></td>
             <td><dt><%= @client.address%></dt></td>
             <td class="w2-button"> <%= link_to t('edit'), client_area_edit_client_path %></td>
           </tr>

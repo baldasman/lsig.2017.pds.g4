@@ -1,14 +1,14 @@
 <!-- Pag4Content -->
 <div class="col-lg-10 text-left">
-  <h1><b>DETALHES DE ENCOMENDA</b></h1>
+  <h1><b><%= t("order_detail") %></b></h1>
   <br /><br />
 
   <div class="col-lg-10">
     <table class="w3-table table-responsive">
               <thead>
               <tr>
-                <th>NÚMERO</th>
-                <th>DESCRIÇÃO</th>
+                <th><%= t("id") %></th>
+                <th><%= t("description") %></th>
               </tr>
               </thead>
            <tbody>
@@ -23,10 +23,11 @@
               <table class="w3-table table-responsive">
               <thead>
               <tr>
-                <th>DATA DE ENTREGA</th>
-                <th>PREÇO UNITÁRIO</th>
-                <th>QUANTIDADE</th>
-                <th>ESTADO</th>
+                <th><%= t("delivery_date") %></th>
+                <th><%= t("unit_price") %></th>
+                <th><%= t("quantity") %></th>
+                <th><%= t("state_id") %></th>
+                <th><%= t("upload_id") %></th>
               </tr>
               </thead>
               <tbody>
@@ -35,6 +36,7 @@
                 <td><%= @order.unit_price %></td>
                 <td><%= @order.quantity %></td>
                 <td><%= @order.state.description %></td>
+                <td><%= @order.upload_id %></td>
                 <td class="w2-button"><%= link_to t("edit"), order_edit_path %></td>
               </tr>
               </tbody>
