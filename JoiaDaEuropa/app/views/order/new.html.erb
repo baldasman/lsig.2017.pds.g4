@@ -1,7 +1,6 @@
     <!-- g4PageContent -->
     <div class="col-lg-10 text-left">
-      <h1><strong>NOVA ENCOMENDA</strong></h1>
-      <i>Faça a sua encomenda</i>
+      <h1><b><%= t("new_order") %></b></h1>
       <br> <br>
 
  <%= form_for @order, url:  {action: "create"} do |f| %>
