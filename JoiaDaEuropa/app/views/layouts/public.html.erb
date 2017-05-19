@@ -9,25 +9,25 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
 
     <%= stylesheet_link_tag 'estilos', media: 'all', 'data-turbolinks-track': 'reload' %>
     <!-- Global styles here -->
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
 
-<body>
+<body data-spy="scroll" data-target="#top-nav">
 <!-- N4vbar -->
-<nav data-spy="scroll" data-target=".navbar" class="navbar navbar-default navbar-fixed-top">
+<nav  class="navbar navbar-default navbar-fixed-top">
 
     <div class="container">
         <div class="navbar-header">
             <a class="button" href="/home/index"><img src="<%= asset_path '2.png' %>" width="190px"></a>
         </div>
-        <div class="collapse navbar-collapse">
+        <div class="collapse navbar-collapse" id="top-nav">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="/profile/index"><%= t("profile") %></a></li>
+                <li class="active"><a href="/profile/index"><%= t("profile") %></a></li>
                 <li><a href="#quem_somos"><%= t("about_us") %></a></li>
                 <li><a href="#missao"><%= t("mission") %></a></li>
                 <li><a href="#noticia"><%= t("news") %></a></li>
