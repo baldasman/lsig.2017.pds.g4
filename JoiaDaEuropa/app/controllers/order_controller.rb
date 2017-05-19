@@ -1,3 +1,5 @@
+require 'securerandom'
+
 class OrderController < ApplicationController
 
     def all
@@ -19,10 +21,10 @@ class OrderController < ApplicationController
     end
 
     #def upload
-       # uploaded_io = params[:order][:picture]
-       # File.open(Rails.root.join('public', 'uploads', uploaded_io.original_filename), 'wb') do |file|
-        #    file.write(uploaded_io.read)
-      #  end
+    # uploaded_io = params[:order][:picture]
+    # File.open(Rails.root.join('public', 'uploads', uploaded_io.original_filename), 'wb') do |file|
+    #    file.write(uploaded_io.read)
+    #  end
     #end
 
     #def recent        @order = Order.last    end
@@ -44,6 +46,16 @@ class OrderController < ApplicationController
 
         @order.delivery_date = Date.new(_order['delivery_date(1i)'].to_i, _order['delivery_date(2i)'].to_i, _order['delivery_date(3i)'].to_i)
 
+
+        # save uploaded file
+        uploaded_io = params[:order][:upload]
+
+        _filename = SecureRandom.hex + '_' + uploaded_io.original_filename
+        @order.upload = Upload.new imageable_type: _filename
+
+        File.open(Rails.root.join('public', 'uploads', _filename), 'wb') do |file|
+            file.write(uploaded_io.read)
+        end
 
         if @order.save
             redirect_to order_detail_path(@order.id), flash[:notice] => "Your Order was save"

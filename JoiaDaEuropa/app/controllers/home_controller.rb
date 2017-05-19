@@ -6,6 +6,8 @@ class HomeController < ApplicationController
   prepend_before_action :verify_signed_out_user, only: :destroy
   prepend_before_action only: [:create, :destroy] { request.env["devise.skip_timeout"] = true }
 
+  layout 'public', only: :index
+
   def index
 
   end
@@ -55,8 +57,6 @@ class HomeController < ApplicationController
   def translation_scope
     'devise.sessions'
   end
-
-  private
 
   # Check if there is no signed in user before doing the sign out.
   #

@@ -20,6 +20,11 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  date:
+    order:
+      - :day
+      - :month
+      - :year
   hello: "Hello world"
   my_account: "My account"
   email: "O meu email"

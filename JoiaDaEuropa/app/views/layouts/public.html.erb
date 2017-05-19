@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <%= stylesheet_link_tag 'estilos', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -65,20 +65,8 @@
     <% end %>
 </div>
 
-<!-- Sid4bar -->
-<div class="container-fluid text-left">
-    <div class="row content">
-        <div class="w3-sidebar w3-bar-block">
-            <p><a href="/profile/index" class="w3-bar-item"><%= t("profile") %></a></p>
-            <p><a href="/client_area/index" class="w3-bar-item"><%= t("client_area") %></a></p>
-            <p><a href="/order/all" class="w3-bar-item"><%= t("orders") %></a></p>
-            <p><a href="/order/new" class="w3-bar-item"><%= t("new_order") %></a></p>
-        </div>
-    </div>
-</div>
-
-
 <%= yield %>
+
 <% if notice %>
     <div class="alert alert-info" role="alert">
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">

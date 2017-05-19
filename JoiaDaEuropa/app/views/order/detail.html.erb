@@ -36,7 +36,7 @@
                 <td><%= @order.unit_price %></td>
                 <td><%= @order.quantity %></td>
                 <td><%= @order.state.description %></td>
-                <td><%= @order.upload_id %></td>
+                <td><%= link_to t('Anexo'), sprintf('/uploads/%s', @order.upload.imageable_type), target: '_blank', class: 'btn btn-default' %></td>
                 <td class="w2-button"><%= link_to t("edit"), order_edit_path %></td>
               </tr>
               </tbody>
