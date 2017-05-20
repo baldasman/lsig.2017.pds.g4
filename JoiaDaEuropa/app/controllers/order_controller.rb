@@ -81,7 +81,7 @@ class OrderController < ApplicationController
         @order.upload_id = _order[:upload_id]
 
         if @order.save
-            redirect_to order_all_path
+            redirect_to order_detail_path(_order[:id])
         else
             redirect_to order_edit_path(_order[:id])
         end

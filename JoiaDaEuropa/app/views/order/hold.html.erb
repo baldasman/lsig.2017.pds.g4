@@ -19,7 +19,6 @@
       <th><%= t("unit_price") %></th>
       <th><%= t("quantity") %></th>
       <th><%= t("state_id") %></th>
-      <th><%= t("upload_id") %></th>
       <th></th>
     </tr>
     </thead>
@@ -32,8 +31,7 @@
           <td><%= order.unit_price %></td>
           <td><%= order.quantity %></td>
           <td><%= order.state.description %></td>
-          <td></td>
-          <td class="w2-button"><%= link_to t("edit"), order_detail_path %></td>
+          <td class="w2-button"><%= link_to t("detail"), order_detail_path %></td>
         </tr>
     <% end %>
     </tbody>

@@ -26,13 +26,15 @@
         <% end %>
 
         <label for="quantity"><%= t('quantity') %></label>
-        <%= f.text_field :quantity %>
-        <% if flash[:error] && flash[:error]['quantity'] %>
-            <div class="alert danger"><%= flash[:error]['quantity'].join('<br/>') %></div>
-        <% end %>
+      <%= f.text_field :quantity %>
+      <% if flash[:error] && flash[:error]['quantity'] %>
+          <div class="alert danger"><%= flash[:error]['quantity'].join('<br/>') %></div>
+      <% end %>
 
-        <%= f.select :state_id, options_for_select(@states, @order.state_id) %>
-<br>
+      <%= f.select :state_id, options_for_select(@states, @order.state_id) %>
+
+      <!-- <%= f.file_field :upload %> -->
+<br />
       <div align="right"> <%= f.submit t('save') %> </div>
     </div>
 <% end %>

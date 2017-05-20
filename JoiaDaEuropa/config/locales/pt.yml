@@ -44,7 +44,7 @@ pt:
   edit: "Editar"
   detail: "Detalhes"
   upload_id: "Ficheiro"
-  order_detail: "Detalhes de Encomendas"
+  order_detail: "DETALHES DA ENCOMENDA"
   profile: "PERFIL"
   about_us: "QUEM SOMOS"
   mission: "MISSÃO"
@@ -69,6 +69,8 @@ pt:
   title_n2: "Feira na Itália"
   title_n3: "Feira na França"
   archive: "Arquivo"
+  id: "Nº"
+  attachment: "Anexo"
   order_state:
     pending: 'Pendente'
     concluded: 'Concluida'

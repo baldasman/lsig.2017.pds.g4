@@ -1,3 +1,3 @@
 class Upload < ApplicationRecord
-  has_one :order
+  has_one :orders
 end

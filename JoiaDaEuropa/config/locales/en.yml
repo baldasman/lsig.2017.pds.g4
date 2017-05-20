@@ -42,9 +42,9 @@ en:
   submit: "Submit"
   add: "Add"
   edit: "Edit"
-  detail: "Details"
+  detail: "Detail"
   upload_id: "File"
-  order_detail: "Order Detail"
+  order_detail: "ORDER DETAIL"
   profile: "PROFILE"
   about_us: "ABOUT US"
   mission: "MISSION"
@@ -69,6 +69,8 @@ en:
   title_n2: "Market in Italy"
   title_n3: "Market in France"
   archive: "Archive"
+  id: "Nº"
+  attachment: "Attachment"
   order_state:
     pending: 'Pending'
     concluded: 'Concluded'
