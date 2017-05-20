@@ -10,7 +10,7 @@
   </div>
 
   <div class="col-lg-10" style="padding-top: 50px">
-    <table class="w3-table">
+    <table class="table table-left">
     <thead>
     <tr>
       <th><%= t("id") %></th>
@@ -32,7 +32,7 @@
           <td><%= order.unit_price %></td>
           <td><%= order.quantity %></td>
           <td><%= order.state.description %></td>
-          <td class="btn btn-default"><%= link_to t("attachment"), sprintf('/uploads/%s', order.upload.imageable_type), target: '_blank' %></td>
+          <td class="btn"><%= link_to t("attachment"), sprintf('/uploads/%s', order.upload.imageable_type), target: '_blank' %></td>
           <td class="w2-button"><%= link_to t("detail"), order_detail_path(order) %></td>
         </tr>
     <% end %>

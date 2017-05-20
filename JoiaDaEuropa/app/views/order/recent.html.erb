@@ -1,6 +1,6 @@
 <!-- Pag4Content -->
 <div class="col-lg-10 text-left">
-  <h1><b><%= t("orders") %></b></h1>
+  <h1><b><%= t("recent_orders") %></b></h1>
   <br /><br />
   <table class="table table-left">
     <thead>
@@ -24,8 +24,8 @@
           <td><%= order.unit_price %></td>
           <td><%= order.quantity %></td>
           <td><%= order.state.description %></td>
-          <td class="btn btn-default"><%= link_to t("attachment"), sprintf('/uploads/%s', order.upload.imageable_type), target: '_blank' %></td>
-          <td><%= link_to t("detail"), order_detail_path(order.id) %></td>
+          <td class="btn"><%= link_to t("attachment"), sprintf('/uploads/%s', order.upload.imageable_type), target: '_blank' %></td>
+          <td class="w2-button"><%= link_to t("detail"), order_detail_path(order.id) %></td>
         </tr>
     <% end %>
     </tbody>

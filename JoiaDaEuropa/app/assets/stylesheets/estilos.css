@@ -95,11 +95,15 @@ a {
 }
 .w2-button{
     width: 5%;
-    background-color: darkslategrey;
+    background-color: cornflowerblue;
     color: white;
 }
 .col-md-3{
     text-align: center;
+}
+.btn{
+    background-color: darkgrey;
+    color: white;
 }
 /*rodape*/
 .footer{

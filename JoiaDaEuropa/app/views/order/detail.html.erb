@@ -4,7 +4,7 @@
   <br /><br />
 
   <div class="col-lg-10">
-    <table class="w3-table table-responsive">
+    <table class="table table-left">
               <thead>
               <tr>
                 <th><%= t("id") %></th>
@@ -20,7 +20,7 @@
             </table>
   </div>
   <div class="col-lg-10" style="padding-top: 25px">
-              <table class="w3-table table-responsive">
+    <table class="table table-left">
               <thead>
               <tr>
                 <th><%= t("delivery_date") %></th>
@@ -36,7 +36,7 @@
                 <td><%= @order.unit_price %></td>
                 <td><%= @order.quantity %></td>
                 <td><%= @order.state.description %></td>
-                <td><%= link_to t("attachment"), sprintf('/uploads/%s', @order.upload.imageable_type), target: '_blank', class: 'btn btn-default' %></td>
+                <td class="btn"><%= link_to t("attachment"), sprintf('/uploads/%s', @order.upload.imageable_type), target: '_blank' %></td>
                 <td class="w2-button"><%= link_to t("edit"), order_edit_path %></td>
               </tr>
               </tbody>
