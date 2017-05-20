@@ -4,42 +4,42 @@
   <br /><br />
 
   <div class="col-lg-10">
-    <table class="table table-left">
-              <thead>
-              <tr>
-                <th><%= t("id") %></th>
-                <th><%= t("description") %></th>
-              </tr>
-              </thead>
-           <tbody>
-           <tr>
-             <td><%= @order.id %></td>
-             <td><%= @order.description %></td>
-           </tr>
-           </tbody>
-            </table>
+    <table class="w3-table table-left">
+      <thead>
+      <tr>
+        <th><%= t("id") %></th>
+        <th><%= t("description") %></th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td><%= @order.id %></td>
+        <td><%= @order.description %></td>
+      </tr>
+      </tbody>
+    </table>
   </div>
   <div class="col-lg-10" style="padding-top: 25px">
-              <table class="w3-table table-responsive">
-              <thead>
-              <tr>
-                <th><%= t("delivery_date") %></th>
-                <th><%= t("unit_price") %></th>
-                <th><%= t("quantity") %></th>
-                <th><%= t("state_id") %></th>
-                <th><%= t("upload_id") %></th>
-              </tr>
-              </thead>
-              <tbody>
-              <tr>
-                <td><%= @order.delivery_date %></td>
-                <td><%= @order.unit_price %></td>
-                <td><%= @order.quantity %></td>
-                <td><%= @order.state.description %></td>
-                <td><%= link_to t("attachment"), sprintf('/uploads/%s', @order.upload.imageable_type), target: '_blank', class: 'btn btn-default' %></td>
-                <td class="w2-button"><%= link_to t("edit"), order_edit_path %></td>
-              </tr>
-              </tbody>
-            </table>
-          </div>
+    <table class="w3-table table-left">
+      <thead>
+      <tr>
+        <th><%= t("delivery_date") %></th>
+        <th><%= t("unit_price") %></th>
+        <th><%= t("quantity") %></th>
+        <th><%= t("state_id") %></th>
+        <th><%= t("upload_id") %></th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td><%= @order.delivery_date %></td>
+        <td><%= @order.unit_price %></td>
+        <td><%= @order.quantity %></td>
+        <td><%= @order.state.description %></td>
+        <td><%= link_to t("attachment"), sprintf('/uploads/%s', @order.upload.imageable_type), target: '_blank', class: 'btn btn-default' %></td>
+        <td class="w2-button"><%= link_to t("edit"), order_edit_path %></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
 </div>

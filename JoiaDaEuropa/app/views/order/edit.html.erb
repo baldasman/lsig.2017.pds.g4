@@ -7,25 +7,27 @@
     <%= f.hidden_field :id %>
     <div class="form-group text-center">
 
-        <label for="description"><%= t('description') %></label>
-        <%= f.text_field :description %>
-        <% if flash[:error] && flash[:error]['description'] %>
-            <div class="alert danger"><%= flash[:error]['description'].join('<br/>') %></div>
-        <% end %>
+      <label for="description"><%= t('description') %></label>
+      <%= f.text_field :description %>
+      <% if flash[:error] && flash[:error]['description'] %>
+          <div class="alert danger"><%= flash[:error]['description'].join('<br/>') %></div>
+      <% end %>
 
       <label for="delivery_date"><%= t('delivery_date') %></label>
-        <%= f.date_select :delivery_date %>
-        <% if flash[:error] && flash[:error]['delivery_date'] %>
-            <div class="alert danger"><%= flash[:error]['delivery_date'].join('<br/>') %></div>
-        <% end %>
-<br />
-        <label for="unit_price"><%= t('unit_price') %></label>
-        <%= f.text_field :unit_price %>
-        <% if flash[:error] && flash[:error]['unit_price'] %>
-            <div class="alert danger"><%= flash[:error]['unit_price'].join('<br/>') %></div>
-        <% end %>
+      <%= f.date_select :delivery_date %>
+      <% if flash[:error] && flash[:error]['delivery_date'] %>
+          <div class="alert danger"><%= flash[:error]['delivery_date'].join('<br/>') %></div>
+      <% end %>
 
-        <label for="quantity"><%= t('quantity') %></label>
+<br />
+
+      <label for="unit_price"><%= t('unit_price') %></label>
+      <%= f.text_field :unit_price %>
+      <% if flash[:error] && flash[:error]['unit_price'] %>
+          <div class="alert danger"><%= flash[:error]['unit_price'].join('<br/>') %></div>
+      <% end %>
+
+      <label for="quantity"><%= t('quantity') %></label>
       <%= f.text_field :quantity %>
       <% if flash[:error] && flash[:error]['quantity'] %>
           <div class="alert danger"><%= flash[:error]['quantity'].join('<br/>') %></div>
@@ -34,8 +36,13 @@
       <%= f.select :state_id, options_for_select(@states, @order.state_id) %>
 
       <!-- <%= f.file_field :upload %> -->
-<br />
-      <div align="right"> <%= f.submit t('save') %> </div>
+
+      <br />
+
+      <a href="/order/detail" class="btn" role="button"><%= t("cancel") %></a>
+      <%= f.submit t('save') %>
     </div>
+
 <% end %>
+
 </div>
