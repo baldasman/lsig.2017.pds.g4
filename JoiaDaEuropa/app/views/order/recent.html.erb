@@ -16,7 +16,7 @@
     </tr>
     </thead>
     <tbody>
-    <% @order.each do |order| %>
+    <% @orders.each do |order| %>
         <tr>
           <td><%= order.id %></td>
           <td><%= order.description %></td>
@@ -24,6 +24,7 @@
           <td><%= order.unit_price %></td>
           <td><%= order.quantity %></td>
           <td><%= order.state.description %></td>
+          <td class="btn btn-default"><%= link_to t("attachment"), sprintf('/uploads/%s', order.upload.imageable_type), target: '_blank' %></td>
           <td><%= link_to t("detail"), order_detail_path(order.id) %></td>
         </tr>
     <% end %>

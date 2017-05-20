@@ -20,7 +20,9 @@ class OrderController < ApplicationController
         @orders = Order.where(state_id: 2)
     end
 
-    #def recent        @order = Order.last    end
+    def recent
+        @orders = Order.where(state_id: 1).limit(10)
+    end
 
     def new
         @order = Order.new

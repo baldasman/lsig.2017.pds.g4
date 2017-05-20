@@ -19,6 +19,7 @@
       <th><%= t("unit_price") %></th>
       <th><%= t("quantity") %></th>
       <th><%= t("state_id") %></th>
+      <th><%= t("upload_id") %></th>
       <th></th>
     </tr>
     </thead>
@@ -31,7 +32,8 @@
           <td><%= order.unit_price %></td>
           <td><%= order.quantity %></td>
           <td><%= order.state.description %></td>
-          <td class="w2-button"><%= link_to t("edit"), order_detail_path %></td>
+          <td class="btn btn-default"><%= link_to t("attachment"), sprintf('/uploads/%s', order.upload.imageable_type), target: '_blank' %></td>
+          <td class="w2-button"><%= link_to t("edit"), order_detail_path(order) %></td>
         </tr>
     <% end %>
     </tbody>
