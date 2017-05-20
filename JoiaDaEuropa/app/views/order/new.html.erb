@@ -25,15 +25,15 @@
             <tr>
               <th><%= f.label t("unit_price") %></th>
               <th> <%= f.label t("quantity") %></th>
-              <th>Estado</th>
-              <th>Anexos</th>
+              <th><%= t("state_id") %></th>
+              <th><%= t("archive") %></th>
             </tr>
             </thead>
             <tbody>
             <tr>
               <td><%= f.text_field :unit_price %></td>
               <td><%= f.text_field :quantity %></td>
-              <td>PENDENTE</td>
+              <td><%= t("order_state.pending") %></td>
               <td> <%= f.file_field :upload %> </td>
             </tr>
             </tbody>

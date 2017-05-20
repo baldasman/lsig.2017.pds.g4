@@ -50,7 +50,7 @@
 
         <div id="quem_somos" class="container-fluid">
             <div class="col-sm-8" id="q">
-                <h2>QUEM SOMOS</h2><br>
+                <h2><%= t("about_us") %></h2><br>
                 <p id="espgq4"><%= t("text_about") %></p><br>
             </div>
             <div class="col-sm-4">
@@ -64,7 +64,7 @@
                     <img class="img-responsive" src="<%= asset_path 'b2.jpg' %>" width="1893" height="697" id="missimg">
                 </div>
                 <div class="col-sm-8"> <!--id="m"-->
-                    <h2 id="tme">MISSÃO</h2><br>
+                    <h2 id="tme"><%= t("mission") %></h2><br>
                     <p id="tm"><%= t("text_mission") %></p>
                 </div>
             </div>
@@ -72,7 +72,7 @@
 
         <!-- N4ticias  -->
         <div class="container-fluid bg-grey" id="noticia">
-            <h2>NOTICIAS</h2>
+            <h2 align="center"><%= t("news") %></h2>
             <br><br>
             <div class="row slideanim">
                 <div class="col-lg-4" onclick="openNav('myNav1')">

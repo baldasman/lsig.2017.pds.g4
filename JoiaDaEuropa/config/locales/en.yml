@@ -68,6 +68,7 @@ en:
   title_n1: "Marketplace in Germany"
   title_n2: "Market in Italy"
   title_n3: "Market in France"
+  archive: "Archive"
   order_state:
     pending: 'Pending'
     concluded: 'Concluded'

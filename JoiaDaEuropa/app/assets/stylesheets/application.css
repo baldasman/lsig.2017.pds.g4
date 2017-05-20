@@ -14,5 +14,253 @@
  *= require_self
 */
 
+/*pagina inicial*/
+#quem_somos{
+    padding-right: 60px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 60px;
+}
+.col-sm-4{
+    padding-right: 20px;
+    padding-left: 20px;
+}
+#missao{
+    padding-right: 60px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
 
+#noticia{
+    padding-bottom: 200px;
+}
 
+#contacto {
+    color: white;
+    background: black;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+#parceria {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+.overlay .closebtn {
+    position: absolute;
+    top: 50px;
+    right: 45px;
+}
+/* Carousel Styles */
+.carousel-indicators .active {
+    background-color: #2980b9;
+}
+/* Carousel Header Styles */
+.header-text {
+    position: absolute;
+    top: 20%;
+    left: 1.8%;
+    right: auto;
+    width: 96.66666666666666%;
+    color: #fff;
+}
+.header-text h2 {
+    font-size: 40px;
+}
+.header-text h2 span {
+    background-color: #2980b9;
+    padding: 10px;
+}
+.header-text h3 span {
+    background-color: #000;
+    padding: 15px;
+}
+.btn-min-block {
+    min-width: 170px;
+    line-height: 26px;
+}
+.btn-theme {
+    color: #fff;
+    background-color: transparent;
+    border: 2px solid #fff;
+    margin-right: 15px;
+}
+.btn-theme:hover {
+    color: #000;
+    background-color: #fff;
+    border-color: #fff;
+}
+.carousel-control .glyphicon-chevron-right, .carousel-control .icon-next {
+    margin-right: 52px!important;
+}
+.carousel-control .glyphicon-chevron-left, .carousel-control .icon-prev {
+    margin-left: 16px!important;
+}
+.wrapper{
+    padding-top: 70px;
+}
+
+input[type=text], input[type=email] {
+    width: 20%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: 8px;
+    display: inline-block;
+    border: 1px solid darkgrey;
+    box-sizing: border-box;
+}
+input[type=text], input[type=password] {
+    width: 20%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: 8px;
+    display: inline-block;
+    border: 1px solid darkgrey;
+    box-sizing: border-box;
+}
+.actions input[type=submit]{
+    width: 100px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: transparent;
+    color: white;
+    background-color: lightslategrey;
+}
+
+.navbar {
+    margin-bottom: 0;
+    background-color: whitesmoke;
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.5 !important;
+    letter-spacing: 1px;
+    border-radius: 0;
+    font-family: Montserrat, sans-serif;
+}
+.navbar li a, .navbar .navbar-brand {
+    color: dimgrey !important;
+}
+.navbar-nav li a:hover, .navbar-nav li.active a {
+    color: lightslategrey !important;
+    background-color: #fff !important;
+}
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+}
+.jumbotron {
+    background-color: slategrey;
+    padding-top: 55px;
+    padding-bottom: 10px;
+    font-family: Montserrat, sans-serif;
+    text-align: center;
+}
+.w3-sidebar{
+    background: whitesmoke;
+    padding-bottom: 15%;
+    padding-top: 2%;
+    font-family: Montserrat, sans-serif;
+}
+.col-lg-10{
+    margin-left: 15%;
+}
+.w3-bar-item{
+    color: dimgrey;
+}
+.btn {
+    border-color: transparent;
+    background: white;
+    color: dimgrey;
+}
+body{
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    text-align: justify;
+    position: relative;
+}
+/*formulário*/
+input[type=text] {
+    padding: 10px 10px;
+    margin: 3px 0;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+/*cabeçalho das tabelas*/
+thead{
+    background-color: slategrey;
+    color: whitesmoke;
+}
+tbody{
+    background-color: transparent;
+}
+.w3-table{
+    margin-left: -20%;
+}
+/*links*/
+a {
+    color: white;
+}
+.glyphicon{
+    font-size: 20px;
+    color: lightslategrey;
+}
+.w3-container{
+    padding: 15px;
+    background: lightslategrey;
+}
+.w3-bar{
+    background-color: lightgrey;
+}
+.w3-display-topleft{
+    color: white;
+    padding:24px 48px;
+}
+.w3-button{
+    background-color: black;
+}
+.w2-button{
+    width: 5%;
+    background-color: darkslategrey;
+    color: white;
+}
+.col-md-3{
+    text-align: center;
+}
+/*rodape*/
+.footer{
+    font-size: x-small;
+}

@@ -68,6 +68,7 @@ pt:
   title_n1: "Feira na Alemanha"
   title_n2: "Feira na Itália"
   title_n3: "Feira na França"
+  archive: "Arquivo"
   order_state:
     pending: 'Pendente'
     concluded: 'Concluida'

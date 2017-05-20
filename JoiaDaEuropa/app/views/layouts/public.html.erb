@@ -12,7 +12,7 @@
     <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
     <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
 
-    <%= stylesheet_link_tag 'estilos', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <!-- Global styles here -->
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
@@ -28,12 +28,12 @@
         <div class="collapse navbar-collapse" id="top-nav">
             <ul class="nav navbar-nav navbar-right">
                 <li ><a href="/profile/index"><%= t("profile") %></a></li>
-                <li class="active"><a href="#homeindex"><%= t("home") %></a></li>
-                <li><a href="#quem_somos"><%= t("about_us") %></a></li>
-                <li><a href="#missao"><%= t("mission") %></a></li>
-                <li><a href="#noticia"><%= t("news") %></a></li>
-                <li><a href="#contacto"><%= t("contact") %></a></li>
-                <li><a href="#parceria"><%= t("partnerships") %></a></li>
+                <li class="active"><a href="home/index"><%= t("home") %></a></li>
+                <li><a href="/home/index/#quem_somos"><%= t("about_us") %></a></li>
+                <li><a href="/home/index/#missao"><%= t("mission") %></a></li>
+                <li><a href="/home/index/#noticia"><%= t("news") %></a></li>
+                <li><a href="/home/index/#contacto"><%= t("contact") %></a></li>
+                <li><a href="/home/index/#parceria"><%= t("partnerships") %></a></li>
                 <li><a onclick="openNav('myNavl')">LOGIN</a></li>
             </ul>
         </div>
