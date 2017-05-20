@@ -6,11 +6,11 @@
   <div class="w3-display-topleft" style="padding-top: 80px">
     <a href="/order/cancel" class="w3-button w3-padding-small w3-small"><%= t("cancel_orders") %></a>
     <a href="/order/end" class="w3-button w3-padding-small w3-small"><%= t("end_orders") %></a>
-    <a href="/order/all" class="w3-button w3-padding-small w3-small"><%= t("all_orders") %></a>
+    <a href="/order/all" class="w3-button w3-padding-small w3-small"><%= t("orders") %></a>
   </div>
 
   <div class="col-lg-10" style="padding-top: 50px">
-    <table class="table table-left">
+    <table class="w3-table">
     <thead>
     <tr>
       <th><%= t("id") %></th>
@@ -33,7 +33,7 @@
           <td><%= order.quantity %></td>
           <td><%= order.state.description %></td>
           <td class="btn"><%= link_to t("attachment"), sprintf('/uploads/%s', order.upload.imageable_type), target: '_blank' %></td>
-          <td class="w2-button"><%= link_to t("detail"), order_detail_path(order) %></td>
+          <td class="w2-button"><%= link_to t("detail"), order_detail_path(order.id) %></td>
         </tr>
     <% end %>
     </tbody>
