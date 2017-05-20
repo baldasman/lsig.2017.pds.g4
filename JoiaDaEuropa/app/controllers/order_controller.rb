@@ -20,13 +20,6 @@ class OrderController < ApplicationController
         @orders = Order.where(state_id: 2)
     end
 
-    #def upload
-    # uploaded_io = params[:order][:picture]
-    # File.open(Rails.root.join('public', 'uploads', uploaded_io.original_filename), 'wb') do |file|
-    #    file.write(uploaded_io.read)
-    #  end
-    #end
-
     #def recent        @order = Order.last    end
 
     def new
@@ -65,12 +58,13 @@ class OrderController < ApplicationController
     end
 
     def detail
-        @order = Order.find_by(id: params[:id])
+      @order = Order.find_by(id: params[:id])
     end
 
     def edit
-        @order =Order.find_by(id: params[:id])
-        @states = State.all.map { |state| [state.description, state.id] }
+      @order = Order.find_by(id: params[:id])
+      @states = State.all.map { |state| [state.description, state.id] }
+      #@uploads = Upload.all
     end
 
     def update
@@ -84,6 +78,7 @@ class OrderController < ApplicationController
         @order.unit_price = _order[:unit_price]
         @order.quantity = _order[:quantity]
         @order.state_id = _order[:state_id]
+        @order.upload_id = _order[:upload_id]
 
         if @order.save
             redirect_to order_all_path
