@@ -84,6 +84,7 @@ class OrderController < ApplicationController
 
         if @order.save
             redirect_to order_detail_path(_order[:id])
+            flash[:notice] = "YOU ORDER HAS BEEN SAVE"
         else
             redirect_to order_edit_path(_order[:id])
         end
@@ -93,5 +94,10 @@ class OrderController < ApplicationController
     private
     def order_params
         params[:order]
+
+        #if params[:order].nil?
+         # redirect_to order_new_path
+         # flash[:notice] = "MAKE YOUR FIRST ORDER"
+       # end
     end
 end
