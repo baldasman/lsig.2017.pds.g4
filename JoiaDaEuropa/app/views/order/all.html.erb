@@ -33,7 +33,7 @@
           <td><%= order.quantity %></td>
           <td><%= order.state.description %></td>
           <td class="btn"><%= link_to t("attachment"), sprintf('/uploads/%s', order.upload.imageable_type), target: '_blank' %></td>
-          <td class="w2-button"><%= link_to t("edit"), order_detail_path(order) %></td>
+          <td class="w2-button"><%= link_to t("edit"), order_detail_path(order.id) %></td>
         </tr>
     <% end %>
     </tbody>
