@@ -259,8 +259,9 @@ a {
     background-color: black;
 }
 .w1-button{
-    background-color: lightslategrey;
-    width: 15%;
+    text-align: center;
+    background-color: ghostwhite;
+    width: 20%;
 }
 .w2-button{
     width: 5%;
