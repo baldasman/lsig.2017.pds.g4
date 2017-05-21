@@ -21,7 +21,7 @@ class OrderController < ApplicationController
     end
 
     def recent
-        @orders = Order.where(state_id: 1).limit(10)
+        @orders = Order.where(state_id: 1).limit(10).order('id desc')
     end
 
     def new
