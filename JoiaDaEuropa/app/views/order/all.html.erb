@@ -32,7 +32,7 @@
           <td><%= order.unit_price %></td>
           <td><%= order.quantity %></td>
           <td><%= order.state.description %></td>
-          <td></td>
+          <td class="btn"><%= link_to t("attachment"), '/uploads/%s' %></td>
           <td class="w2-button"><%= link_to t("edit"), order_detail_path(order.id) %></td>
         </tr>
     <% end %>
